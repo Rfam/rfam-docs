@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rfam Documentation by Rfam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Rfam Documentation</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/Rfam/docs" class="btn">View on GitHub</a>
+      <a href="https://github.com/Rfam/docs/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Rfam/docs/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="http://rfam.xfam.org/">Rfam</a> is a collection of non-coding RNA families represented by manually curated sequence alignments, consensus secondary structures, and predicted homologues. This website, maintained by the <a href="http://rfam.xfam.org/help#tabview=tab10">Rfam team</a>, complements the <a href="http://rfam.xfam.org/help">Rfam Help</a> section.</p>
+
+<h2>
+<a id="public-mysql-database" class="anchor" href="#public-mysql-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Public MySQL Database</h2>
+
+<p>Rfam provides a public read-only <a href="https://www.mysql.com/">MySQL</a> database containing the latest version of Rfam data. The database will be updated with each release. To access old versions of the database download SQL dumps from the FTP archive.</p>
+
+<h3>
+<a id="connection-details" class="anchor" href="#connection-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connection details</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>mysql-rfam-public.ebi.ac.uk</td>
+</tr>
+<tr>
+<td>user</td>
+<td>rfamro</td>
+</tr>
+<tr>
+<td>password</td>
+<td>not required</td>
+</tr>
+<tr>
+<td>port</td>
+<td>4497</td>
+</tr>
+<tr>
+<td>database</td>
+<td>rfam</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can connect to the database on command line:</p>
+
+<pre><code>mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database rfam
+</code></pre>
+
+<p>or use MySQL clients such as <a href="http://dev.mysql.com/downloads/workbench/">MySQL Workbench</a> or <a href="http://www.sequelpro.com/">Sequel Pro</a>.</p>
+
+<p>If your computer is behind a firewall, please ensure that outgoing TCP/IP connections to the corresponding ports are allowed.</p>
+
+<h3>
+<a id="main-tables" class="anchor" href="#main-tables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main tables</h3>
+
+<p>The most important tables are listed below and can be used as starting points for exploring the schema:</p>
+
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>family</td>
+<td>a list of all Rfam families and family specific information (family accession, family name, description etc.)</td>
+</tr>
+<tr>
+<td>rfamseq</td>
+<td>a list of all analysed sequences including INSDC accessions, taxonomy id etc.</td>
+</tr>
+<tr>
+<td>full_region</td>
+<td>a list of all sequences annotated with Rfam families including  INSDC accessions, start and end coordinates, bit scores etc.</td>
+</tr>
+<tr>
+<td>clan</td>
+<td>description of all Rfam clans</td>
+</tr>
+<tr>
+<td>clan_membership</td>
+<td>a list of all Rfam families per clan</td>
+</tr>
+<tr>
+<td>taxonomy</td>
+<td>NCBI taxonomy identifiers</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="example-queries" class="anchor" href="#example-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example queries</h3>
+
+<p>Retrieve all rat sequence coordinates that are annotated with Rfam families:</p>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfam_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">rfamseq_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_start</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_end</span>
+<span class="pl-k">FROM</span> full_region fr, rfamseq rf, taxonomy tx
+<span class="pl-k">WHERE</span> <span class="pl-c1">rf</span>.<span class="pl-c1">ncbi_id</span> <span class="pl-k">=</span> <span class="pl-c1">tx</span>.<span class="pl-c1">ncbi_id</span>
+<span class="pl-k">AND</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfamseq_acc</span> <span class="pl-k">=</span> <span class="pl-c1">rf</span>.<span class="pl-c1">rfamseq_acc</span>
+<span class="pl-k">AND</span> <span class="pl-c1">tx</span>.<span class="pl-c1">ncbi_id</span> <span class="pl-k">=</span> <span class="pl-c1">10116</span> <span class="pl-c">-- NCBI taxonomy id of Rattus norvegicus</span>
+<span class="pl-k">AND</span> is_significant <span class="pl-k">=</span> <span class="pl-c1">1</span> <span class="pl-c">-- exclude low-scoring matches from the same clan</span></pre></div>
+
+<p>Example output:</p>
+
+<pre><code>RF01942 AABR05000009.1  211 327
+RF00005 AABR05000052.1  4940    5008
+</code></pre>
+
+<p>While it is possible to get a list of Rfam families found in a species using the <a href="http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3">taxonomy search</a>, with an SQL query one can access sequence coordinates of each ncRNA. </p>
+
+<h2>
+<a id="get-in-touch" class="anchor" href="#get-in-touch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get in touch</h2>
+
+<p>If you have any questions or feedback, feel free to <a href="https://github.com/Rfam/docs/issues">submit an issue</a> on GitHub or send an email at <strong><a href="mailto:rfam-help@ebi.ac.uk">rfam-help@ebi.ac.uk</a></strong>. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Rfam/docs">Rfam Documentation</a> is maintained by <a href="https://github.com/Rfam">Rfam</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
