@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Rfam Documentation by Rfam</title>
+    <title>Rfam Help by Rfam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,13 +11,15 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Rfam Documentation</h1>
+      <h1 class="project-name">Rfam Help</h1>
       <h2 class="project-tagline"></h2>
       <a href="https://github.com/Rfam/docs" class="btn">View on GitHub</a>
+      <a href="https://github.com/Rfam/docs/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Rfam/docs/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <p><a href="http://rfam.xfam.org/">Rfam</a> is a collection of non-coding RNA families represented by manually curated sequence alignments, consensus secondary structures, and predicted homologues. This website, maintained by the <a href="http://rfam.xfam.org/help#tabview=tab10">Rfam team</a>, complements the <a href="http://rfam.xfam.org/help">Rfam Help</a> section.</p>
+      <p><a href="http://rfam.xfam.org/">Rfam</a> is a collection of non-coding RNA families represented by manually curated sequence alignments, consensus secondary structures, and predicted homologues. This website, maintained by the <a href="http://rfam.xfam.org/help#tabview=tab10">Rfam team</a>, complements the <a href="http://rfam.xfam.org/help">Help section</a> of the Rfam website.</p>
 
 <h2>
 <a id="public-mysql-database" class="anchor" href="#public-mysql-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Public MySQL Database</h2>
@@ -107,10 +109,16 @@
 </tbody>
 </table>
 
+<p><img src="https://raw.githubusercontent.com/Rfam/docs/gh-pages/images/core-schema.png" alt="alt text" title="Rfam core tables"></p>
+
 <h3>
 <a id="example-queries" class="anchor" href="#example-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example queries</h3>
 
-<p>Retrieve all rat sequence coordinates that are annotated with Rfam families:</p>
+<h4>
+<a id="1-retrieve-all-rat-sequence-coordinates-annotated-with-rfam-families" class="anchor" href="#1-retrieve-all-rat-sequence-coordinates-annotated-with-rfam-families" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Retrieve all rat sequence coordinates annotated with Rfam families</h4>
+
+<p>While it is possible to get a list of Rfam families found in a species using the <a href="http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3">taxonomy search</a>,
+with an SQL query one can access sequence coordinates of each ncRNA:</p>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfam_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">rfamseq_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_start</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_end</span>
 <span class="pl-k">FROM</span> full_region fr, rfamseq rf, taxonomy tx
@@ -125,7 +133,24 @@
 RF00005 AABR05000052.1  4940    5008
 </code></pre>
 
-<p>While it is possible to get a list of Rfam families found in a species using the <a href="http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3">taxonomy search</a>, with an SQL query one can access sequence coordinates of each ncRNA. </p>
+<h5>
+<a id="2-retrieve-all-snorna-families-found-in-mammals" class="anchor" href="#2-retrieve-all-snorna-families-found-in-mammals" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Retrieve all snoRNA families found in Mammals</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfam_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">rfamseq_acc</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_start</span>, <span class="pl-c1">fr</span>.<span class="pl-c1">seq_end</span>, <span class="pl-c1">f</span>.<span class="pl-c1">type</span>
+<span class="pl-k">FROM</span> full_region fr, rfamseq rf, taxonomy tx, family f
+<span class="pl-k">WHERE</span> 
+<span class="pl-c1">rf</span>.<span class="pl-c1">ncbi_id</span> <span class="pl-k">=</span> <span class="pl-c1">tx</span>.<span class="pl-c1">ncbi_id</span>
+<span class="pl-k">AND</span> <span class="pl-c1">f</span>.<span class="pl-c1">rfam_acc</span> <span class="pl-k">=</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfam_acc</span>
+<span class="pl-k">AND</span> <span class="pl-c1">fr</span>.<span class="pl-c1">rfamseq_acc</span> <span class="pl-k">=</span> <span class="pl-c1">rf</span>.<span class="pl-c1">rfamseq_acc</span>
+<span class="pl-k">AND</span> <span class="pl-c1">tx</span>.<span class="pl-c1">tax_string</span> <span class="pl-k">LIKE</span> <span class="pl-s"><span class="pl-pds">'</span>%Mammalia%<span class="pl-pds">'</span></span>
+<span class="pl-k">AND</span> <span class="pl-c1">f</span>.<span class="pl-c1">type</span> <span class="pl-k">LIKE</span> <span class="pl-s"><span class="pl-pds">'</span>%snoRNA%<span class="pl-pds">'</span></span>
+<span class="pl-k">AND</span> is_significant <span class="pl-k">=</span> <span class="pl-c1">1</span> <span class="pl-c">-- exclude low-scoring matches from the same clan</span></pre></div>
+
+<p>Example output:</p>
+
+<pre><code>RF00012 AAYZ01671298.1  83  298 Gene; snRNA; snoRNA; CD-box;
+RF00012 AAYZ01122278.1  302 87  Gene; snRNA; snoRNA; CD-box;
+</code></pre>
 
 <h2>
 <a id="get-in-touch" class="anchor" href="#get-in-touch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get in touch</h2>
@@ -133,7 +158,7 @@ RF00005 AABR05000052.1  4940    5008
 <p>If you have any questions or feedback, feel free to <a href="https://github.com/Rfam/docs/issues">submit an issue</a> on GitHub or send an email at <em><a href="mailto:rfam-help@ebi.ac.uk">rfam-help@ebi.ac.uk</a></em>. </p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Rfam/docs">Rfam Documentation</a> is maintained by <a href="https://github.com/Rfam">Rfam</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/Rfam/docs">Rfam Help</a> is maintained by <a href="https://github.com/Rfam">Rfam</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
