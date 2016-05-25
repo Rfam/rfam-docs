@@ -3,7 +3,7 @@ Rfam Documentation
 
 |docs|
 
-This repository is the source of Rfam documentation hosted on Read The Docs.
+This repository is the source of `Rfam documentation <http://rfam.readthedocs.io/en/latest/>`_ hosted on Read The Docs.
 
 Installation instructions
 ==========================
@@ -17,7 +17,7 @@ Auto-reload on file change: ``sphinx-autobuild source build``
 Contact
 ========
 
-If you have any questions or feedback, feel free to `submit a GitHub issue` <https://github.com/Rfam/docs/issues>` or send an email at *rfam-help@ebi.ac.uk*. 
+If you have any questions or feedback, feel free to `submit a GitHub issue` <https://github.com/Rfam/docs/issues>`_ or send an email at *rfam-help@ebi.ac.uk*. 
 
 .. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
     :alt: Documentation Status
