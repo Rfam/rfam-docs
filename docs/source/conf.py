@@ -29,7 +29,6 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
     'sphinx.ext.githubpages',
 ]
