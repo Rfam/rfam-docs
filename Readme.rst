@@ -8,7 +8,7 @@ This repository is the source of Rfam documentation hosted on Read The Docs.
 Installation instructions
 ==========================
 
-Install dependencies: `pip install -r requirements.txt
+Install dependencies: `pip install -r requirements.txt`
 
 Generate documentation: `make html`
 
@@ -17,7 +17,7 @@ Auto-reload on file change: `sphinx-autobuild source build`
 Contact
 ========
 
-If you have any questions or feedback, feel free to [submit an issue](https://github.com/Rfam/docs/issues) on GitHub or send an email at *rfam-help@ebi.ac.uk*. 
+If you have any questions or feedback, feel free to `submit a GitHub issue` <https://github.com/Rfam/docs/issues>` or send an email at *rfam-help@ebi.ac.uk*. 
 
 .. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
     :alt: Documentation Status
