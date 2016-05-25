@@ -8,11 +8,11 @@ This repository is the source of Rfam documentation hosted on Read The Docs.
 Installation instructions
 ==========================
 
-Install dependencies: `pip install -r requirements.txt`
+Install dependencies: ``pip install -r requirements.txt``
 
-Generate documentation: `make html`
+Generate documentation: ``make html``
 
-Auto-reload on file change: `sphinx-autobuild source build`
+Auto-reload on file change: ``sphinx-autobuild source build``
 
 Contact
 ========
