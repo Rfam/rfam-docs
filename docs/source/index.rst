@@ -6,7 +6,6 @@
 Welcome to Rfam documentation!
 ================================
 
-|build-status| |docs|
 
 Contents:
 
@@ -32,3 +31,7 @@ Links
 
 * :ref:`search`
 
+.. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://rfam.readthedocs.io/en/latest/?badge=latest
