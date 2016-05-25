@@ -1,6 +1,8 @@
 # Rfam Documentation
 
-This repository is the source of Rfam documentation to be hosted on Read The Docs.
+|build-status| |docs|
+
+This repository is the source of Rfam documentation hosted on Read The Docs.
 
 ## Installation instructions
 
