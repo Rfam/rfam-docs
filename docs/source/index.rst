@@ -6,13 +6,7 @@
 Welcome to Rfam documentation!
 ================================
 
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-   
-   database
+|docs|
 
 Introduction
 =============
@@ -21,10 +15,18 @@ Introduction
 consensus secondary structures, and predicted homologues. This website, maintained by the `Rfam Team <http://rfam.xfam.org/help#tabview=tab10>`_,
 complements the `Help section <http://rfam.xfam.org/help>`_ of the Rfam website.
 
+Contents
+=========
+
+.. toctree::
+   :maxdepth: 3
+   
+   database
+
 Get in touch
 =============
 
-If you have any questions or feedback, feel free to `submit an issue <https://github.com/Rfam/docs/issues>`_ on GitHub or send an email at *rfam-help@ebi.ac.uk*. 
+If you have any questions or feedback, feel free to `submit a GitHub issue <https://github.com/Rfam/docs/issues>`_ or email us at **rfam-help@ebi.ac.uk**.
 
 Links
 ==================
