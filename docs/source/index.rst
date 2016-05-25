@@ -6,6 +6,8 @@
 Welcome to Rfam documentation!
 ================================
 
+|build-status| |docs|
+
 Contents:
 
 .. toctree::
