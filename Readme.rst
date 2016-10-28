@@ -5,10 +5,8 @@ Rfam Documentation
 
 This repository is the source of `Rfam documentation <http://rfam.readthedocs.io/en/latest/>`_ hosted on Read The Docs.
 
-Installation instructions
-==========================
-
-**First time setup**
+Installation
+============
 
 .. code:: bash
 
@@ -22,28 +20,30 @@ Installation instructions
   cd /path/to/rfam-docs
   pip install -r requirements.txt
 
-**Workflow**
+Editing workflow
+================
 
-.. code:: bash
+1. Install documentation
 
-  cd docs
-  sphinx-autobuild source build
+2. Build and view HTML output locally
 
-The documentation will be served at http://127.0.0.1:8000.
+    .. code:: bash
 
-**Generate documentation**
+      cd docs
+      sphinx-autobuild source build
 
-.. code:: bash
+    The documentation will be available at http://127.0.0.1:8000.
 
-  cd docs
-  make html
+3. Make changes
 
-The output will be in the ``docs/build`` folder.
+4. Commit your changes in a new branch or a fork
+
+5. Send a pull request on GitHub
 
 Contact
 ========
 
-If you have any questions or feedback, feel free to `submit a GitHub issue <https://github.com/Rfam/docs/issues>`_ or email us at *rfam-help@ebi.ac.uk*.
+If you have any questions or feedback, feel free to `submit a new issue <https://github.com/Rfam/docs/issues>`_ or email us at *rfam-help@ebi.ac.uk*.
 
 .. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
     :alt: Documentation Status
