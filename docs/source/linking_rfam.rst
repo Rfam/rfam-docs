@@ -3,7 +3,8 @@ How to link to Rfam?
 
 You can refer to Rfam families either by accession or ID. You can also refer to a family by "entry", although this is a convenience that should be used only if you're not sure if what you have is an accession or an ID.
 
-Rfam accession numbers are more stable between releases than IDs and we **strongly** recommend that you link by accession number.
+.. HINT::
+    Rfam accession numbers are more stable between releases than IDs and we **strongly** recommend that you link by accession number.
 
 Here are some examples of linking to Rfam:
 
