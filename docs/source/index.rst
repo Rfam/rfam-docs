@@ -23,6 +23,7 @@ Contents
 
    about-rfam
    building-families
+   ftp-help
    database
 
 Get in touch

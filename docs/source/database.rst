@@ -1,4 +1,5 @@
-Public MySQL Database 
+.. _ftp_help_link:
+Public MySQL Database
 ======================
 
 Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database containing the latest version of Rfam data. The database will be updated with each release. To access old versions of the database download SQL dumps from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
