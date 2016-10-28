@@ -1,4 +1,4 @@
-Public MySQL Database 
+Public MySQL Database
 ======================
 
 Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database containing the latest version of Rfam data. The database will be updated with each release. To access old versions of the database download SQL dumps from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
@@ -41,8 +41,8 @@ Table                 Description
 family                 a list of all Rfam families and family specific information (family accession, family name, description etc.)
 rfamseq                a list of all analysed sequences including INSDC accessions, taxonomy id etc.
 full_region            a list of all sequences annotated with Rfam families including  INSDC accessions, start and end coordinates, bit scores etc.
-clan                   description of all Rfam clans 
-clan_membership        a list of all Rfam families per clan 
+clan                   description of all Rfam clans
+clan_membership        a list of all Rfam families per clan
 taxonomy               NCBI taxonomy identifiers
 =================    ================================================================================================================================
 
@@ -81,7 +81,7 @@ Retrieve all snoRNA families found in Mammals
 
   SELECT fr.rfam_acc, fr.rfamseq_acc, fr.seq_start, fr.seq_end, f.type
   FROM full_region fr, rfamseq rf, taxonomy tx, family f
-  WHERE 
+  WHERE
   rf.ncbi_id = tx.ncbi_id
   AND f.rfam_acc = fr.rfam_acc
   AND fr.rfamseq_acc = rf.rfamseq_acc
