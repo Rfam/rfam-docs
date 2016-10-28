@@ -12,6 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import datetime
 import sys
 import os
 
@@ -48,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Rfam'
-copyright = u'2016, Rfam Team'
+copyright = u"Rfam Team, {}".format(datetime.datetime.now().year)
 author = u'Rfam Team'
 
 # The version info for the project you're documenting, acts as replacement for
