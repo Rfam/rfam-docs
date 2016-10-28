@@ -24,6 +24,7 @@ Contents
    about-rfam
    building-families
    database
+   website-updates
 
 Get in touch
 =============
