@@ -22,6 +22,7 @@ Contents
    :maxdepth: 3
 
    about-rfam
+   searching-rfam
    building-families
    database
    website-updates
