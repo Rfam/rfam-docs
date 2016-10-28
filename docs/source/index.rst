@@ -26,6 +26,7 @@ Contents
    building-families
    genome-annotation
    database
+   rfam-team
    website-updates
 
 Get in touch
