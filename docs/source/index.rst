@@ -26,6 +26,7 @@ Contents
    building-families
    genome-annotation
    linking-rfam
+   ftp-help
    database
    rfam-team
    website-updates
