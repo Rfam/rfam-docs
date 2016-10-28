@@ -3,9 +3,12 @@ About Rfam
 
 The Rfam database is a collection of RNA sequence families of
 structural RNAs including non-coding RNA genes as well as
-cis-regulatory elements. Each family is represented by multiple
-sequence alignments and covariance models (CMs). You can use the Rfam
-website to obtain information about an individual family, or browse
+cis-regulatory elements.
+
+Each family is represented by multiple
+sequence alignments and covariance models (CMs).
+You can use the `Rfam website <http://rfam.xfam.org>`_
+to obtain information about an individual family, or browse
 our families and genome annotations. Alternatively you can download
 all of the Rfam data from our `FTP site <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
 
