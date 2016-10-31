@@ -24,6 +24,7 @@ Contents
    about-rfam
    searching-rfam
    building-families
+   faq
    genome-annotation
    linking-rfam
    rest-api
