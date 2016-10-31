@@ -6,7 +6,6 @@ Rfam `FTP site <ftp://ftp.ebi.ac.uk/pub/databases/Rfam>`_.
 Some of these files may be very large (of the order of several hundred megabytes).
 Please check the sizes before trying to download them over a slow connection.
 
-
 Documentation
 -------------
 
@@ -16,8 +15,6 @@ Documentation
   Public Domain Information for Rfam
 `USERMAN <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/USERMAN>`_
   A description of the Rfam flatfile formats
-
-
 
 Sequences, Alignments, Models and Trees
 ---------------------------------------
@@ -32,8 +29,6 @@ Sequences, Alignments, Models and Trees
   List of sequence regions making up the full family membership for each family
 `fasta_files <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_
   Directory containing the sequences for all significant hits per family
-
-
 
 Rfam database dumps
 -------------------
