@@ -28,6 +28,7 @@ Contents
    glossary
    genome-annotation
    linking-rfam
+   ftp-help
    rest-api
    database
    rfam-team
