@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Rfam'
+project = u'Rfam Help'
 copyright = u"Rfam Team, {}".format(datetime.datetime.now().year)
 author = u'Rfam Team'
 
