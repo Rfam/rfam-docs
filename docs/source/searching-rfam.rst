@@ -155,11 +155,8 @@ convenient to `run Infernal searches locally <TODO>`_.
 Search by entry type
 --------------------
 
-Each family in Rfam is assigned to a "type" category, based on
-its function. These categories are hierarchical such that an entry
-classified as a ncRNA *Gene* can be classified further as a
-*Gene;snoRNA*, which can in turn be classified further as
-*Gene;snoRNA;CD-box*.
+You can `search by entry type <http://rfam.xfam.org/search#tabview=tab4>`_
+to view or download a list of families by type.
 
 Here is a list of Rfam ncRNA types:
 
@@ -187,10 +184,6 @@ Here is a list of Rfam ncRNA types:
   * Gene; tRNA;
 
 * Intron;
-
-The "search by type" form allows you to browse the families according to
-these categories. The tick boxes at each level in the tree diagram allow
-you to access the families assigned at each type level.
 
 -----------------------------
 
