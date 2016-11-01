@@ -17,8 +17,8 @@ European Bioinformatics Institute
 Collaborators
 -------------
 
-* `Sean Eddy <http://eddylab.org/people.html>`_ (Harvard University) - founding developer and author of Infernal software*
-* Eric Nawrocki (NCBI) - developer of Infernal software*
+* `Sean Eddy <http://eddylab.org/people.html>`_ (Harvard University) - founding developer and author of Infernal software
+* Eric Nawrocki (NCBI) - developer of Infernal software
 
 Previous contributors
 ---------------------
