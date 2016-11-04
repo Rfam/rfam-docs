@@ -31,6 +31,7 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.ifconfig',
+    'sphinx.ext.autosectionlabel',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -57,7 +58,7 @@ author = u'Rfam Team'
 # built documents.
 #
 # The short X.Y version.
-version = u'12.1'
+version = u''
 # The full version, including alpha/beta/rc tags.
 release = u'1'
 
@@ -183,7 +184,7 @@ html_static_path = ['ystatic']
 #html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

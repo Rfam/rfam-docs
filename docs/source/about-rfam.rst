@@ -12,6 +12,11 @@ to obtain information about an individual family, or browse
 our families and genome annotations. Alternatively you can download
 all of the Rfam data from our `FTP site <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
 
+.. HINT::
+
+  Take an `quick tour <https://www.ebi.ac.uk/training/online/course/rfam-quick-tour>`_
+  of Rfam to find out more about the project.
+
 For each Rfam family we provide:
 
 **Summary page**

@@ -1,8 +1,3 @@
-.. Rfam documentation master file, created by
-   sphinx-quickstart on Wed May 25 11:56:25 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Rfam Help
 =========
 
@@ -28,7 +23,8 @@ Contents
    glossary
    genome-annotation
    linking-rfam
-   rest-api
+   ftp-help
+   api
    database
    rfam-team
    website-updates

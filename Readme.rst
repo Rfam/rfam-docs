@@ -20,12 +20,17 @@ Installation
   cd /path/to/rfam-docs
   pip install -r requirements.txt
 
-Editing workflow
-================
+How to contribute
+=================
+
+Editing locally
+---------------
+
+1. Fork the repo or create a new branch
 
 1. Install documentation
 
-2. Build and view HTML output locally
+1. Build and view HTML output locally
 
     .. code:: bash
 
@@ -34,11 +39,20 @@ Editing workflow
 
     The documentation will be available at http://127.0.0.1:8000.
 
-3. Make changes
+1. Make changes
 
-4. Commit your changes in a new branch or a fork
+1. Commit your changes
 
-5. Send a pull request on GitHub
+1. Send a pull request
+
+Editing on GitHub
+-----------------
+
+1. Fork the repo or create a new branch
+
+1. Make changes `using GitHub interface <https://help.github.com/articles/editing-files-in-your-repository/>`_
+
+1. Send a pull request
 
 Contact
 ========

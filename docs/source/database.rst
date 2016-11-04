@@ -1,7 +1,11 @@
+.. _ftp_help_link:
 Public MySQL Database
 ======================
 
-Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database containing the latest version of Rfam data. The database will be updated with each release. To access old versions of the database download SQL dumps from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
+Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database
+containing the latest version of Rfam data. The database will be updated with each release.
+To access old versions of the database download SQL dumps
+from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
 
 Connection details
 ------------------
@@ -55,7 +59,9 @@ Example queries
 Retrieve all rat sequence coordinates annotated with Rfam families
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-While it is possible to get a list of Rfam families found in a species using the `taxonomy search <http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3>`_, with an SQL query one can access sequence coordinates of each ncRNA:
+While it is possible to get a list of Rfam families found in a species
+using the `taxonomy search <http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3>`_,
+with an SQL query one can access sequence coordinates of each ncRNA:
 
 .. code-block:: sql
 

@@ -9,8 +9,10 @@ access all of the search methods that we offer:
   :local:
 
 Additionally, every page in the Rfam site includes a `Browse <http://rfam.xfam.org/browse>`_ link in
-the page header, which you can use to browse the Rfam families by name
-or by species name.
+the page header, which you can use to explore Rfam
+`families <http://rfam.xfam.org/families>`_,
+`clans <http://rfam.xfam.org/clans>`_,
+and `motifs <http://rfam.xfam.org/motifs>`_.
 
 "Jump to" search
 ----------------
@@ -62,7 +64,7 @@ several different sections of the Rfam database:
 
 * text fields for Rfam families, such as family descriptions and identifiers
 * Rfam associated Wikipedia entries
-* Literature reference titles and authors
+* literature reference titles and authors
 * PDB structures
 
 Your keyword should be a simple text string (letters and numbers),
@@ -146,18 +148,15 @@ Large scale batch searches (more than 1,000 sequences)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have a large number of nucleotide searches, it may be more
-convenient to `run Rfam locally <TODO>`_.
+convenient to `run Infernal searches locally <TODO>`_.
 
 -------------------------------------
 
 Search by entry type
 --------------------
 
-Each family in Rfam is assigned to a "type" category, based on
-its function. These categories are hierarchical such that an entry
-classified as a ncRNA *Gene* can be classified further as a
-*Gene;snoRNA*, which can in turn be classified further as
-*Gene;snoRNA;CD-box*.
+You can `search by entry type <http://rfam.xfam.org/search#tabview=tab4>`_
+to view or download a list of families by type.
 
 Here is a list of Rfam ncRNA types:
 
@@ -185,10 +184,6 @@ Here is a list of Rfam ncRNA types:
   * Gene; tRNA;
 
 * Intron;
-
-The "search by type" form allows you to browse the families according to
-these categories. The tick boxes at each level in the tree diagram allow
-you to access the families assigned at each type level.
 
 -----------------------------
 
