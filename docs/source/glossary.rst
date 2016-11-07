@@ -62,15 +62,15 @@ Sequence region
 
 A single segment of nucleotide sequence in our alignments. Multiple sequence regions from a single EMBL sequence may be in the same family.
 
-Type
-----
-
-A simple functional classification we use for our families. This is our own ontology and does not current directly relate to the ontologies used by other databases. For a full list of our current ontologies see the help section on `searching by family type <TO DO>`_.
-
 Stockholm format
 ----------------
 
 A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_.
+
+Type
+----
+
+A simple functional classification we use for our families. This is our own ontology and does not current directly relate to the ontologies used by other databases. For a full list of RNA types in our current ontology see the :ref:`search by entry type` section.
 
 WAR
 ---
