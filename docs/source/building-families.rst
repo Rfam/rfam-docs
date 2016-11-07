@@ -138,4 +138,4 @@ this annotation and we would encourage you to do so.
 Phylogenetic trees
 ------------------
 
-All our phylogenetic trees are now generated using `fasttree <http://www.microbesonline.org/fasttree/>`_.
+All our phylogenetic trees are generated using `fasttree <http://www.microbesonline.org/fasttree/>`_.
