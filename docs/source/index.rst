@@ -24,9 +24,12 @@ Contents
    genome-annotation
    linking-rfam
    ftp-help
+   citing-rfam
    api
    database
    rfam-team
+   privacy
+   contact-us
    website-updates
 
 Get in touch
