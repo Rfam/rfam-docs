@@ -69,7 +69,7 @@ Covariance Models
 From the seed alignment, we use the `Infernal software <http://eddylab.org/infernal/>`_ to build a
 probabilistic model (covariance model or CM) for this family. Useful
 references on stochastic free grammars and covariance models can be
-found in the `citing Rfam <TODO>`_
+found in the :ref:`Citing Rfam`
 section. This model is then used to search the *rfamseq*
 database for other possible homologs.
 
