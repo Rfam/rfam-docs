@@ -1,6 +1,8 @@
 Glossary
 ========
-These are some of the commonly used terms in the Rfam website.
+
+.. contents::
+  :local:
 
 ClustalW
 --------
