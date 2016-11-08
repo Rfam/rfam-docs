@@ -39,7 +39,7 @@ We use the following `cookie <http://en.wikipedia.org/wiki/HTTP_cookie>`_ to mai
 
 In addition to this Rfam-specific cookie, `GA uses a series of cookies <http://code.google.com/apis/analytics/docs/concepts/gaConceptsOverview.html>`_. You can read more about these in the GA documentation , or in EMBL-EBI's `cookie policy <http://www.ebi.ac.uk/about/cookies#cookies>`_.
 
-If you are at all concerned about the use of cookies in the Pfam site, you are free to block all cookies from this site and you should not experience any problems. You may see some unintended behaviour, such as being notified of all new features every time you visit the index page, but the core functionality of the site should be unaffected.
+If you are at all concerned about the use of cookies in the Rfam site, you are free to block all cookies from this site and you should not experience any problems. You may see some unintended behaviour, such as being notified of all new features every time you visit the index page, but the core functionality of the site should be unaffected.
 
 Third-party javascript libraries
 --------------------------------
