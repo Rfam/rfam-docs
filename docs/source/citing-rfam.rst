@@ -3,7 +3,7 @@ Citing Rfam
 
 Rfam makes use of a large amount of publicly available data, especially published multiple sequence alignments and secondary structures, and repackages these data in a single searchable and sustainable resource. We have made every effort to credit individual sources on family pages. If you find any of the data presented here useful, please also be sure to credit the primary source also.
 
-Rfam References
+Rfam references
 ---------------
 `Rfam 12.0: updates to the RNA families database <http://nar.oxfordjournals.org/content/43/D1/D130>`_
 	| E.P. Nawrocki, S.W. Burge, A. Bateman, J. Daub, R.Y. Eberhardt, S.R. Eddy, E.W. Floden, P.P. Gardner, T.A. Jones, J.T. and R.D. Finn
