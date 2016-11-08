@@ -1,5 +1,5 @@
-References & Bibliography
-=========================
+Citing Rfam
+===========
 
 Rfam makes use of a large amount of publicly available data, especially published multiple sequence alignments and secondary structures, and repackages these data in a single searchable and sustainable resource. We have made every effort to credit individual sources on family pages. If you find any of the data presented here useful, please also be sure to credit the primary source also.
 
@@ -40,7 +40,7 @@ Covariance models and stochastic context-free grammars
 	| E.P. Nawrocki
 	| **Methods in Molecular Biology** (2014) 1097:163-97
 
-`Infernal 1.1: 100-fold Faster RNA Homology Searches <http://www.ncbi.nlm.nih.gov/pubmed/24008419>`_ 
+`Infernal 1.1: 100-fold Faster RNA Homology Searches <http://www.ncbi.nlm.nih.gov/pubmed/24008419>`_
 	| E. P. Nawrocki, S. R. Eddy
 	| **Bioinformatics** (2013) 29:2933-2935
 

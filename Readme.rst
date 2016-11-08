@@ -20,39 +20,36 @@ Installation
   cd /path/to/rfam-docs
   pip install -r requirements.txt
 
+  # serve documentation locally at http://127.0.0.1:8000
+  cd docs
+  sphinx-autobuild source build
+
 How to contribute
 =================
 
-Editing locally
----------------
+Edit on GitHub
+--------------
 
 1. Fork the repo or create a new branch
 
-1. Install documentation
+2. Make changes `using GitHub interface <https://help.github.com/articles/editing-files-in-your-repository/>`_
 
-1. Build and view HTML output locally
+3. Send a pull request
 
-    .. code:: bash
-
-      cd docs
-      sphinx-autobuild source build
-
-    The documentation will be available at http://127.0.0.1:8000.
-
-1. Make changes
-
-1. Commit your changes
-
-1. Send a pull request
-
-Editing on GitHub
------------------
+Edit locally
+------------
 
 1. Fork the repo or create a new branch
 
-1. Make changes `using GitHub interface <https://help.github.com/articles/editing-files-in-your-repository/>`_
+2. Install documentation
 
-1. Send a pull request
+3. Build and view HTML output locally
+
+4. Make changes
+
+5. Commit and push to GitHub
+
+6. Send a pull request
 
 Contact
 ========

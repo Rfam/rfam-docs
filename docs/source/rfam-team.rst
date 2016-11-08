@@ -1,7 +1,7 @@
-The Rfam Consortium
-===================
+Rfam Team
+=========
 
-The Rfam database is curated and maintained
+The `Rfam database <http://rfam.xfam.org>`_ is curated and maintained
 at the `European Bioinformatics Institute <http://www.ebi.ac.uk>`_ in Cambridge, UK.
 The resource is a collaboration with researchers from `Sean Eddy lab <http://eddylab.org/>`_ at Harvard University, USA.
 
@@ -40,4 +40,4 @@ Previous contributors
 
 Rfam is a collaborative venture and we hope to be able to interact
 with as many people as possible to provide a quality database. Please
-`get in touch <TODO>`_ with us for information.
+:ref:`Contact us` for information.

@@ -35,7 +35,7 @@ We will group sequences into a "family" where we can identify sequence or second
 
 When we set this cut off threshold, we are essentially deciding that any sequences that score above the threshold are true, homologous members of the family, whilst those below are "chance hits". This discrimination between true and false is usually very clear if we have a representative seed alignment.
 
-Occasionally, for various biological reasons, it can be extremely difficult to get good resolution between true and false predictions. In such case we make an informed decision on where the cutoff should be. As a result, some families may contain false positives (often pseudogenes) or may also lose some true positives below the threshold. In such cases we will have made the best choice we can in order to limit the false positive and loss of true positives. If you have queries about the membership of any of our families, please do `contact us <TO DO>`_ and we will try to clarify or resolve the problem.
+Occasionally, for various biological reasons, it can be extremely difficult to get good resolution between true and false predictions. In such case we make an informed decision on where the cutoff should be. As a result, some families may contain false positives (often pseudogenes) or may also lose some true positives below the threshold. In such cases we will have made the best choice we can in order to limit the false positive and loss of true positives. If you have queries about the membership of any of our families, please :ref:`contact us` and we will try to clarify or resolve the problem.
 
 How can I tell which are predicted and which are experimentally confirmed sequences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,11 +45,11 @@ You can study the descriptions of sequences extracted from the EMBL nucleotide d
 
 Why is my favourite sequence not in the family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The most likely reason is that it is not in the EMBL release that rfamseq is based on. With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide database. You can check which version we are currently using `here <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_. If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family, it is possible that our model may need to be improved. Please `contact us <TO DO>`_ with the relevant information and we will decide whether the sequence should indeed be included and, if so, we will try to improve our model.
+The most likely reason is that it is not in the EMBL release that rfamseq is based on. With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide database. You can check which version we are currently using `here <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_. If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family, it is possible that our model may need to be improved. Please :ref:`contact us` with the relevant information and we will decide whether the sequence should indeed be included and, if so, we will try to improve our model.
 
 Where can I find out more about RNA sequence analysis/covariance models/SCFGs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The `Infernal <http://eddylab.org/infernal/>`_ software package, which is an essential companion to the Rfam database, now has extensive documentation, along with some description of how covariance models work for RNA sequence analysis. Background and theory can also be found in the excellent book `Biological Sequence Analysis <TO DO>`_ by Richard Durbin, Sean Eddy, Anders Krogh, and Graeme Mitchison (Cambridge University Press, 1998). For more references see the `Citing Rfam tab <TO DO>`_.
+The `Infernal <http://eddylab.org/infernal/>`_ software package, which is an essential companion to the Rfam database, now has extensive documentation, along with some description of how covariance models work for RNA sequence analysis. Background and theory can also be found in the excellent book `Biological Sequence Analysis <http://eddylab.org/cupbook.html>`_ by Richard Durbin, Sean Eddy, Anders Krogh, and Graeme Mitchison (Cambridge University Press, 1998). For more references see :ref:`Citing Rfam`.
 
 Searching
 ---------
@@ -91,7 +91,7 @@ Unfortunately, this has not been implemented yet. There are plans in place to mo
 
 How can I download all Rfam sequences for my favourite species?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Unfortunately, this has not been implemented yet. This type of query can potentially return huge amounts of data, enough to scare our our database administrators. There are plans in place to implement a `Biomart <http://www.biomart.org>`_ interface that will allow these queries. Meanwhile, if you `contact us <TO DO>`_ and `ask us <TO DO>`_ very nicely, and we have have time, then one of our engineers may be able to help.
+Unfortunately, this has not been implemented yet. Please :ref:`contact us` if you need help.
 
 The "Taxonomy" tab on the search page will allow you to perform taxonomic queries. In fact, this function also allows you to search with queries from internal nodes of the NCBI taxonomic tree. However, the results are only returned on the family level, not the sequence level.
 
@@ -102,9 +102,8 @@ I would like to submit a family
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Great! We are very keen for the community to help keep us updated on new families. Ideally, a new family for Rfam should contain elements (RNA sequences) that have some known functional classification, are evolutionarily conserved and have evidence for a secondary structure. The families should not solely be based on prediction only, e.g. RNAz, EvoFold, or QRNA predictions, nor solely on transcriptomic data, e.g. tiling array or deep sequencing. For more detailed information on how to submit a family, please read the rest of the Rfam documentation but, if you have any queries, please do `contact us <TO DO>`_.
 
-If your family is sufficiently interesting, or if you have several of them, you may be interested in publishing your family in the RNA families track that is now available through `RNA Biology <TO DO>`_.
+If your family is sufficiently interesting, or if you have several of them, you may be interested in publishing your family in the RNA families track that is now available through the `RNA Biology <http://www.tandfonline.com/toc/krnb20/current>`_ journal.
 
 How can I edit a SEED alignment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We do not currently provide public access to edit our alignments. This is advantageous in that it maintains our standard of alignments and structures, but, if you feel our seed alignment/structure annotations can and should be improved, please `contact us <TO DO>`_, preferably supplying us with a new alignment, in Stockholm format, and we will do our best to incorporate the improvements.
-
+We do not currently provide public access to edit our alignments. This is advantageous in that it maintains our standard of alignments and structures, but, if you feel our seed alignment/structure annotations can and should be improved, please :ref:`contact us`, preferably supplying us with a new alignment, in Stockholm format, and we will do our best to incorporate the improvements.
