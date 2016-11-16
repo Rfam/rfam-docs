@@ -3,9 +3,6 @@
 Genome annotation
 =================
 
-Annotating non-coding RNAs in complete genomes
-----------------------------------------------
-
 Before trying to annotate your own genome sequences on your local
 hardware or submitting lots of sequences to Rfam via the website, please
 check that the following resources do not provide the annotation for you:
@@ -21,11 +18,11 @@ conjunction with the `Infernal software <http://eddylab.org/infernal/>`_.
 Example of using Infernal and Rfam to annotate RNAs in an archaeal genome
 -------------------------------------------------------------------------
 
-.. note:: This example is from pages 27 and 28 of the Infernal v1.1.2
+.. .. note:: This example is from pages 27 and 28 of the Infernal v1.1.2
           `User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_
 
 The instructions below will walk you through how to annotate the
-Methanobrevibacter ruminantium genome (NC_013790.1) for non-coding
+*Methanobrevibacter ruminantium* genome (NC_013790.1) for non-coding
 RNAs using Rfam and Infernal. The files needed are included in the
 Infernal software package, which you will download in step 1.
 
@@ -38,7 +35,7 @@ Infernal software package, which you will download in step 1.
   $ cd infernal-1.1.2
   $ make
    
-(If you do not have wget installed and in your path, download the infernal-1.1.2.tar.gz `here:
+(If you do not have wget installed and in your path, download infernal-1.1.2.tar.gz `here:
 <http://eddylab.org/infernal/infernal-1.1.2.tar.gz>`_.)
 
 To compile and run a test suite to make sure all is well, you can
@@ -55,8 +52,8 @@ system, do::
 
 By default, programs are installed in /usr/local/bin and man pages
 in /usr/local/share/man/man1/. You can change the /usr/localprefix to
-any directory you want using the ./configure
---prefix option, as in ./configure --prefix /the/directory/you/want.
+any directory you want using the ``./configure
+--prefix`` option, as in ``./configure --prefix /the/directory/you/want``.
 
 Additional programs from the Easel library are available in
 easel/miniapps/. You can install these too if you'd like, but this is
@@ -69,7 +66,7 @@ Step 4 below involves the use of one of these Easel programs (esl-seqstat).
 For more information on customizing the Infernal installation, see
 the Userguide that comes with Infernal
 
-2. Download Rfam CMs from `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_.
+2. Download the Rfam library of CMs from `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_.
 
 ::
 
@@ -79,13 +76,14 @@ the Userguide that comes with Infernal
 (If you do not have wget installed and in your path, download the
 file from a browser.)
 
-
 3. Use the Infernal program cmpress to index the Rfam.cm file
    
 ::
 
    $ cmpress Rfam.cm
 
+This step is required before cmscan can be run in step 5.
+   
 4. Determine the total database size for the genome you are annotating. 
 
 For the purposes of Infernal, the total database size is the number of
@@ -113,54 +111,100 @@ nucleotides::
 
   Total # of residues: 2937203
 
-Since we want millions of nucleotides on both strands, we multiple
+Because we want millions of nucleotides on both strands, we multiple
 this by 2, and divide by 1,000,000 to get 5.874406. This number will
 be used in step 5.
 
-5. Use Infernal's cmscan program to annotate RNAs represented in Rfam in the *Methanobrevibacter ruminantium* genome.
+5. Use the cmscan program to annotate RNAs represented in Rfam in the *Methanobrevibacter ruminantium* genome.
+   
+::
+   
+   $ cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin testsuite/Rfam.12.1.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
 
-   $ cmscan -Z 5.874406 --rfam --cut_ga --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin testsuite/Rfam.12.1.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
-  
-The command line options used in the above command are as follows:
+.. note:: The above cmscan command assumes you are in the
+          infernal-1.1.2 directory from step 1. If not, you'll need to
+          supply the paths to the tutorial/mrum-genome.fa and
+          testsuite/Rfam.12.1.clanin files within the infernal-1.1.2
+          directory.
+   
+Explanations of the command line options used in the above command are as follows:
 
-  * ``-Z 5.874406`` this specifies the sequence size in millions of
-      nucleotides, it is the number computed in step 4, divided by 1
-      million. This option specifies that the E-values are accurate.
+:``-Z 5.874406``:
+   the sequence database size in millions of nucleotides is 5.874406, it is the
+   number computed in step 4. This option
+   ensures that the reported E-values are accurate.
+ 
+:``--cut_ga``:
+   specifies that the special Rfam GA (gathering) thresholds be used
+   to determine which hits are reported. These thresholds are stored
+   in the Rfam.cm file. Each model has its own GA bit score threshold,
+   which was determined by Rfam curators as the bit score at and above
+   which all hits are believed to be true homologs to the model. These
+   determinations were made based on observed hit results against the
+   large Rfamseq database used by Rfam (`Nawrocki et al., 2015 <http://nar.oxfordjournals.org/content/43/D1/D130>`_).
+   
+:``--rfam``:
+   run in "fast" mode, the same mode used for
+   Rfam annotation and determination of GA thresholds
+   
+:``--nohmmonly``:
+   all models, even those with zero basepairs, are run in CM mode (not
+   HMM mode). This ensures all GA cutoffs, which were determined in CM
+   mode for each model, are valid.
+   
+:``--tblout``:
+   a tabular output file will be created.
 
-  * *--rfam* Specifies that the filter pipeline run in fast mode, with
-       the same strict filters that are used for Rfam searches and for
-       other sequence databases larger than 20 Gb     
+:``--fmt 2``:
+   the tabular output file will be in format 2, which includes
+   annotation of overlapping hits.
 
-Further reference
------------------
+:``--clanin``:
+   Clan information should be read from the file
+   ``testsuite/Rfam.12.1.claninfo``. This file lists which models belong
+   to the same clan. Clans are groups of models that are homologous and
+   therefore it is expected that some hits to these models will
+   overlap. For example, the LSU rRNA archaea and LSU rRNA bacteria
+   models are both in the same clan.
 
-There are two publications related to genome annotation using Rfam
-and Infernal:
 
-* `Annotating functional RNAs in genomes using Infernal. EP
-  Nawrocki. In RNA sequence, structure and function: computational
-  and bioinformatic methods, J Gorodkin, WL Ruzzo, eds. Chapter
-  9. Springer Humana Press, 2014. <http://eddylab.org/publications/Nawrocki13/Nawrocki13-preprint.pdf>`_.
-
-* `Rfam 12.0: updates to the RNA families database. EP Nawrocki, SW
-  Burge, A Bateman, J Daub, RY Eberhardt, SR Eddy, EW Floden, PP
-  Gardner, TA Jones, J Tate, RD Finn. Nucleic Acids Res. 43:D130-7,226-32,
-  2015.
-
-The Rfam 12.0 publication includes a section "Using Rfam 12.0 for
-Genome Annotation" and Table 2 includes some running times for
-annotating various sized genomes using Infernal. 
-
-Compute
+Expected Running Times
 -------
 
-Covariance model searches are extremely computionally intensive. A small
-model (like tRNA) can search a sequence database at a rate of around
-300 bases/sec.
+CM searches are computationally expensive and searching large multi-Gb
+genomes with the roughly 2500 models in Rfam takes hundreds of CPU
+hours. However, you can parallelize by splitting up the input genome
+sequence file into multiple files (if the genome has multiple
+chromosomes) and running cmscan separately on each individual
+file. Also, you can run cmscan with multiple threads, as explained
+more below.
 
-The compute time scales roughly to the 4th power of the
-length of the RNA, so searching larger models quickly become infeasible
-without significant compute resources.
+The following timings are from Table 2 of (`Nawrocki et al., 2015
+<http://nar.oxfordjournals.org/content/43/D1/D130>`_). All searches
+were run as single execution threads on 3.0 GHz Intel Xeon
+processors. 
+
++------------------------------------+------------+------------------+---------+
+| Genome                             | Size (Mb)  | CPU time (hours) | Mb/hour |
++====================================+============+==================+=========+
+| *Homo sapiens*                     | 3099.7     | 650              | 4.8     |
++------------------------------------+------------+------------------+---------+
+| *Sus scrofa (pig)*                 | 2808.5     | 460              | 6.1     |
++------------------------------------+------------+------------------+---------+
+| *Caenorhabditis elegans*           | 100.3      | 20               | 5.2     |
++------------------------------------+------------+------------------+---------+
+| *Escherichia coli*                 |        4.6 | 0.46             |10.2     |
++------------------------------------+------------+------------------+---------+
+| *Methanocaldococcus jannaschii*    |        1.7 | 0.31             | 5.6     |
++------------------------------------+------------+------------------+---------+
+
+.. | *Drosophila melanogaster*       | 168.7      | 30               | 5.7     |
+.. | Human immunodeficiency virus (HIV) |        1.7 | 0.31             | 5.6     |
+
+cmscan will run in multithreaded mode by default, if
+multiple processors are available. Running with 8 threads with 8 cores
+should reduce the running times listed in the table above by about
+4-fold (reflecting about 50% efficiency versus single threaded).
 
 Specificity
 -----------
@@ -177,13 +221,13 @@ RNA, such as
 * `snoscan <http://lowelab.ucsc.edu/snoscan/>`_ for snoRNAs, and
 * `SRPscan <http://bio.lundberg.gu.se/srpscan/>`_ for SRP RNA.
 
-The generic Rfam approach has obvious advantages. However,
-the specialised programs often incorporate heuristics and
-family-specific information which may allow them to out-perform the
-general method. A comparison of Infernal versus some of these generic
-methods is presented in section 2.2 of a `2014 paper
-<https://www.ncbi.nlm.nih.gov/pubmed/24639160>`_ (by one of the authors
-of Infernal), `available here
+The generic Rfam approach has obvious advantages. However, the
+specialised programs often incorporate heuristics and family-specific
+information which may allow them to out-perform the general method. A
+comparison of Infernal versus some of these generic methods is
+presented in section 2.2 of a `2014 paper
+<https://www.ncbi.nlm.nih.gov/pubmed/24639160>`_ (by one of the
+authors of Infernal), `available here
 <http://eddylab.org/publications/Nawrocki13/Nawrocki13-preprint.pdf>`_.
 
 Pseudogenes
