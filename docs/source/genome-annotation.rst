@@ -18,9 +18,6 @@ conjunction with the `Infernal software <http://eddylab.org/infernal/>`_.
 Example of using Infernal and Rfam to annotate RNAs in an archaeal genome
 -------------------------------------------------------------------------
 
-.. .. note:: This example is from pages 27 and 28 of the Infernal v1.1.2
-          `User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_
-
 The instructions below will walk you through how to annotate the
 *Methanobrevibacter ruminantium* genome (NC_013790.1) for non-coding
 RNAs using Rfam and Infernal. The files needed are included in the
@@ -35,7 +32,7 @@ Infernal software package, which you will download in step 1.
   $ cd infernal-1.1.2
   $ make
    
-(If you do not have wget installed and in your path, download infernal-1.1.2.tar.gz `here:
+(If you do not have ``wget`` installed and in your path, download infernal-1.1.2.tar.gz `here
 <http://eddylab.org/infernal/infernal-1.1.2.tar.gz>`_.)
 
 To compile and run a test suite to make sure all is well, you can
@@ -56,15 +53,16 @@ any directory you want using the ``./configure
 --prefix`` option, as in ``./configure --prefix /the/directory/you/want``.
 
 Additional programs from the Easel library are available in
-easel/miniapps/. You can install these too if you'd like, but this is
-not done by default, in case you already have a copy of Easel
-separately installed::
+easel/miniapps/. You can install these too if you'd like.
+Step 4 below involves the use of one of these
+Easel programs (esl-seqstat). If you do not install these programs,
+you can use the executable files in easel/miniapps/. To install them::
 
   $ cd easel; make install
 
-Step 4 below involves the use of one of these Easel programs (esl-seqstat).
+
 For more information on customizing the Infernal installation, see
-the Userguide that comes with Infernal
+section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
 2. Download the Rfam library of CMs from `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_.
 
@@ -73,7 +71,7 @@ the Userguide that comes with Infernal
    $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz
    $ gunzip Rfam.cm.gz
 
-(If you do not have wget installed and in your path, download the
+(If you do not have ``wget`` installed and in your path, download the
 file from a browser.)
 
 3. Use the Infernal program cmpress to index the Rfam.cm file
@@ -105,6 +103,9 @@ this genome can be found in infernal-1.1.2/tutorial/, which you
 created in step 1. To determine the total size of this genome, do::
   
   $ esl-seqstat infernal-1.1.2/mrum-genome.fa
+
+.. note:: If you did not install the Easel miniapps in step 1, you can
+          run ``esl-seqstat`` from infernal-1.1.2/easel/miniapps/esl-seqstat.
 
 The output will include a line reporting the total number of
 nucleotides::
@@ -169,7 +170,7 @@ Explanations of the command line options used in the above command are as follow
 
 6. Remove hits from the tabular output file that have overlapping hits with better scores.
    This step is explained below after a discussion of the cmscan
-   output, here:
+   output, in the section: 
    `Removing lower-scoring overlaps from a tblout file`_.
 
 Understanding Infernal output
@@ -254,7 +255,8 @@ recommendation is to keep the hit amongst all overlapping hits that
 has the best (lowest) E-value. If the E-values are equal, keep the hit
 with the highest bit score. In the tabular output file (discussed
 below), overlapping hits are annotated, making it easy to remove lower
-scoring overlaps.
+scoring overlaps, as explained in the section: `Removing
+lower-scoring overlaps from a tblout file`_.
 
 After the list of hits you will find the hit alignments for each
 hit. Each alignment is preceded by a summary of each hit. For
@@ -389,13 +391,13 @@ three possible characters in this column:
    Indicates that this hit does overlap with at least one other hit on
    the same strand, but none of those hits are "better" hits. Here,
    hit A is "better" than hit B, if hit A's E-value is lower than hit
-   B's E-value or, if hit A and hit B have equal E-values but hit A
+   B's E-value or if hit A and hit B have equal E-values but hit A
    has a higher bit score than hit B. 
    
 :``=``:
    Indicates that this hit does overlap with at least one other hit
    on the same strand that is a "better" hit, given the definition of
-   better above. 
+   "better" above. 
    
 Removing lower-scoring overlaps from a tblout file
 --------------------------------------------------
