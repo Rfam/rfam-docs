@@ -95,6 +95,90 @@ Unfortunately, this has not been implemented yet. Please :ref:`contact us` if yo
 
 The "Taxonomy" tab on the search page will allow you to perform taxonomic queries. In fact, this function also allows you to search with queries from internal nodes of the NCBI taxonomic tree. However, the results are only returned on the family level, not the sequence level.
 
+Rfam and Infernal
+-----------------
+
+How do I filter Infernal output by Rfam family type?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sometimes it is useful to filter Infernal output based on Rfam family type, for
+example, if you are only interested in rRNA families.
+
+1. `Get a list of Rfam families <http://rfam.xfam.org/search#tabview=tab4>`_
+for each RNA type (see :ref:`Search by entry type`).
+
+  For example, selecting the **rRNA** checkbox gives the following list:
+
+  .. code-block:: none
+
+    RF00001	5S_rRNA	Gene; rRNA
+    RF00002	5_8S_rRNA	Gene; rRNA
+    RF00177	SSU_rRNA_bacteria	Gene; rRNA
+    RF01118	PK-G12rRNA	Gene; rRNA
+    RF01959	SSU_rRNA_archaea	Gene; rRNA
+    RF01960	SSU_rRNA_eukarya	Gene; rRNA
+    RF02540	LSU_rRNA_archaea	Gene; rRNA
+    RF02541	LSU_rRNA_bacteria	Gene; rRNA
+    RF02542	SSU_rRNA_microsporidia	Gene; rRNA
+    RF02543	LSU_rRNA_eukarya	Gene; rRNA
+    RF02545	SSU_trypano_mito	Gene; rRNA
+    RF02546	LSU_trypano_mito	Gene; rRNA
+    RF02547	mtPerm-5S	Gene; rRNA
+    RF02554	ppoRNA	Gene; rRNA
+    RF02555	hveRNA	Gene; rRNA
+
+2. Create a file on your computer called ``rfam-ids.txt`` with a list of Rfam ids:
+
+  .. code-block:: none
+
+    RF00001
+    RF00002
+    RF00177
+    RF01118
+    RF01959
+    RF01960
+    RF02540
+    RF02541
+    RF02542
+    RF02543
+    RF02545
+    RF02546
+    RF02547
+    RF02554
+    RF02555
+
+  .. TIP::
+
+    If you would like to download results as text, click **Show the unformatted list**
+    at the bottom of the `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
+
+3. Use the `grep <https://en.wikipedia.org/wiki/Grep>`_ command to filter Infernal results.
+
+  For instance, given an Infernal *tblout* file ``results.tblout``
+  (`example file <https://gist.githubusercontent.com/AntonPetrov/b7a3c27201d020449332815113ee294a/raw/d924423e179b55986ab477d3b776ac72ec08994c/results.tblout>`_),
+  run this command:
+
+  .. code-block:: bash
+
+    grep -f rfam-ids.txt results.tblout
+
+  It will print only the lines from ``results.tblout`` that contain Rfam ids
+  specified in ``rfam-ids.txt``.
+
+  Alternatively, if you want to **exclude** some families from your analysis,
+  you can use the following command:
+
+  .. code-block:: bash
+
+    grep -v -f rfam-ids.txt results.tblout
+
+  This will print only the lines that **do not** contain Rfam ids listed in
+  ``rfam-ids.txt``.
+
+You can use this procedure to filter Infernal resutls by **any** set of Rfam families.
+For example, you can get a list of Rfam families using :ref:`Taxonomy search`
+and get Infernal search results from families found in a specific taxonomic group.
+
 Other
 -----
 

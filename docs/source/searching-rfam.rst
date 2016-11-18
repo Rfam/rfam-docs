@@ -185,6 +185,11 @@ Here is a list of Rfam ncRNA types:
 
 * Intron;
 
+.. TIP::
+
+  If you would like to download results as text, click **Show the unformatted list**
+  at the bottom of the `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
+
 -----------------------------
 
 Taxonomy search
