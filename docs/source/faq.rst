@@ -149,9 +149,13 @@ for each RNA type (see :ref:`Search by entry type`).
 
   .. TIP::
 
-    If you would like to download results as text, click **Show the unformatted list**
-    at the bottom of the `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
-
+    If you would like to download the list of RNA families and types
+    as text, click **Show the unformatted list** at the bottom of the
+    `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
+    Then copy and paste into an editor and save the file for example
+    as ``rfam-types.txt``. You can then create the ``rfam-ids.txt``
+    file with the command ``cat rfam-types.txt | awk '{ print $1 }' > rfam-ids.txt``.
+    
 3. Use the `grep <https://en.wikipedia.org/wiki/Grep>`_ command to filter Infernal results.
 
   For instance, given an Infernal *tblout* file ``results.tblout``
@@ -175,7 +179,7 @@ for each RNA type (see :ref:`Search by entry type`).
   This will print only the lines that **do not** contain Rfam ids listed in
   ``rfam-ids.txt``.
 
-You can use this procedure to filter Infernal resutls by **any** set of Rfam families.
+You can use this procedure to filter Infernal results by **any** set of Rfam families.
 For example, you can get a list of Rfam families using :ref:`Taxonomy search`
 and get Infernal search results from families found in a specific taxonomic group.
 
