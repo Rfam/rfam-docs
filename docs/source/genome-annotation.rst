@@ -167,9 +167,30 @@ Explanations of the command line options used in the above command are as follow
    overlap. For example, the LSU rRNA archaea and LSU rRNA bacteria
    models are both in the same clan.
 
+Understanding Infernal output
+-----------------------------
+
+The above cmscan command will take at least several minutes and
+possibly up to about 30 minutes depending on the number of cores and
+speed of your computer. After it has finished, you will have two
+output files: mrum-genome.cmscan (standard output of cmscan) and
+mrum-genome.tblout (tabular output).
+
+cmscan standard output
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+Interpreting Infernal tabular output
+------------------------------------
+
+
+
 
 Expected Running Times
--------
+----------------------
 
 CM searches are computationally expensive and searching large multi-Gb
 genomes with the roughly 2500 models in Rfam takes hundreds of CPU
