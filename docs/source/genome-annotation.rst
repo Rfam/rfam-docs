@@ -3,6 +3,10 @@
 Genome annotation
 =================
 
+The Rfam library of covariance models can be used to search sequences
+(including whole genomes) for homologues to known non-coding RNAs, in
+conjunction with the `Infernal software <http://eddylab.org/infernal/>`_.
+
 Before trying to annotate your own genome sequences on your local
 hardware or submitting lots of sequences to Rfam via the website, please
 check that the following resources do not provide the annotation for you:
@@ -11,16 +15,12 @@ check that the following resources do not provide the annotation for you:
 * `Ensembl Genomes <http://ensemblgenomes.org/>`_
 * `UCSC Genome Browser <http://www.genome.ucsc.edu/>`_
 
-The Rfam library of covariance models can be used to search sequences
-(including whole genomes) for homologues to known non-coding RNAs, in
-conjunction with the `Infernal software <http://eddylab.org/infernal/>`_.
-
 Example of using Infernal and Rfam to annotate RNAs in an archaeal genome
 -------------------------------------------------------------------------
 
 The instructions below will walk you through how to annotate the
-*Methanobrevibacter ruminantium* genome (NC_013790.1) for non-coding
-RNAs using Rfam and Infernal. The files needed are included in the
+*Methanobrevibacter ruminantium* genome (`NC_013790.1 <https://www.ncbi.nlm.nih.gov/nuccore/NC_013790.1>`_)
+for non-coding RNAs using Rfam and Infernal. The files needed are included in the
 Infernal software package, which you will download in step 1.
 
 1. Download, build and install Infernal from `<http://eddylab.org/infernal/>`_
@@ -31,35 +31,34 @@ Infernal software package, which you will download in step 1.
   $ tar xf infernal-1.1.2.tar.gz
   $ cd infernal-1.1.2
   $ make
-   
-(If you do not have ``wget`` installed and in your path, download infernal-1.1.2.tar.gz `here
-<http://eddylab.org/infernal/infernal-1.1.2.tar.gz>`_.)
+
+If you do not have ``wget`` installed and in your path, download infernal-1.1.2.tar.gz `here
+<http://eddylab.org/infernal/infernal-1.1.2.tar.gz>`_.
 
 To compile and run a test suite to make sure all is well, you can
 optionally do::
-  
+
   $ make check
 
 You don’t have to install Infernal programs to run them. The newly
-compiled binaries are now in the src directory. You can run them
+compiled binaries are now in the *src* directory. You can run them
 from there. To install the programs and man pages somewhere on your
 system, do::
-    
+
   $ make install
 
-By default, programs are installed in /usr/local/bin and man pages
-in /usr/local/share/man/man1/. You can change the /usr/localprefix to
+By default, programs are installed in */usr/local/bin* and man pages
+in */usr/local/share/man/man1/*. You can change the */usr/localprefix* to
 any directory you want using the ``./configure
 --prefix`` option, as in ``./configure --prefix /the/directory/you/want``.
 
-Additional programs from the Easel library are available in
-easel/miniapps/. You can install these too if you'd like.
+Additional programs from the **Easel** library are available in
+*easel/miniapps/*. You can install these too if you'd like.
 Step 4 below involves the use of one of these
 Easel programs (esl-seqstat). If you do not install these programs,
-you can use the executable files in easel/miniapps/. To install them::
+you can use the executable files in *easel/miniapps/*. To install them::
 
   $ cd easel; make install
-
 
 For more information on customizing the Infernal installation, see
 section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
@@ -71,37 +70,37 @@ section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.p
    $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz
    $ gunzip Rfam.cm.gz
 
-(If you do not have ``wget`` installed and in your path, download the
-file from a browser.)
+If you do not have ``wget`` installed and in your path, `download the
+file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_ from a browser.
 
 3. Use the Infernal program cmpress to index the Rfam.cm file
-   
+
 ::
 
    $ cmpress Rfam.cm
 
 This step is required before cmscan can be run in step 5.
-   
-4. Determine the total database size for the genome you are annotating. 
+
+4. Determine the total database size for the genome you are annotating.
 
 For the purposes of Infernal, the total database size is the number of
 nucleotides that will be searched, in units of megabases (Mb, millions
-of nucleotides). So, it is the total number of nucleotides in all
-sequences that make up the genome, multiplied by two (because both
-strands will be searched), and divided by 1,000,000 (to convert to
+of nucleotides). So, it is the **total number of nucleotides** in all
+sequences that make up the genome, **multiplied by two** (because both
+strands will be searched), and **divided by 1,000,000** (to convert to
 millions of nucleotides).
 
 You will need to supply this number to Infernal to assure that the
 E-values reported by the cmscan program run in the next step are
-accurate. 
+accurate.
 
 You can use the esl-seqstat program from the Easel
 library that you built along with Infernal in step 1 to help with
-this. For this example, we will be annotating the genome of 
+this. For this example, we will be annotating the genome of
 *Methanobrevibacter ruminantium*, an archaeon. The sequence file with
-this genome can be found in infernal-1.1.2/tutorial/, which you
+this genome can be found in *infernal-1.1.2/tutorial/*, which you
 created in step 1. To determine the total size of this genome, do::
-  
+
   $ esl-seqstat infernal-1.1.2/mrum-genome.fa
 
 .. note:: If you did not install the Easel miniapps in step 1, you can
@@ -117,9 +116,9 @@ this by 2, and divide by 1,000,000 to get 5.874406. This number will
 be used in step 5.
 
 5. Use the cmscan program to annotate RNAs represented in Rfam in the *Methanobrevibacter ruminantium* genome.
-   
+
 ::
-   
+
    $ cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin testsuite/Rfam.12.1.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
 
 .. note:: The above cmscan command assumes you are in the
@@ -127,14 +126,14 @@ be used in step 5.
           supply the paths to the tutorial/mrum-genome.fa and
           testsuite/Rfam.12.1.clanin files within the infernal-1.1.2
           directory.
-   
+
 Explanations of the command line options used in the above command are as follows:
 
 :``-Z 5.874406``:
    the sequence database size in millions of nucleotides is 5.874406, it is the
    number computed in step 4. This option
    ensures that the reported E-values are accurate.
- 
+
 :``--cut_ga``:
    specifies that the special Rfam GA (gathering) thresholds be used
    to determine which hits are reported. See more in the section :ref:`Gathering cutoff`.
@@ -142,12 +141,12 @@ Explanations of the command line options used in the above command are as follow
 :``--rfam``:
    run in "fast" mode, the same mode used for
    Rfam annotation and determination of GA thresholds
-   
+
 :``--nohmmonly``:
    all models, even those with zero basepairs, are run in CM mode (not
    HMM mode). This ensures all GA cutoffs, which were determined in CM
    mode for each model, are valid.
-   
+
 :``--tblout``:
    a tabular output file will be created.
 
@@ -158,14 +157,15 @@ Explanations of the command line options used in the above command are as follow
 :``--clanin``:
    Clan information should be read from the file
    ``testsuite/Rfam.12.1.claninfo``. This file lists which models belong
-   to the same clan. Clans are groups of models that are homologous and
+   to the same clan. `Rfam clans <http://rfam.xfam.org/clans>`_
+   are groups of models that are homologous and
    therefore it is expected that some hits to these models will
    overlap. For example, the LSU rRNA archaea and LSU rRNA bacteria
    models are both in the same clan.
 
 6. Remove hits from the tabular output file that have overlapping hits with better scores.
    This step is explained below after a discussion of the cmscan
-   output, in the section: 
+   output, in the section:
    `Removing lower-scoring overlaps from a tblout file`_.
 
 Understanding Infernal output
@@ -192,7 +192,7 @@ The second section is a list of ranked top hits (sorted by E-value,
 most significant hit first). For ``cmscan`` output this section is
 broken down per-query sequence. In this example, there is only one
 sequence NC_013790.1. Here is the list of the top 25 hits (out of 78
-total): 
+total):
 
 .. literalinclude:: mrum-genome.cmscan
     :linenos:
@@ -203,7 +203,7 @@ The most important columns here are those labelled "E-value", "score",
 "modelname", "start" and "end", which are described below. For
 information on the other columns see the tutorial section (pages
 18-19) of the `Infernal User's
-Guide <http://eddylab.org/infernal/Userguide.pdf>`_)
+Guide <http://eddylab.org/infernal/Userguide.pdf>`_).
 
 :``E-value``:
    The E-value is the statistical significance of the hit: the
@@ -211,7 +211,7 @@ Guide <http://eddylab.org/infernal/Userguide.pdf>`_)
    size (measured by the total number of nucleotides) if the database
    contained only nonhomologous random sequences. The lower the E-value,
    the more significant the hit.
- 
+
 :``score``:
    The E-value is based on the bit score, which is in the "score"
    column. This is the log-odds score for the hit. Some people like to
@@ -225,12 +225,12 @@ Guide <http://eddylab.org/infernal/Userguide.pdf>`_)
    The name of the Rfam family/model this hit is to. The accession is
    not listed in this output, but is listed in the tabular output
    file, explained below.
-   
+
 :``start``:
    The start (first) position of the hit in the query sequence.
 
 :``stop``:
-   The stop (final) position of the hit in the query sequence. 
+   The stop (final) position of the hit in the query sequence.
    Immediately after this column is a single character denoting the
    strand of the hit: ``+`` for positive (Watson) strand and ``-`` for
    negative (Crick) strand. Also, for positive strand hits, the start
@@ -245,7 +245,9 @@ is because both models recognized this archael LSU rRNA sequence in
 this genome. Note that the LSU_rRNA_archaea score (2763.5 bits) is
 better than the LSU_rRNA_bacteria score (1872.9) indicating that the
 LSU_rRNA_archaea model is a better match (even though both hits have
-an E-value of 0). When dealing with overlapping hits, the general
+an E-value of 0).
+
+When dealing with overlapping hits, the general
 recommendation is to keep the hit amongst all overlapping hits that
 has the best (lowest) E-value. If the E-values are equal, keep the hit
 with the highest bit score. In the tabular output file (discussed
@@ -255,7 +257,7 @@ lower-scoring overlaps from a tblout file`_.
 
 After the list of hits you will find the hit alignments for each
 hit. Each alignment is preceded by a summary of each hit. For
-hit #33, a tRNA (RF00005) hit: 
+hit #33, a tRNA hit (`RF00005 <http://rfam.xfam.org/family/RF00005>`_):
 
 .. literalinclude:: mrum-genome.cmscan
     :linenos:
@@ -265,9 +267,9 @@ hit #33, a tRNA (RF00005) hit:
 This information is mostly redundant with the list of all hits at the
 top of the file, but is repeated here because it is useful to see
 adjacent to each hit alignment. After the summary, the hit alignment
-is displayed. 
+is displayed.
 
-understanding hit alignment annotation
+Understanding hit alignment annotation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: trna-cmscan-alignment.png
@@ -276,25 +278,28 @@ understanding hit alignment annotation
             Bottom: Three secondary structure diagrams showing the
             relationship between the alignment and the secondary
             structure of the Rfam tRNA model.
-            
+
 The alignment contains six lines. Start by looking at the second line
 which ends with CS. The line shows the predicted secondary structure
-of the query sequence. The format is a little fancier than simple
+of the query sequence in **WUSS format**. The format is a little fancier than simple
 dot-parantheses secondary structure markup which you may be familiar
 with. It’s designed to make it easier to see the secondary structure
-by eye. The format is described in detail in `Infernal User's Guide
-<http://eddylab.org/infernal/Userguide.pdf>`_) (see WUSS format in
-section 9).  Briefly, basepairs in simple stem loops are annotated
-with ``<>`` characters. Basepairs enclosing multifurcations (multiple
-stem loops) are annotated with (), such as the tRNA acceptor stem in
-this example. In more complicated structures, ``[]`` and ``{}``
-annotations also show up to reflect deeper nestings of
-multifurcations. For single stranded residues, characters mark hairpin
-loops; ``-`` characters mark interior loops and bulges; ``,``
-characters mark single-stranded residues in multifurcation loops; and
-``:`` characters mark single stranded residues external to any
-secondary structure. Insertions relative to this consensus are
-annotated by a ``.`` character.
+by eyes and follows the following conventions:
+
+  * basepairs in simple stem loops are annotated with ``<>`` characters
+  * basepairs enclosing multifurcations (multiple
+    stem loops) are annotated with ``()``, such as the tRNA acceptor stem in
+    this example. In more complicated structures, ``[]`` and ``{}``
+    annotations also show up to reflect deeper nestings of
+    multifurcations
+  * ``-`` characters mark interior loops and bulges
+  * ``,`` characters mark single-stranded residues in multifurcation loops
+  * ``:`` characters mark single stranded residues external to any
+    secondary structure
+  * insertions relative to this consensus are annotated by a ``.`` character
+
+  For more information see section 9 of the `Infernal User's Guide
+  <http://eddylab.org/infernal/Userguide.pdf>`_.
 
 The secondary structure on the left above shows how the CS line folds
 into the tRNA cloverleaf secondary structure.
@@ -372,13 +377,13 @@ the two accessions) were also included in the standard output file discussed
 above. The meanings of these columns should be clear from their names,
 but for a complete explanation of these and all other fields see Section 6
 (target hits table format 2) of the `Infernal User's
-Guide <http://eddylab.org/infernal/Userguide.pdf>`_. 
+Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
-One column that requires explanation here is the "olp" column, which
+One column that requires explanation here is the **"olp"** (overlap) column, which
 indicates which hits overlap with one or more other hits. There are
 three possible characters in this column:
 
-:``*``: 
+:``*``:
  This hit's coordinates in the query sequence do not overlap with the
  query sequence coordinates of any other hits, on the same strand.
 
@@ -387,13 +392,13 @@ three possible characters in this column:
    the same strand, but none of those hits are "better" hits. Here,
    hit A is "better" than hit B, if hit A's E-value is lower than hit
    B's E-value or if hit A and hit B have equal E-values but hit A
-   has a higher bit score than hit B. 
-   
+   has a higher bit score than hit B.
+
 :``=``:
    Indicates that this hit does overlap with at least one other hit
    on the same strand that is a "better" hit, given the definition of
-   "better" above. 
-   
+   "better" above.
+
 Removing lower-scoring overlaps from a tblout file
 --------------------------------------------------
 
@@ -406,7 +411,7 @@ sequence dataset. To do this for the example genome annotation file
 
   grep -v " = " mrum-genome.tblout > mrum-genome.deoverlapped.tblout
 
-Expected Running Times
+Expected running times
 ----------------------
 
 CM searches are computationally expensive and searching large multi-Gb
@@ -420,7 +425,7 @@ more below.
 The following timings are from Table 2 of (`Nawrocki et al., 2015
 <http://nar.oxfordjournals.org/content/43/D1/D130>`_). All searches
 were run as single execution threads on 3.0 GHz Intel Xeon
-processors. 
+processors.
 
 +------------------------------------+------------+------------------+---------+
 | Genome                             | Size (Mb)  | CPU time (hours) | Mb/hour |
@@ -436,13 +441,12 @@ processors.
 | *Methanocaldococcus jannaschii*    |        1.7 | 0.31             | 5.6     |
 +------------------------------------+------------+------------------+---------+
 
-.. | *Drosophila melanogaster*       | 168.7      | 30               | 5.7     |
-.. | Human immunodeficiency virus (HIV) |        1.7 | 0.31             | 5.6     |
-
-cmscan will run in multithreaded mode by default, if
+cmscan will run in **multithreaded mode** by default, if
 multiple processors are available. Running with 8 threads with 8 cores
 should reduce the running times listed in the table above by about
 4-fold (reflecting about 50% efficiency versus single threaded).
+
+---------------------------------------------------
 
 Specificity
 -----------
@@ -454,10 +458,10 @@ exactly the same way.
 In contrast, several tools are available that search for specific types of
 RNA, such as
 
-* `tRNAscan-SE <http://lowelab.ucsc.edu/tRNAscan-SE/>`_ for tRNAs,
-* `RNAMMER <http://www.cbs.dtu.dk/services/RNAmmer/>`_ for rRNA,
-* `snoscan <http://lowelab.ucsc.edu/snoscan/>`_ for snoRNAs, and
-* `SRPscan <http://bio.lundberg.gu.se/srpscan/>`_ for SRP RNA.
+* `tRNAscan-SE <http://lowelab.ucsc.edu/tRNAscan-SE/>`_ for tRNAs
+* `RNAMMER <http://www.cbs.dtu.dk/services/RNAmmer/>`_ for rRNA
+* `snoscan <http://lowelab.ucsc.edu/snoscan/>`_ for snoRNAs
+* `SRPscan <http://bio.lundberg.gu.se/srpscan/>`_ for SRP RNA
 
 The generic Rfam approach has obvious advantages. However, the
 specialised programs often incorporate heuristics and family-specific
