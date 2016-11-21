@@ -137,13 +137,8 @@ Explanations of the command line options used in the above command are as follow
  
 :``--cut_ga``:
    specifies that the special Rfam GA (gathering) thresholds be used
-   to determine which hits are reported. These thresholds are stored
-   in the Rfam.cm file. Each model has its own GA bit score threshold,
-   which was determined by Rfam curators as the bit score at and above
-   which all hits are believed to be true homologs to the model. These
-   determinations were made based on observed hit results against the
-   large Rfamseq database used by Rfam (`Nawrocki et al., 2015 <http://nar.oxfordjournals.org/content/43/D1/D130>`_).
-   
+   to determine which hits are reported. See more in the section :ref:`Gathering cutoff`.
+
 :``--rfam``:
    run in "fast" mode, the same mode used for
    Rfam annotation and determination of GA thresholds

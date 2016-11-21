@@ -27,7 +27,10 @@ An alignment of the set of related sequences which score higher than the manuall
 Gathering cutoff
 ----------------
 
-The bit score gathering threshold (GA cutoff), set by our curators when building the family. All sequences that score at or above this threshold will be included in the full alignment.
+The bit score gathering threshold (GA cutoff), set by Rfam curators when building the family.
+All sequences that score at or above this threshold will be included in the full alignment
+and are believed to be true homologs to the model.
+For more information see `Nawrocki et al., 2015 <http://nar.oxfordjournals.org/content/43/D1/D130>`_.
 
 Infernal
 --------
