@@ -37,6 +37,7 @@ Previous contributors
 * William Mifsud
 * Enrico Marantidis
 * Diana Kolbe
+* Zasha Weinberg
 
 Rfam is a collaborative venture and we hope to be able to interact
 with as many people as possible to provide a quality database. Please
