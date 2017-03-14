@@ -10,7 +10,7 @@
 # tabular output format:                 2
 # model-specific thresholding:           GA cutoffs
 # Rfam pipeline mode:                    on [strict filtering]
-# clan information read from file:       /Users/nawrockie/src/infernal-1.1.2/testsuite/Rfam.12.1.clanin
+# clan information read from file:       Rfam12.2.claninfo
 # HMM-only mode for 0 basepair models:   no
 # number of worker threads:              8
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -3569,19 +3569,19 @@ Hit alignments:
 Internal CM pipeline statistics summary:
 ----------------------------------------
 Query sequence(s):                                               1  (5874406 residues searched)
-Query sequences re-searched for truncated hits:                  1  (718.7 residues re-searched, avg per model)
-Target model(s):                                              2473  (308563 consensus positions)
-Windows   passing  local HMM SSV           filter:        13142153  (0.1571); expected (0.06)
-Windows   passing  local HMM Viterbi       filter:         3721423  (0.04818); expected (0.02)
-Windows   passing  local HMM Viterbi  bias filter:         1437429  (0.0142); expected (0.02)
-Windows   passing  local HMM Forward       filter:          178792  (0.002382); expected (0.0002)
-Windows   passing  local HMM Forward  bias filter:          108341  (0.001552); expected (0.0002)
-Windows   passing glocal HMM Forward       filter:           59142  (0.0008075); expected (0.0002)
-Windows   passing glocal HMM Forward  bias filter:           49390  (0.0006423); expected (0.0002)
-Envelopes passing glocal HMM envelope defn filter:           49667  (0.0003772); expected (0.0002)
-Envelopes passing  local CM  CYK           filter:           19981  (0.0001258); expected (0.0001)
-Total CM hits reported:                                         78  (2.407e-06); includes 0 truncated hit(s)
+Query sequences re-searched for truncated hits:                  1  (727.4 residues re-searched, avg per model)
+Target model(s):                                              2588  (329475 consensus positions)
+Windows   passing  local HMM SSV           filter:        13657928  (0.1571); expected (0.06)
+Windows   passing  local HMM Viterbi       filter:         3879011  (0.04816); expected (0.02)
+Windows   passing  local HMM Viterbi  bias filter:         1485448  (0.01407); expected (0.02)
+Windows   passing  local HMM Forward       filter:          186053  (0.002372); expected (0.0002)
+Windows   passing  local HMM Forward  bias filter:          112532  (0.001546); expected (0.0002)
+Windows   passing glocal HMM Forward       filter:           61287  (0.0008004); expected (0.0002)
+Windows   passing glocal HMM Forward  bias filter:           50940  (0.0006329); expected (0.0002)
+Envelopes passing glocal HMM envelope defn filter:           51296  (0.0003729); expected (0.0002)
+Envelopes passing  local CM  CYK           filter:           20443  (0.0001228); expected (0.0001)
+Total CM hits reported:                                         78  (2.3e-06); includes 0 truncated hit(s)
 
-# CPU time: 2472.23u 42.65s 00:41:54.88 Elapsed: 00:07:34.28
+# CPU time: 2726.89u 52.11s 00:46:19.00 Elapsed: 00:08:37.16
 //
 [ok]

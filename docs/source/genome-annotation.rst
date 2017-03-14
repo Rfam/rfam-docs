@@ -63,15 +63,22 @@ you can use the executable files in *easel/miniapps/*. To install them::
 For more information on customizing the Infernal installation, see
 section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
-2. Download the Rfam library of CMs from `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_.
+2. Download the Rfam library of CMs from
+   `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam.cm.gz>`_ and the
+   Rfam claninfo file from
+   `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam12.2.claninfo>`_ .
+   
 
 ::
 
-   $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz
+   $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam.cm.gz
    $ gunzip Rfam.cm.gz
+   $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam12.2.claninfo
 
-If you do not have ``wget`` installed and in your path, `download the
-file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.1/Rfam.cm.gz>`_ from a browser.
+If you do not have ``wget`` installed and in your path, download the
+files `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam.cm.gz>`_ and
+`<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam12.2.claninfo>`_
+from a browser.
 
 3. Use the Infernal program cmpress to index the Rfam.cm file
 
@@ -119,13 +126,12 @@ be used in step 5.
 
 ::
 
-   $ cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin testsuite/Rfam.12.1.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
+   $ cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin Rfam12.2.claninfo Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
 
 .. note:: The above cmscan command assumes you are in the
           infernal-1.1.2 directory from step 1. If not, you'll need to
           supply the paths to the tutorial/mrum-genome.fa and
-          testsuite/Rfam.12.1.clanin files within the infernal-1.1.2
-          directory.
+          file within the infernal-1.1.2 directory.
 
 Explanations of the command line options used in the above command are as follows:
 
@@ -156,7 +162,7 @@ Explanations of the command line options used in the above command are as follow
 
 :``--clanin``:
    Clan information should be read from the file
-   ``testsuite/Rfam.12.1.claninfo``. This file lists which models belong
+   ``Rfam12.2.claninfo``. This file lists which models belong
    to the same clan. `Rfam clans <http://rfam.xfam.org/clans>`_
    are groups of models that are homologous and
    therefore it is expected that some hits to these models will

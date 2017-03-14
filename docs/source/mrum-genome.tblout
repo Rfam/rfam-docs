@@ -14,7 +14,7 @@
 12   SSU_rRNA_eukarya       RF01960   NC_013790.1          -         CL00111    cm        1     1851   760878   762348      +    no    1 0.54   4.5  963.8  9.9e-291  !   =       8  1.000  0.998      "      "      " -
 13   SSU_rRNA_microsporidia RF02542   NC_013790.1          -         CL00111    cm        1     1312  2043361  2041891      -    no    1 0.53   4.6  919.9  7.7e-281  !   =       7  1.000  0.998      "      "      " -
 14   SSU_rRNA_microsporidia RF02542   NC_013790.1          -         CL00111    cm        1     1312   760878   762348      +    no    1 0.54   4.5  917.2  5.4e-280  !   =       8  1.000  0.998      "      "      " -
-15   RNaseP_arch            RF00373   NC_013790.1          -         -          cm        1      303  2614544  2614262      -    no    1 0.43   0.0  184.9   1.1e-53  !   *       -      -      -      -      -      - -
+15   RNaseP_arch            RF00373   NC_013790.1          -         CL00002    cm        1      303  2614544  2614262      -    no    1 0.43   0.0  184.9   1.1e-53  !   *       -      -      -      -      -      - -
 16   Archaea_SRP            RF01857   NC_013790.1          -         CL00003    cm        1      318  1064321  1064634      +    no    1 0.44   0.1  197.6   6.9e-49  !   *       -      -      -      -      -      - -
 17   FMN                    RF00050   NC_013790.1          -         -          cm        1      140   193975   193837      -    no    1 0.42   0.0  115.2   6.8e-28  !   *       -      -      -      -      -      - -
 18   tRNA                   RF00005   NC_013790.1          -         CL00001    cm        1       71   735136   735208      +    no    1 0.59   0.0   72.1   4.9e-16  !   *       -      -      -      -      -      - -
@@ -84,7 +84,7 @@
 # Pipeline mode:   SCAN
 # Query file:      /Users/nawrockie/src/infernal-1.1.2/tutorial/mrum-genome.fa
 # Target file:     Rfam.cm
-# Option settings: cmscan -Z 5.874406 --tblout mrum-genome.tblout --fmt 2 --cut_ga --rfam --nohmmonly --clanin /Users/nawrockie/src/infernal-1.1.2/testsuite/Rfam.12.1.clanin Rfam.cm /Users/nawrockie/src/infernal-1.1.2/tutorial/mrum-genome.fa 
+# Option settings: cmscan -Z 5.874406 --tblout mrum-genome.tblout --fmt 2 --cut_ga --rfam --nohmmonly --clanin Rfam12.2.claninfo Rfam.cm /Users/nawrockie/src/infernal-1.1.2/tutorial/mrum-genome.fa 
 # Current dir:     /Users/nawrockie/Dropbox/work/notebook/16_1111_rfam_docs_inf_genome_annotation
-# Date:            Fri Nov 18 09:19:31 2016
+# Date:            Tue Mar 14 12:33:23 2017
 # [ok]
