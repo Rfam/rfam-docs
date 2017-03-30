@@ -21,14 +21,14 @@ Connection details
 +--------------+------------------------------+
 | port         | 4497                         |
 +--------------+------------------------------+
-| database     | rfam                         |
+| database     | Rfam                         |
 +--------------+------------------------------+
 
 You can connect to the database on command line:
 
 .. code-block:: bash
 
-  mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database rfam
+  mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam
 
 or use MySQL clients such as `MySQL Workbench <http://dev.mysql.com/downloads/workbench/>`_ or `Sequel Pro <http://www.sequelpro.com/>`_.
 
