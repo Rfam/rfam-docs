@@ -1,5 +1,5 @@
-Privacy issues
-==============
+Privacy
+=======
 
 This section outlines the ways in which the Rfam website handles information about users. This should not be read as a legal document, but as a description of how we handle information that could be considered sensitive. It should be read in conjunction with the privacy policy documents of the individual Rfam consortium member sites. If you have any concerns about the way that information is used in the website, please contact us at the address given at the bottom of the page and we will be more than happy to discuss your concerns.
 
