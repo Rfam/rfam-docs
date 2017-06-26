@@ -148,7 +148,7 @@ Large scale batch searches (more than 1,000 sequences)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have a large number of nucleotide searches, it may be more
-convenient to `run Infernal searches locally <TODO>`_.
+convenient to run Infernal searches locally (see section :ref:`Genome annotation`).
 
 -------------------------------------
 
