@@ -50,14 +50,15 @@ Text search is powered by the `EBI search <http://www.ebi.ac.uk/ebisearch/overvi
 which supports a `REST API <http://www.ebi.ac.uk/ebisearch/documentation.ebi>`_
 that can be used to access the Rfam data programmatically in addition to the :ref:`Rfam API`.
 
-Here is an example query that retrieves all riboswitch families as well as their descriptions
+Here is an example query that retrieves riboswitch families as well as their descriptions
 and the number of sequences in seed alignments:
 
 .. code-block:: url
 
     https://www.ebi.ac.uk/ebisearch/ws/rest/rfam?query=riboswitch&format=json&fields=num_seed,description
 
-The `full list of fields <http://www.ebi.ac.uk/ebisearch/metadata.ebi?db=rfam>`_ that can be retrieved.
+Here is `full list of fields <http://www.ebi.ac.uk/ebisearch/metadata.ebi?db=rfam>`_ that can be retrieved
+using the text search API.
 
 -------------------------
 
