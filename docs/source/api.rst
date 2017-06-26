@@ -179,11 +179,15 @@ The following types of secondary structure diagrams are supported:
 * *ent* (relative entropy)
 * *maxcm* (maximum CM parse)
 * *norm* (normal)
+* *rscape* (`R-scape`_ analysis of Rfam SEED alignment)
+* *rscape-cyk* (secondary structure predicted by `R-scape`_ based on Rfam SEED alignment)
 
 **Examples:**
 
 * http://rfam.xfam.org/family/snoZ107_R87/image/norm
 * http://rfam.xfam.org/family/RF00360/image/cov
+* http://rfam.xfam.org/family/RF00360/image/rscape
+* http://rfam.xfam.org/family/RF00360/image/rscape-cyk
 
 Covariance models
 +++++++++++++++++
@@ -459,3 +463,10 @@ codes:
 +--------------+-------------------+-----------------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | GET, POST    | 500               | Internal server error | Error message  | There was some problem accepting or running your job, but it does not fall into any of the other categories. The body of the response will contain an error message from the server. Contact the help desk for assistance with the problem. |
 +--------------+-------------------+-----------------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Links
+-----
+
+.. target-notes::
+
+.. _`R-scape`: http://eddylab.org/R-scape/
