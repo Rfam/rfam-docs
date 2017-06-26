@@ -67,7 +67,7 @@ section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.p
    `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam.cm.gz>`_ and the
    Rfam claninfo file from
    `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/12.2/Rfam12.2.claninfo>`_ .
-   
+
 
 ::
 
@@ -278,7 +278,7 @@ is displayed.
 Understanding hit alignment annotation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: trna-cmscan-alignment.png
+.. figure:: images/trna-cmscan-alignment.png
 
             Top: cmscan standard output of alignment of hit #33.
             Bottom: Three secondary structure diagrams showing the
