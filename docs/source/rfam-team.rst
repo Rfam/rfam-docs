@@ -8,7 +8,7 @@ The resource is a collaboration with researchers from `Sean Eddy lab <http://edd
 European Bioinformatics Institute
 ---------------------------------
 
-* `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - EMBL-EBI Cluster Head
+* `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Senior Team Leader
 * `Rob Finn <http://www.ebi.ac.uk/about/people/rob-finn>`_ - Team Leader
 * `Anton Petrov <http://www.ebi.ac.uk/about/people/anton-petrov>`_ - Rfam Project Leader
 * `Ioanna Kalvari <http://www.ebi.ac.uk/about/people/ioanna-kalvari>`_ - Bioinformatician
@@ -17,17 +17,17 @@ European Bioinformatics Institute
 Collaborators
 -------------
 
-* `Sean Eddy <http://eddylab.org/people.html>`_ (Harvard University) - founding developer and author of Infernal software
-* Eric Nawrocki (NCBI) - developer of Infernal software
+* `Sean Eddy <http://orcid.org/0000-0001-6676-4706>`_ (Harvard University) - founding developer and author of Infernal software
+* `Eric Nawrocki <http://orcid.org/0000-0002-2497-3427>`_ (NCBI) - developer of Infernal software
 
 Previous contributors
 ---------------------
 
-* Sam Griffiths-Jones - *founding Rfam project leader*
-* Paul Gardner - *former Rfam project leader*
-* Sarah Burge - *former Rfam project leader*
+* `Sam Griffiths-Jones <http://orcid.org/0000-0001-6043-807X>`_ - *founding Rfam project leader*
+* `Paul Gardner <http://orcid.org/0000-0002-7808-1213>`_ - *former Rfam project leader*
+* `Sarah Burge <http://orcid.org/0000-0002-2506-927X>`_ - *former Rfam project leader*
 * Ruth Eberhardt
-* Evan Floden
+* `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
 * John Tate
 * Jennifer Daub
 * Ben Moore
@@ -37,7 +37,7 @@ Previous contributors
 * William Mifsud
 * Enrico Marantidis
 * Diana Kolbe
-* Zasha Weinberg
+* `Zasha Weinberg <http://orcid.org/0000-0002-6681-3624>`_
 
 Rfam is a collaborative venture and we hope to be able to interact
 with as many people as possible to provide a quality database. Please
