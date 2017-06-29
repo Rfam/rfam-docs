@@ -16,7 +16,7 @@ When you search a sequence against Rfam and obtain a hit to one of our families,
 
 More specifically the bit score is the log\ :sub:`2`\  of the probability of the query sequence given the model, over the probability of the sequence given the null model:
 
-.. image:: bit-score.gif
+.. image:: images/bit-score.gif
    :alt: Bit score formula
 
 In theory this means that positive bits scores are significant but, in practice, more conservative cutoffs are used as the size of the database means we can observe hits with low positive bits scores by chance. (See the `Infernal user guide <http://eddylab.org/infernal/Userguide.pdf>`_ for more information.)
@@ -155,7 +155,7 @@ for each RNA type (see :ref:`Search by entry type`).
     Then copy and paste into an editor and save the file for example
     as ``rfam-types.txt``. You can then create the ``rfam-ids.txt``
     file with the command ``cat rfam-types.txt | awk '{ print $1 }' > rfam-ids.txt``.
-    
+
 3. Use the `grep <https://en.wikipedia.org/wiki/Grep>`_ command to filter Infernal results.
 
   For instance, given an Infernal *tblout* file ``results.tblout``

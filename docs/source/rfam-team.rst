@@ -1,4 +1,4 @@
-Rfam Team
+Rfam team
 =========
 
 The `Rfam database <http://rfam.xfam.org>`_ is curated and maintained

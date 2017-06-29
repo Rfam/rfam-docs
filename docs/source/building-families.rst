@@ -1,5 +1,8 @@
-Building Rfam families
-======================
+How Rfam families are built
+===========================
+
+testeste4
+
 
 *rfamseq* database
 ----------------
@@ -91,7 +94,7 @@ continue to iterate the seed until we have good resolution
 between real and false hits and cannot improve the seed membership
 further.
 
-Important points to remember about our seed alignments
+Important points to remember about seed alignments
 ------------------------------------------------------
 
 * We can only build families using the sequences in *rfamseq*

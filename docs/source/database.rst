@@ -50,7 +50,7 @@ clan_membership        a list of all Rfam families per clan
 taxonomy               NCBI taxonomy identifiers
 =================    ================================================================================================================================
 
-.. image:: core-schema.png
+.. image:: images/core-schema.png
    :alt: Rfam core tables
 
 Example queries

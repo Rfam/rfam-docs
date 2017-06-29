@@ -16,9 +16,9 @@ Contents
   :caption: About Rfam
 
   about-rfam
-  faq
   building-families
   glossary
+  faq
   rfam-team
   contact-us
 
