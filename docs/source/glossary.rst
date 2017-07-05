@@ -4,6 +4,11 @@ Glossary
 .. contents::
   :local:
 
+Clan
+----
+
+Clan is a group of families.
+
 ClustalW
 --------
 
