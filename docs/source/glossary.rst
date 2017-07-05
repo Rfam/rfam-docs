@@ -7,7 +7,7 @@ Glossary
 Clan
 ----
 
-Clan is a group of families.
+Clan is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions.
 
 ClustalW
 --------
