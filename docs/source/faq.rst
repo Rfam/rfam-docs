@@ -62,9 +62,9 @@ If you're not even sure of your query term and simply want to browse our familie
 
 How can I search my DNA sequence for non-coding RNA genes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Both our `single sequence <http://rfam.xfam.org/search>`_ and `batch <http://rfam.xfam.org/search?tab=searchBatchBlock#tabview=tab1>`_ searches allow you to search a nucleotide sequences against the Rfam model library. Any hits to Rfam families will be returned with start and end coordinates, orientation and a score for each hit.
+Both our `single sequence <http://rfam.org/search>`_ and `batch <http://rfam.org/search?tab=searchBatchBlock#tabview=tab1>`_ searches allow you to search a nucleotide sequences against the Rfam model library. Any hits to Rfam families will be returned with start and end coordinates, orientation and a score for each hit.
 
-For short single sequences, our `single sequence <http://rfam.xfam.org/search>`_ search tool will return Rfam matches to your sequence interactively. However, if your sequence is longer than 2Kbp, we suggest that you fragment it into smaller, overlapping segments and use the `batch search <http://rfam.xfam.org/search?tab=searchBatchBlock#tabview=tab1>`_ facility. You might find `this tool <http://emboss.bioinformatics.nl/cgi-bin/emboss/splitter>`_ useful for splitting large sequences into fragments.
+For short single sequences, our `single sequence <http://rfam.org/search>`_ search tool will return Rfam matches to your sequence interactively. However, if your sequence is longer than 2Kbp, we suggest that you fragment it into smaller, overlapping segments and use the `batch search <http://rfam.org/search?tab=searchBatchBlock#tabview=tab1>`_ facility. You might find `this tool <http://emboss.bioinformatics.nl/cgi-bin/emboss/splitter>`_ useful for splitting large sequences into fragments.
 
 Finally, if you have a very large number of sequences to search, you may find it most convenient to download and `run Rfam locally <TO DO>`_.
 
@@ -104,7 +104,7 @@ How do I filter Infernal output by Rfam family type?
 Sometimes it is useful to filter Infernal output based on Rfam family type, for
 example, if you are only interested in rRNA families.
 
-1. `Get a list of Rfam families <http://rfam.xfam.org/search#tabview=tab4>`_
+1. `Get a list of Rfam families <http://rfam.org/search#tabview=tab4>`_
 for each RNA type (see :ref:`Search by entry type`).
 
   For example, selecting the **rRNA** checkbox gives the following list:
@@ -151,7 +151,7 @@ for each RNA type (see :ref:`Search by entry type`).
 
     If you would like to download the list of RNA families and types
     as text, click **Show the unformatted list** at the bottom of the
-    `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
+    `search results page <http://rfam.org/search#tabview=tab4>`_.
     Then copy and paste into an editor and save the file for example
     as ``rfam-types.txt``. You can then create the ``rfam-ids.txt``
     file with the command ``cat rfam-types.txt | awk '{ print $1 }' > rfam-ids.txt``.

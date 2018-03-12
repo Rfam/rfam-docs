@@ -163,7 +163,7 @@ Explanations of the command line options used in the above command are as follow
 :``--clanin``:
    Clan information should be read from the file
    ``Rfam.clanin``. This file lists which models belong
-   to the same clan. `Rfam clans <http://rfam.xfam.org/clans>`_
+   to the same clan. `Rfam clans <http://rfam.org/clans>`_
    are groups of models that are homologous and
    therefore it is expected that some hits to these models will
    overlap. For example, the LSU rRNA archaea and LSU rRNA bacteria
@@ -263,7 +263,7 @@ lower-scoring overlaps from a tblout file`_.
 
 After the list of hits you will find the hit alignments for each
 hit. Each alignment is preceded by a summary of each hit. For
-hit #33, a tRNA hit (`RF00005 <http://rfam.xfam.org/family/RF00005>`_):
+hit #33, a tRNA hit (`RF00005 <http://rfam.org/family/RF00005>`_):
 
 .. literalinclude:: mrum-genome.cmscan
     :linenos:
@@ -492,7 +492,7 @@ in mouse is recently derived from a tRNA.
 In addition, specific RNA genes appear to have
 undergone massive **pseudogene expansions** in certain genomes. For
 example, searching the human genome using the Rfam
-`U6 family <http://rfam.xfam.org/family/RF00026>`_
+`U6 family <http://rfam.org/family/RF00026>`_
 yields over 1000 hits, all with very high score. These are not "false
 positives" in the sequence analysis sense, because they are closely
 related by sequence to the real U6 genes, but they completely

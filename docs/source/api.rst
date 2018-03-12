@@ -17,13 +17,13 @@ Data access
 The data can be accessed in several formats which can be specified in the URL:
 
 * HTML
-  http://rfam.xfam.org/family/RF00360
+  http://rfam.org/family/RF00360
 
 * JSON
-  http://rfam.xfam.org/family/RF00360?content-type=application/json
+  http://rfam.org/family/RF00360?content-type=application/json
 
 * XML
-  http://rfam.xfam.org/family/RF00360?content-type=text/xml
+  http://rfam.org/family/RF00360?content-type=text/xml
 
 Using *curl*
 ^^^^^^^^^^^^
@@ -33,7 +33,7 @@ using `curl <https://curl.haxx.se>`_:
 
 .. code-block:: bash
 
-  curl http://rfam.xfam.org/family/snoZ107_R87?content-type=text%2Fxml
+  curl http://rfam.org/family/snoZ107_R87?content-type=text%2Fxml
 
 Output:
 
@@ -95,7 +95,7 @@ for example Python or Perl.
   import json
   import requests
 
-  r = requests.get('http://rfam.xfam.org/family/RF00360?content-type=application/json')
+  r = requests.get('http://rfam.org/family/RF00360?content-type=application/json')
   print r.json()['rfam']['acc']
 
 **Perl example script**
@@ -112,7 +112,7 @@ for example Python or Perl.
   my $ua = LWP::UserAgent->new;
   $ua->env_proxy;
 
-  my $res = $ua->get(' http://rfam.xfam.org/family/snoZ107_R87?content-type=text%2Fxml' );
+  my $res = $ua->get(' http://rfam.org/family/snoZ107_R87?content-type=text%2Fxml' );
 
   if ( $res->is_success ) {
     print $res->content;
@@ -136,8 +136,8 @@ Returns general information about an Rfam family, such as curation details, sear
 
 **Examples:**
 
-* http://rfam.xfam.org/family/RF00360?content-type=text/xml
-* http://rfam.xfam.org/family/snoZ107_R87?content-type=application/json
+* http://rfam.org/family/RF00360?content-type=text/xml
+* http://rfam.org/family/snoZ107_R87?content-type=application/json
 
 Accession to ID
 +++++++++++++++
@@ -146,7 +146,7 @@ Returns the ID for the family with the given Rfam accession or ID.
 
 **Example:**
 
-http://rfam.xfam.org/family/snoZ107_R87/acc
+http://rfam.org/family/snoZ107_R87/acc
 
 **Example output:**
 
@@ -159,7 +159,7 @@ ID to accession
 
 **Example output:**
 
-http://rfam.xfam.org/family/RF00360/id
+http://rfam.org/family/RF00360/id
 
 **Output:**
 
@@ -184,17 +184,17 @@ The following types of secondary structure diagrams are supported:
 
 **Examples:**
 
-* http://rfam.xfam.org/family/snoZ107_R87/image/norm
-* http://rfam.xfam.org/family/RF00360/image/cov
-* http://rfam.xfam.org/family/RF00360/image/rscape
-* http://rfam.xfam.org/family/RF00360/image/rscape-cyk
+* http://rfam.org/family/snoZ107_R87/image/norm
+* http://rfam.org/family/RF00360/image/cov
+* http://rfam.org/family/RF00360/image/rscape
+* http://rfam.org/family/RF00360/image/rscape-cyk
 
 Covariance models
 +++++++++++++++++
 
 Returns the covariance model for the specified family.
 
-**Example:** http://rfam.xfam.org/family/RF00360/cm
+**Example:** http://rfam.org/family/RF00360/cm
 
 Sequence regions
 ++++++++++++++++
@@ -207,8 +207,8 @@ Returns the list of all sequence regions for the specified families in tab-delim
 
 **Examples:**
 
-* http://rfam.xfam.org/family/snoZ107_R87/regions (plain text)
-* http://rfam.xfam.org/family/RF00360/regions?content-type=text%2Fxml
+* http://rfam.org/family/snoZ107_R87/regions (plain text)
+* http://rfam.org/family/RF00360/regions?content-type=text%2Fxml
 
 ---------------------------
 
@@ -220,7 +220,7 @@ Tree data
 
 Returns the raw data for the phylogenetic tree in NHX format based on seed alignment.
 
-Example: http://rfam.xfam.org/family/RF00360/tree/
+Example: http://rfam.org/family/RF00360/tree/
 
 Tree image
 ++++++++++
@@ -230,8 +230,8 @@ The image can be labelled either using **species names** or **sequence accession
 
 **Examples:**
 
-* http://rfam.xfam.org/family/RF00360/tree/label/species/image
-* http://rfam.xfam.org/family/RF00360/tree/label/acc/image
+* http://rfam.org/family/RF00360/tree/label/species/image
+* http://rfam.org/family/RF00360/tree/label/acc/image
 
 Tree image map
 ++++++++++++++
@@ -242,8 +242,8 @@ in the Rfam website.
 
 **Example:**
 
-* http://rfam.xfam.org/family/RF00360/tree/label/acc/map
-* http://rfam.xfam.org/family/RF00360/tree/label/species/map
+* http://rfam.org/family/RF00360/tree/label/acc/map
+* http://rfam.org/family/RF00360/tree/label/species/map
 
 .. NOTE::
 
@@ -259,9 +259,9 @@ The plain text file has a tab-delimited format.
 
 **Examples:**
 
-* http://rfam.xfam.org/family/RF00002/structures (HTML)
-* http://rfam.xfam.org/family/RF00002/structures?content-type=application/json
-* http://rfam.xfam.org/family/RF00002/structures?content-type=text/xml
+* http://rfam.org/family/RF00002/structures (HTML)
+* http://rfam.org/family/RF00002/structures?content-type=application/json
+* http://rfam.org/family/RF00002/structures?content-type=text/xml
 
 ---------------------------
 
@@ -281,8 +281,8 @@ Returns the Stockholm-format seed alignment for the specified family.
 
 **Examples:**
 
-* http://rfam.xfam.org/family/RF00360/alignment
-* http://rfam.xfam.org/family/RF00360/alignment?gzip=1
+* http://rfam.org/family/RF00360/alignment
+* http://rfam.org/family/RF00360/alignment?gzip=1
 
 Formatted alignment
 +++++++++++++++++++
@@ -296,17 +296,17 @@ Returns the seed alignment for the specified family in one of the following form
 
 **Examples:**
 
-* http://rfam.xfam.org/family/RF00360/alignment/stockholm
-* http://rfam.xfam.org/family/RF00360/alignment/pfam
-* http://rfam.xfam.org/family/RF00360/alignment/fasta
-* http://rfam.xfam.org/family/snoZ107_R87/alignment/fastau
+* http://rfam.org/family/RF00360/alignment/stockholm
+* http://rfam.org/family/RF00360/alignment/pfam
+* http://rfam.org/family/RF00360/alignment/fasta
+* http://rfam.org/family/snoZ107_R87/alignment/fastau
 
 ---------------------------
 
 Sequence searches
 -----------------
 
-In addition to a `sequence search <http://rfam.xfam.org/search>`_ user interface,
+In addition to a `sequence search <http://rfam.org/search>`_ user interface,
 it is possible to run single-sequence Rfam searches programmatically.
 
 Running a search is a two step process:
@@ -357,14 +357,14 @@ than setting a header.
 
 .. code-block:: bash
 
-  curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" http://rfam.xfam.org/search/sequence
+  curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" http://rfam.org/search/sequence
 
 **Example output:**
 
 .. code-block:: json
 
   {
-    "resultURL": "http://rfam.xfam.org/search/sequence/d9b451d8-96e6-4234-9dbb-aa4806925353",
+    "resultURL": "http://rfam.org/search/sequence/d9b451d8-96e6-4234-9dbb-aa4806925353",
     "opened": "2016-10-31 13:19:06",
     "estimatedTime": "3",
     "jobId": "d9b451d8-96e6-4234-9dbb-aa4806925353"
@@ -401,7 +401,7 @@ which you can now retrieve results:
 
 .. code-block:: bash
 
-  curl -H "Expect:" -H "Accept: application/json" http://rfam.xfam.org/search/sequence/01d3c704-591a-4a85-b7c1-366496c5a63
+  curl -H "Expect:" -H "Accept: application/json" http://rfam.org/search/sequence/01d3c704-591a-4a85-b7c1-366496c5a63
 
 .. code-block:: json
 

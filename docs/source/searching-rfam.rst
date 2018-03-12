@@ -2,17 +2,17 @@ Searching Rfam
 ==============
 
 In addition to the quick links on the home page, every page in the Rfam
-site includes a `Search <http://rfam.xfam.org/search>`_ link in the page header, which you can use to
+site includes a `Search <http://rfam.org/search>`_ link in the page header, which you can use to
 access all of the search methods that we offer:
 
 .. contents::
   :local:
 
-Additionally, every page in the Rfam site includes a `Browse <http://rfam.xfam.org/browse>`_ link in
+Additionally, every page in the Rfam site includes a `Browse <http://rfam.org/browse>`_ link in
 the page header, which you can use to explore Rfam
-`families <http://rfam.xfam.org/families>`_,
-`clans <http://rfam.xfam.org/clans>`_,
-and `motifs <http://rfam.xfam.org/motifs>`_.
+`families <http://rfam.org/families>`_,
+`clans <http://rfam.org/clans>`_,
+and `motifs <http://rfam.org/motifs>`_.
 
 Unified text search
 --------------
@@ -20,7 +20,7 @@ Unified text search
 .. image:: images/text-search.png
    :alt: Screenshot of Rfam text search
 
-The new text search, available on the `Rfam homepage <http://rfam.xfam.org>`_
+The new text search, available on the `Rfam homepage <http://rfam.org>`_
 or at the top of any Rfam page, will soon replace older search options, such as
 *Keyword search*, *Taxonomy search*, *browsing* entries by type, and *Jump To* navigation.
 
@@ -32,11 +32,11 @@ Using the new search one can:
 
 **Examples**:
 
-* `families <http://rfam.xfam.org/search?q=entry_type:%22family%22>`_,
-* `clans <http://rfam.xfam.org/search?q=entry_type:%22clan%22>`_,
-* `motifs <http://rfam.xfam.org/search?q=entry_type:%22motif%22>`_,
-* `families with 3D structures <http://rfam.xfam.org/search?q=entry_type:%22Family%22%20AND%20has_3d_structure:%22Yes%22>`_
-* `snoRNA families that match human sequences <http://rfam.xfam.org/search?q=rna_type:%22snoRNA%22%20AND%20TAXONOMY:%229606%22>`_
+* `families <http://rfam.org/search?q=entry_type:%22family%22>`_,
+* `clans <http://rfam.org/search?q=entry_type:%22clan%22>`_,
+* `motifs <http://rfam.org/search?q=entry_type:%22motif%22>`_,
+* `families with 3D structures <http://rfam.org/search?q=entry_type:%22Family%22%20AND%20has_3d_structure:%22Yes%22>`_
+* `snoRNA families that match human sequences <http://rfam.org/search?q=rna_type:%22snoRNA%22%20AND%20TAXONOMY:%229606%22>`_
 
 The new search is a **full replacement** for most of the old search functionality except
 for taxonomy as the new search can currently find only species but not higher taxa
@@ -91,7 +91,7 @@ Medium scale batch searches (less than 1,000 sequences)
 If you have multiple nucleotide sequences to search, you can use our
 batch upload facility to upload a file of your sequences in FASTA
 format. Information on the format for this file can be found under the
-more link `here <http://rfam.xfam.org/search>`_. We will
+more link `here <http://rfam.org/search>`_. We will
 search your sequences against the Rfam library of covariance models and email the results
 back to you, usually within 48 hours. We request that you search a
 maximum of 1000 sequences in each file. Each sequence may be up to 200kb
@@ -174,7 +174,7 @@ Search by entry type
 
   Entry type search will soon be replaced by the Unified text search.
 
-You can `search by entry type <http://rfam.xfam.org/search#tabview=tab4>`_
+You can `search by entry type <http://rfam.org/search#tabview=tab4>`_
 to view or download a list of families by type.
 
 Here is a list of Rfam ncRNA types:
@@ -207,7 +207,7 @@ Here is a list of Rfam ncRNA types:
 .. TIP::
 
   If you would like to download results as text, click **Show the unformatted list**
-  at the bottom of the `search results page <http://rfam.xfam.org/search#tabview=tab4>`_.
+  at the bottom of the `search results page <http://rfam.org/search#tabview=tab4>`_.
 
 -----------------------------
 
@@ -224,7 +224,7 @@ that are specific to a given taxonomic level or those found in a given
 set of  taxonomic levels. You can also limit your queries to those
 families which are found only in a single species or taxonomic
 level. Please read the information under the "More..." link on the
-`taxonomy search page <http://rfam.xfam.org/search#tabview=tab3>`_
+`taxonomy search page <http://rfam.org/search#tabview=tab3>`_
 for details on how to use this search.
 
 -----------------------------
@@ -232,7 +232,7 @@ for details on how to use this search.
 Exploring families by name
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `Browse <http://rfam.xfam.org/browse>`_ link at the top of each page will take you to an
+The `Browse <http://rfam.org/browse>`_ link at the top of each page will take you to an
 index page, from which you can browse all Rfam families by
 their family names (otherwise known as the Rfam IDs). These are the
 familiar names for the RNA, such as "tRNA" or

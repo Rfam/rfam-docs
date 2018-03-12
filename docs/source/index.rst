@@ -3,7 +3,7 @@ Rfam Help
 
 |docs|
 
-`Rfam <http://rfam.xfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
+`Rfam <http://rfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
 consensus secondary structures, and predicted homologues. This documentation is maintained by the :ref:`Rfam team`.
 
 Contents

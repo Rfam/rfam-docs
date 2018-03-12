@@ -26,4 +26,4 @@ You can `follow <http://www.twitter.com/Xfam_EBI>`_ the Xfam team at EMBL-EBI.
 Submit an alignment
 -------------------
 We're happy to receive updated or improved alignments for new or existing families.
-`Submit <http://rfam.xfam.org/submit_alignment>`_ your alignment and we'll take a look.
+`Submit <http://rfam.org/submit_alignment>`_ your alignment and we'll take a look.

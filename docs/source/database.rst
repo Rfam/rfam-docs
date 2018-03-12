@@ -60,7 +60,7 @@ Retrieve all rat sequence coordinates annotated with Rfam families
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 While it is possible to get a list of Rfam families found in a species
-using the `taxonomy search <http://rfam.xfam.org/search?tab=searchTaxBlock#tabview=tab3>`_,
+using the `taxonomy search <http://rfam.org/search?tab=searchTaxBlock#tabview=tab3>`_,
 with an SQL query one can access sequence coordinates of each ncRNA:
 
 .. code-block:: sql
