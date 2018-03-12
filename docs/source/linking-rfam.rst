@@ -1,6 +1,10 @@
 How to link to Rfam?
 ====================
 
+.. NOTE::
+  All links to Rfam should use the ``rfam.org`` domain.
+  Please update any links referring to the ``rfam.xfam.org`` domain.
+
 Here are some examples of linking to Rfam:
 
 * Using Rfam accession (**recommended**):
