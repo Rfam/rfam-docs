@@ -1,9 +1,6 @@
 How Rfam families are built
 ===========================
 
-testeste4
-
-
 *rfamseq* database
 ----------------
 

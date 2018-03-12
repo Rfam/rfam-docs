@@ -14,7 +14,7 @@ all of the Rfam data from our `FTP site <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/
 
 .. HINT::
 
-  Take an `quick tour <https://www.ebi.ac.uk/training/online/course/rfam-quick-tour>`_
+  Take a `quick tour <https://www.ebi.ac.uk/training/online/course/rfam-quick-tour>`_
   of Rfam to find out more about the project.
 
 For each Rfam family we provide:
