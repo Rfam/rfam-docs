@@ -4,23 +4,18 @@ How Rfam families are built
 *rfamseq* database
 ----------------
 
-The underlying nucleotide sequence database from which we build our
-families (known as *rfamseq*) is derived from the `European Nucleotide Archive <http://www.ebi.ac.uk/ena/>`_.
+Starting with Rfam 13.0, the underlying nucleotide sequence database from which
+the RNA families are built (known as *rfamseq*) is based on a reprsentative collection
+of complete genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`_.
 
-We include Standard (STD) and Whole Genome Shotgun (WGS) data
-classes. This includes all the environmental sample sequences (ENV)
-but we currently exclude the patented (PAT) and synthetic (SYN)
-divisions. You should note that *rfamseq* does NOT include Expressed
-Sequence Tag (EST) or Genome Survey Sequence (GSS) data classes.
-
-*rfamseq* is usually updated with each major Rfam release, e.g., 8.0, 9.0.
-You can find out the ENA release currently in use in the
-`README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ on our FTP site.
+*rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
+You can find out the information about *rfamseq* currently in use in the
+`README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
 Seed alignments and secondary structure annotation
 --------------------------------------------------
 
-Our **seed alignments** are small, curated sets of representative sequences
+Rfam **seed alignments** are small, curated sets of representative sequences
 for each family, as opposed to an alignment of all known members. The
 seed alignment also has as a **secondary structure** annotation, which
 represents the conserved secondary structure for these sequences.
@@ -35,8 +30,8 @@ In order to build a new family, we
 must first obtain at least one **experimentally validated example** from
 the published literature. If any other homologues are identified in the
 literature, we will add these to the seed. Alternatively, if these are
-not available, we will try to identify others members either by
-similarity searching (using BLAST) or manual curation.
+not available, we will try to identify other members either by
+similarity searching (using Infernal) or manual curation.
 
 Where possible we will use a multiple sequence alignment and
 secondary structure annotation provided in the literature. If this is
@@ -45,7 +40,7 @@ secondary structure. You should note that the structure annotations
 obtained from the literature may be experimentally validated or they
 may be RNA folding predictions (commonly `Mfold <http://unafold.rna.albany.edu/?q=mfold>`_).
 Unfortunately, we do not discriminate between these two cases when we
-site the PubMed Identifier (PMID) and you will need to refer to the
+cite the PubMed Identifier (PMID) and you will need to refer to the
 original publications to clarify.
 
 Alternatively, where this information is not available from the
@@ -73,12 +68,6 @@ found in the :ref:`Citing Rfam`
 section. This model is then used to search the *rfamseq*
 database for other possible homologs.
 
-Searching a nucleotide database as larger as *rfamseq* with a covariance
-model is hugely computationally expensive. In order to do this in
-reasonable time, we use sequence based filters to prune the search
-space prior to applying the CMs. Please refer to the recent Rfam
-publication for more details on how we implement this.
-
 Expanding the seed (iteration)
 ------------------------------
 
@@ -86,7 +75,7 @@ If the CM search of *rfamseq* identifies any homologs that we believe
 would improve the seed, we use the Infernal software (cmalign) to
 add these sequences to the seed alignment. From the new seed, the CM
 is re-built and re-searched against *rfamseq*. We refer to this process
-of expanding the seed using Infernal searching as "iteration". We
+of expanding the seed using Infernal searching as **iteration**. We
 continue to iterate the seed until we have good resolution
 between real and false hits and cannot improve the seed membership
 further.
@@ -122,7 +111,8 @@ the CM to produce the full alignment. All sequences in the seed will
 also be present in the full  alignment.
 
 As of Rfam 12.0, we no longer automatically generate full alignments for
-each Rfam family. You may download the Rfam CM and generate your own alignments.
+each Rfam family. You may download the Rfam CM and generate your own alignments
+using Infernal.
 
 Family annotation
 -----------------
