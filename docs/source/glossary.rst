@@ -12,7 +12,7 @@ Clan is a group of families that either share a common ancestor but are too dive
 ClustalW
 --------
 
-A general purpose multiple sequence alignment program for DNA(RNA) which we use while building our SEED alignments. See the `Clustal web server <http://www.clustal.org>`_.
+A general purpose multiple sequence alignment program for DNA (RNA) which we use while building our SEED alignments. See the `Clustal web server <http://www.clustal.org>`_.
 
 Covariance model (CM)
 ---------------------
@@ -40,7 +40,9 @@ For more information see `Nawrocki et al., 2015 <http://nar.oxfordjournals.org/c
 Infernal
 --------
 
-`Infernal <http://eddylab.org/infernal/>`_  is the core software that enables us to make consensus RNA secondary structure profiles (covariance models (CMs)) for our families. We also use Infernal for searching sequence databases for homologous RNAs. See the Infernal website.
+`Infernal <http://eddylab.org/infernal/>`_  is the core software that enables us to make consensus RNA secondary structure profiles (covariance models (CMs)) for our families.
+We also use Infernal for searching sequence databases for homologous RNAs.
+See the `Infernal website <http://eddylab.org/infernal>`_ for more details.
 
 MFOLD
 -----
@@ -55,34 +57,53 @@ RNA folding software which folds alignments using a Stochastic Context-Free Gram
 rfamseq
 -------
 
-The underlying nucleotide sequence database on which Rfam is based. It is derived from the `EMBL nucleotide database <http://www.ebi.ac.uk/ena>`_.
+The underlying nucleotide sequence database on which Rfam is based.
 
 RNAalifold
 ----------
 
-Folds pre-computed alignments using a combination of free-energy and covariation measures. Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_.
+Folds pre-computed alignments using a combination of free-energy and covariation measures.
+Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_.
+
+R-scape
+-------
+
+`R-scape <http:/eddylab.org/R-scape/>`_ is a method for testing whether **covariation analysis**
+supports the presence of a conserved RNA secondary structure
+in a multiple sequence alignment. R-scape is used to create and improve
+Rfam families, and R-scape visualisations are shown on the secondary structure
+tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
 Seed alignment
 --------------
 
-A manually curated sample of representative sequences for a family. These sequences are aligned and annotated with a consensus secondary structure. This alignment is used to build the covariance model for the family.
+A manually curated sample of representative sequences for a family.
+These sequences are aligned and annotated with a consensus secondary structure.
+This alignment is used to build the covariance model for the family.
 
 Sequence region
 ---------------
 
-A single segment of nucleotide sequence in our alignments. Multiple sequence regions from a single EMBL sequence may be in the same family.
+A single segment of nucleotide sequence in our alignments.
+Multiple sequence regions from a single EMBL sequence may be in the same family.
 
 Stockholm format
 ----------------
 
-A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_.
+A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination
+of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_.
 
 Type
 ----
 
-A simple functional classification we use for our families. This is our own ontology and does not current directly relate to the ontologies used by other databases. For a full list of RNA types in our current ontology see the :ref:`search by entry type` section.
+A simple functional classification used to organise Rfam families.
+This is our own ontology and does not current directly relate to the ontologies
+used by other databases. For a full list of RNA types in our current ontology
+see the :ref:`search by entry type` section.
 
 WAR
 ---
 
-A software tool that enables us to simultaneously run several different methods for performing multiple alignment and secondary structure prediction for non-coding RNA sequences. See the `WAR  <http://genome.ku.dk/resources/war/>`_ website.
+A software tool that enables us to simultaneously run several different methods
+for performing multiple alignment and secondary structure prediction
+for non-coding RNA sequences. See the `WAR  <http://genome.ku.dk/resources/war/>`_ website.
