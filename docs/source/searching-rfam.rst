@@ -14,7 +14,7 @@ the page header, which you can use to explore Rfam
 `clans <http://rfam.org/clans>`_,
 and `motifs <http://rfam.org/motifs>`_.
 
-`:new:` For more examples please see our newly published `protocols <https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/cpbi.51>`_ in Bioinformatics. 
+`:new:` For more examples please see our newly published `Current Protocols in Bioinformatics <https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/cpbi.51>`_. 
 
 Unified text search
 --------------
