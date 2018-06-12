@@ -21,7 +21,7 @@ to the `RSS <http://xfam.wordpress.com/tag/rfam/feed/>`_ feed from the Xfam blog
 
 Twitter
 -------
-You can `follow <http://www.twitter.com/Xfam_EBI>`_ the Xfam team at EMBL-EBI.
+You can `follow <https://twitter.com/RfamDB>`_ the RfamDB team at EMBL-EBI.
 
 Submit an alignment
 -------------------
