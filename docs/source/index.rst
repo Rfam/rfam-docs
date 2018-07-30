@@ -44,6 +44,7 @@ Contents
   :caption: Other
 
   genome-annotation
+  sequence-extraction
   linking-rfam
   citing-rfam
   privacy
