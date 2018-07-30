@@ -1,11 +1,10 @@
 .. highlight:: console
 
-Extract ncRNA sequences using Infernal's esl-sfetch
+Extract ncRNA sequences
 ===================================================
 
 All Rfam ncRNA sequences become available on the `ftp <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release. 
-
-The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_.
+The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_ ``esl-sfetch`` tool.
 
 1. Download and install the `Infernal software <http://eddylab.org/infernal/>`_. You can find additional information in the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_. 
 
