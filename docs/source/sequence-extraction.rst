@@ -32,7 +32,7 @@ The following is a tutorial on how to extract sequences using the public instanc
 
 .. note:: If the above command is successfull, you should see a ``.ssi`` file generated in your current directory
 
-6. Fetch the list of accessions you want to extract and save them in a ``.txt`` file using the MySQL database :
+6. Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
 
 .. 
 
