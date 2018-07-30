@@ -60,7 +60,7 @@ Here's an example query on how to retrieve all Human snoRNAs:
 	and f.rfam_acc=fr.rfam_acc
 	and fr.is_significant=1
 	and fr.type='full'
-	and gs.upid='UP000008827'
+	and gs.upid='UP000005640'
 	and f.type like '%snoRNA%'
 	and gs.version=14.0
 
