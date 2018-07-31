@@ -10,7 +10,7 @@ The following is a tutorial on how to extract sequences using the public instanc
 
 .. seealso:: `Genome annotation <http://rfam.readthedocs.io/en/latest/genome-annotation.html#example-of-using-infernal-and-rfam-to-annotate-rnas-in-an-archaeal-genome>`_ section
 
-2. Add Infernal tools to your $PATH using the following command:
+2. Add Infernal tools to your **$PATH** using the following command:
 :: 
 	> export PATH="/path/to/infernal-1.1.x/bin:$PATH"
 
