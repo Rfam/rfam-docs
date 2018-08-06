@@ -96,7 +96,7 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 .. 
 
-8. Extract the ncRNA sequences in the ``.txt`` file you generated in **step 6** using ``esl-fetch``, and the unified Rfam fasta file from **step 4**:
+8. Extract the ncRNA sequences in the ``.txt`` file generated in **step 7** from the unified Rfam fasta file from **step 4** using ``esl-fetch``:
 
 :: 
 
