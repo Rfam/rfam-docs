@@ -64,6 +64,17 @@ Here's an example query on how to retrieve all Human snoRNAs:
 	and f.type like '%snoRNA%'
 	and gs.version=14.0
 
+Extract all Mammalian 5S ribosomal RNAs (RF00001):
+
+::
+	
+	select concat(fr.rfamseq_acc,'/',seq_start,'-',seq_end) 
+	from full_region fr, rfamseq rs, taxonomy tx
+	where fr.rfamseq_acc=rs.rfamseq_acc
+	and tx.ncbi_id=rs.ncbi_id
+	and fr.rfam_acc='RF00001'
+	and tx.tax_string like '%Mammalia%'
+	and is_significant=1
 
 .. note:: In order for ``esl-sfetch`` to work with the Rfam fasta file, the accessions need to be in the format: **rfamseq_acc/seq_start-seq_end**.
 
