@@ -44,16 +44,9 @@ The following is a tutorial on how to extract sequences using the public instanc
 
 .. note:: If the above command is successfull, you should see a ``.ssi`` file generated in your current directory
 
-6. Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
+6. Create a ``.sql`` file with a SQL command that fetches the regions of interest.
 
-
-::
-	
-	> mysql -urfamro -hmysql-rfam-public -P4497 --database Rfam < query.sql > accession_list.txt
-
-.. 
-
-Here's an example query on how to retrieve all Human ncRNAs:
+Example query to retrieve all human ncRNAs:
 
 ::
 
@@ -67,7 +60,7 @@ Here's an example query on how to retrieve all Human ncRNAs:
 
 .. 
 
-Here's an example query on how to retrieve all Human snoRNAs:
+Example query to retrieve all human snoRNAs:
 
 ::	
 
@@ -81,7 +74,7 @@ Here's an example query on how to retrieve all Human snoRNAs:
 	and f.type like '%snoRNA%'
 	and gs.version=14.0;
 
-Extract all Mammalian 5S ribosomal RNAs (RF00001):
+Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 ::
 	
@@ -93,11 +86,19 @@ Extract all Mammalian 5S ribosomal RNAs (RF00001):
 	and tx.tax_string like '%Mammalia%'
 	and is_significant=1;
 
-.. note:: In order for ``esl-sfetch`` to work with the Rfam fasta file, the accessions need to be in the format: **rfamseq_acc/seq_start-seq_end**.
+.. note:: In order for ``esl-sfetch`` to work with the Rfam fasta file, the regions need to be in the format: **rfamseq_acc/seq_start-seq_end**.
 
-7. Extract the ncRNA sequences in the ``.txt`` file you generated in **step 6** using ``esl-fetch``, and the unified Rfam fasta file from **step 4**:
+7.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
+
+::
+	
+	> mysql -urfamro -hmysql-rfam-public -P4497 --database Rfam < query.sql > accessions.txt
+
+.. 
+
+8. Extract the ncRNA sequences in the ``.txt`` file you generated in **step 6** using ``esl-fetch``, and the unified Rfam fasta file from **step 4**:
 
 :: 
 
-	> esl-sfetch -f Rfam.fa /path/to/accession_file.txt > Rfam_ncRNAs.fa
+	> esl-sfetch -f Rfam.fa /path/to/accessions.txt > Rfam_ncRNAs.fa
 
