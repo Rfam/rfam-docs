@@ -49,7 +49,7 @@ The following is a tutorial on how to extract sequences using the public instanc
 
 ::
 	
-	> mysql -urfamro -hmysql-rfam-public -P4497 --database Rfam < query.sql > accession_list.txt
+	> mysql -urfamro -hmysql-rfam-public -P4497 --skip-column-names --database Rfam < query.sql > accession_list.txt
 
 .. 
 
