@@ -92,7 +92,7 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 ::
 	
-	> mysql -urfamro -hmysql-rfam-public -P4497 --database Rfam < query.sql > accessions.txt
+	> mysql -urfamro -hmysql-rfam-public.ebi.ac.uk -P4497 --database Rfam < query.sql > accessions.txt
 
 .. 
 
