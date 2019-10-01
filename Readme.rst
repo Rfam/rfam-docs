@@ -10,14 +10,15 @@ Installation
 
 .. code:: bash
 
+  cd /path/to/rfam-docs
+
   # create a new virtual environment
-  virtualenv /path/to/new/rfam-docs-virtualenv
+  virtualenv `pwd`/env
 
   # activate virtual environment
-  source /path/to/new/rfam-docs-virtualenv/bin/activate
+  source env/bin/activate
 
   # install Python dependencies
-  cd /path/to/rfam-docs
   pip install -r requirements.txt
 
   # serve documentation locally at http://127.0.0.1:8000
