@@ -2,7 +2,7 @@ How Rfam families are built
 ===========================
 
 *rfamseq* database
-----------------
+------------------
 
 Starting with Rfam 13.0, the underlying nucleotide sequence database from which
 the RNA families are built (known as *rfamseq*) is based on a reprsentative collection

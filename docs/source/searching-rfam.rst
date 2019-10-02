@@ -17,7 +17,7 @@ and `motifs <http://rfam.org/motifs>`_.
 `:new:` For more examples please see our newly published `paper <https://doi.org/10.1002/cpbi.51>`_ in Current Protocols in Bioinformatics.
 
 Unified text search
---------------
+-------------------
 
 .. image:: images/text-search.png
    :alt: Screenshot of Rfam text search
@@ -108,7 +108,7 @@ convenient to run Infernal searches locally (see section :ref:`Genome annotation
 -------------------------
 
 Other ways to search Rfam
-------------------------
+-------------------------
 
 Keyword search
 ^^^^^^^^^^^^^^
