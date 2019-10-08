@@ -21,6 +21,7 @@ Contents
 
   about-rfam
   building-families
+  rfam-cloud
   glossary
   faq
   rfam-team
