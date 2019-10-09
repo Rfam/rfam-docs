@@ -12,7 +12,6 @@ European Bioinformatics Institute
 * `Rob Finn <http://www.ebi.ac.uk/about/people/rob-finn>`_ - Team Leader
 * `Anton Petrov <http://www.ebi.ac.uk/about/people/anton-petrov>`_ - Rfam Project Leader
 * `Ioanna Kalvari <http://www.ebi.ac.uk/about/people/ioanna-kalvari>`_ - Bioinformatician
-* `Joanna Argasinska <http://www.ebi.ac.uk/about/people/joanna-argasinska>`_ - Curator
 
 Collaborators
 -------------
@@ -26,6 +25,7 @@ Previous contributors
 * `Sam Griffiths-Jones <http://orcid.org/0000-0001-6043-807X>`_ - *founding Rfam project leader*
 * `Paul Gardner <http://orcid.org/0000-0002-7808-1213>`_ - *former Rfam project leader*
 * `Sarah Burge <http://orcid.org/0000-0002-2506-927X>`_ - *former Rfam project leader*
+* `Joanna Argasinska <https://orcid.org/0000-0003-2678-2824>`_
 * Ruth Eberhardt
 * `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
 * John Tate
