@@ -1,7 +1,7 @@
 Using Rfam family building pipeline in the cloud
 =================================================
 
-The Rfam cloud environment provides access to the command-line interface for curating Rfam families. It uses the same software and the sequence database as the Rfam team. The pipeline allows one to create a new RNA family or update an existing Rfam entry.
+The Rfam cloud environment provides access to the command-line interface for curating Rfam families. It uses the same software and the sequence database as the ones used by the Rfam team. The pipeline allows one to create a new RNA family or update an existing Rfam entry.
 
 .. contents::
   :local:
@@ -15,7 +15,7 @@ Requirements
 ------------
 
 1. A computer with internet access (Mac, Linux, or PC)
-2. A command line environment supporting ssh (for example, bash)
+2. A command line environment supporting ``ssh`` (for example, bash)
 3. An Rfam cloud account
 
 Requesting an Rfam cloud account
@@ -45,7 +45,7 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 1. Create a new folder
 ^^^^^^^^^^^^^^^^^^^^^^
 
-📂Create a new folder, for example *rfam_test* and navigate to it::
+📂 Create a new folder, for example *rfam_test* and navigate to it::
 
   mkdir rfam_test
   cd rfam_test
@@ -80,11 +80,13 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 
 Build a covariance model based on your ``SEED`` alignment and search for similar sequences in the *rfamseq* database::
 
-  rfsearch.pl -nodesc
+  rfsearch.pl -nodesc -relax -t 30
 
-This command creates a file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run ``rfsearch``, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
+- ``-nodesc`` creates a required file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run rfsearch, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
+- ``-relax`` - allow sequences not found in the `rfamseq` database to be included in SEED.
+- ``-t`` - gathering threshold in bits. Usually 30 bits is a good starting point as most families are expected to have a threshold higher than 30.
 
-⚠️ **This step can take a long time** depending on your SEED alignment.
+⚠️ **This step can take a long time** depending on your SEED alignment and the availability of computational resources.
 
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -103,60 +105,71 @@ Find an accession in the ``outlist`` file that you would like to add to the ``SE
 
 To remove sequences from ``SEED`` (if added in error, for example), create a file with a list of accessions you want to remove using ``grep`` as described above and call it *removeme*. Make sure the accession is exactly the same as in the ``SEED`` file, for example ``NW_002196667.1/1438869-1438941``. Then run the following command::
 
-  run rfseed.pl -d -n removeme
+  rfseed.pl -d -n removeme
 
 Consider **manually editing the alignment** on your local computer using `RALEE <http://sgjlab.org/ralee/>`_ or `belvu <http://sonnhammer.sbc.su.se/Belvu.html>`_ and re-uploading it as explained in **Step 1**.
 
 6. Repeat rfsearch with a new threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-🔄Steps 5 and 6 should be repeated until the SEED alignment can no longer be improved::
+🔄 Steps 5 and 6 should be repeated until the SEED alignment can no longer be improved::
 
   rfsearch.pl -t new_cutoff
 
-This process is known as `iteration <https://rfam.readthedocs.io/en/latest/building-families.html#expanding-the-seed-iteration>`_).
+This process is known as `iteration <https://rfam.readthedocs.io/en/latest/building-families.html#expanding-the-seed-iteration>`_.
 
-7. Finalise the family using rfmake
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+7. Create required family files with rfmake
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the cutoff has been selected, the family is ready to be finalised::
+Once the cutoff has been chosen, all the required family files can be generated like this::
 
-  rfmake.pl -t gathering_cutoff
+  rfmake.pl -t gathering_cutoff -a
+
+The ``-a`` option creates an ``align`` file with an alignment of all the sequences above the gathering threshold. Reviewing the ``align`` file can help to adjust the threshold, as the unwanted sequences can be excluded by rerunning rfmake with a higher threshold ``-t``.
 
 8. Add metadata to the DESC file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each family is described using in a ``DESC`` file (see `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example). The following fields are required:
+Each family is described using in a ``DESC`` file (see the `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example). The following fields are required:
 
 :ID:
     a unique ID, such as *tRNA* or *skipping-rope*. No spaces are allowed.
 :DE:
-    a short description of the family.
-    Example: `GlmZ RNA activator of glmS mRNA`.
+  | a short description of the family.
+  | Example: ``DE   GlmZ RNA activator of glmS mRNA``
+  | ⚠️ Maximum **75 characters**.
+
 :AU:
-    Author name with ORCID id. Multiple ``AU`` lines can be used.
-    Example: `AU   Eddy SR; 0000-0001-6676-4706`
+    Author name with an `ORCID <https://orcid.org/>`_ id. Multiple ``AU`` lines can be used.
+    Example: ``AU   Eddy SR; 0000-0001-6676-4706``
 :SE:
-    Seed alignment source.
-    Example: `Published; PMID:21994249;`.
+    Seed alignment source. Example: ``SE   Published; PMID:21994249;``
 :SS:
     Secondary structure source.
-    Examples: `Published; PMID:28977401;, `Predicted; mfold;`.
+    Examples:
+
+    - ``SS   Published; PMID:28977401;``
+    - ``SS   Predicted; mfold;``
+
 :TP:
     One of Rfam `RNA types <https://rfam.readthedocs.io/en/latest/searching-rfam.html#search-by-entry-type>`_.
-    Example: `Gene; sRNA;.
+    Example: `TP   Gene; sRNA;`
 :DR:
-    A reference to a `Gene Ontology <http://geneontology.org/>`_ or `Sequence Ontology <http://sequenceontology.org/>`_ term. Multiple ``DR`` lines can be used.
-    Example: `DR   SO; 0000253; tRNA;`, `DR   GO; 0030533; triplet codon-amino acid adaptor activity;`.
-    You may find the `QuickGO <https://www.ebi.ac.uk/QuickGO/>`_ website useful for finding GO terms.
-:CC:
-    A free text comment. Multiple ``CC`` lines can be used.
-    ⚠️ Maximum line width: 80 characters.
-:WK:
-    A Wikipedia link (create a new page or link to an existing one).
-    Example: `WK   Transfer_RNA`.
+    A reference to a `Gene Ontology <http://geneontology.org/>`_ or `Sequence Ontology <http://sequenceontology.org/>`_ term. Multiple ``DR`` lines can be used. Example:
 
-📚To add literature references, use the following command::
+    - ``DR   SO; 0000253; tRNA;``
+    - ``DR   GO; 0030533; triplet codon-amino acid adaptor activity;``
+
+    You may find the `QuickGO <https://www.ebi.ac.uk/QuickGO/>`_ website useful for finding GO terms.
+    A link to a website can also be included, for example: ``DR   URL; http://telomerase.asu.edu/;``
+:CC:
+    A free text comment describing what is known about the RNA (function, taxonomic distribution, experimental validation etc).
+    ⚠️ Maximum **80 characters per line**, but multiple ``CC`` lines can be used.
+:WK:
+    A `Wikipedia <https://en.wikipedia.org/>`_ link (you should create a new Wikipedia article or link to an existing one).
+    Example: ``WK   Transfer_RNA``
+
+📚 To add literature references, use the following command that automatically imports information from `PubMed <https://www.ncbi.nlm.nih.gov/pubmed/>`_::
 
   add_ref.pl pubmed_id
 
@@ -172,7 +185,12 @@ The ``rqc-all`` script performs multiple quality controls on the family. It chec
 10. Send SEED and DESC files for review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Download your ``SEED`` and ``DESC`` files to your local machine and `email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_ to the Rfam team for review. 🎉🎉🎉
+Download your ``SEED`` and ``DESC`` files to your local machine::
+
+  scp username@rfam_ip_address/rfam_test/SEED:.
+  scp username@rfam_ip_address/rfam_test/DESC:.
+
+`Email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_ the files to the Rfam team for review. 🎉🎉🎉
 
 .. DANGER::
   We encourage you to **always keep a local copy of the important data**!
