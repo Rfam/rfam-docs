@@ -6,7 +6,7 @@ Rfam Help
 `Rfam <http://rfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
 consensus secondary structures, and predicted homologues.
 
-This documentation is maintained by the :ref:`Rfam team`.
+This documentation is maintained by the :ref:`rfam-team:Rfam team`.
 Please **report any issues** or **contribute** to the text
 on `GitHub <https://github.com/Rfam/rfam-docs>`_.
 

@@ -41,4 +41,4 @@ Previous contributors
 
 Rfam is a collaborative venture and we hope to be able to interact
 with as many people as possible to provide a quality database. Please
-:ref:`Contact us` for information.
+:ref:`contact-us:Contact us` for information.

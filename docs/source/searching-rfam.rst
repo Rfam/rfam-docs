@@ -51,7 +51,7 @@ Text search API
 
 Text search is powered by the `EBI search <http://www.ebi.ac.uk/ebisearch/overview.ebi>`_
 which supports a `REST API <http://www.ebi.ac.uk/ebisearch/documentation.ebi>`_
-that can be used to access the Rfam data programmatically in addition to the :ref:`Rfam API`.
+that can be used to access the Rfam data programmatically in addition to the :ref:`api:Rfam API`.
 
 Here is an example query that retrieves riboswitch families as well as their descriptions
 and the number of sequences in seed alignments:
@@ -104,7 +104,7 @@ Large scale batch searches (more than 1,000 sequences)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have a large number of nucleotide searches, it may be more
-convenient to run Infernal searches locally (see section :ref:`Genome annotation`).
+convenient to run Infernal searches locally (see section :ref:`genome-annotation:Genome annotation`).
 
 -------------------------
 

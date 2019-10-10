@@ -145,7 +145,7 @@ Explanations of the command line options used in the above command are as follow
 
 :``--cut_ga``:
    specifies that the special Rfam GA (gathering) thresholds be used
-   to determine which hits are reported. See more in the section :ref:`Gathering cutoff`.
+   to determine which hits are reported. See more in the section :ref:`glossary:Gathering cutoff`.
 
 :``--rfam``:
    run in "fast" mode, the same mode used for

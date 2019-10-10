@@ -36,8 +36,4 @@ Rfam database dumps
 `database_files <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/database_files>`_
   Directory containing MYSQL dump of the the Rfam database data, tables and mysql database schema
 
-.. hint:: For direct access to the database please visit :ref:`Public MySQL Database <ftp_help_link>`
-
-
-
-
+.. hint:: For direct access to the database please visit :ref:`database:Public MySQL Database`

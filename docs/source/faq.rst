@@ -78,7 +78,7 @@ we make an informed decision on where the cutoff should be. As a result, some fa
 may contain false positives (often pseudogenes) or may also lose some true positives
 below the threshold. In such cases we will have made the best choice we can in order to limit
 the false positive and loss of true positives. If you have queries about the membership of any of our families,
-please :ref:`contact us` and we will try to clarify or resolve the problem.
+please :ref:`contact-us:Contact us` and we will try to clarify or resolve the problem.
 
 How can I tell which are predicted and which are experimentally confirmed sequences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,7 +100,7 @@ With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide data
 You can check which version we are currently using `here <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_.
 If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family,
 it is possible that our model may need to be improved.
-Please :ref:`contact us` with the relevant information and we will decide
+Please :ref:`contact-us:Contact us` with the relevant information and we will decide
 whether the sequence should indeed be included and, if so, we will try to improve our model.
 
 Where can I find out more about RNA sequence analysis/covariance models/SCFGs?
@@ -110,7 +110,7 @@ which is an essential companion to the Rfam database, now has extensive document
 along with some description of how covariance models work for RNA sequence analysis.
 Background and theory can also be found in the excellent book
 `Biological Sequence Analysis <http://eddylab.org/cupbook.html>`_ by Richard Durbin, Sean Eddy, Anders Krogh,
-and Graeme Mitchison (Cambridge University Press, 1998). For more references see :ref:`Citing Rfam`.
+and Graeme Mitchison (Cambridge University Press, 1998). For more references see :ref:`citing-rfam:Citing Rfam`.
 
 Searching
 ---------
@@ -147,7 +147,7 @@ useful for splitting large sequences into fragments.
 
 Finally, if you have a very large number of sequences to search, you may find it
 most convenient to download and run Rfam locally
-(see section :ref:`Genome annotation` for more information).
+(see section :ref:`genome-annotation:Genome annotation` for more information).
 
 Downloading
 -----------
@@ -187,7 +187,7 @@ to modify the underlying Rfam database to allow this.
 
 How can I download all Rfam sequences for my favourite species?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Unfortunately, this has not been implemented yet. Please :ref:`contact us` if you need help.
+Unfortunately, this has not been implemented yet. Please :ref:`contact-us:Contact us` if you need help.
 
 The "Taxonomy" tab on the search page will allow you to perform taxonomic queries.
 In fact, this function also allows you to search with queries from internal nodes
@@ -204,7 +204,7 @@ Sometimes it is useful to filter Infernal output based on Rfam family type, for
 example, if you are only interested in rRNA families.
 
 1. `Get a list of Rfam families <http://rfam.org/search#tabview=tab4>`_
-for each RNA type (see :ref:`Search by entry type`).
+for each RNA type (see :ref:`searching-rfam:Search by entry type`).
 
   For example, selecting the **rRNA** checkbox gives the following list:
 
@@ -279,7 +279,7 @@ for each RNA type (see :ref:`Search by entry type`).
   ``rfam-ids.txt``.
 
 You can use this procedure to filter Infernal results by **any** set of Rfam families.
-For example, you can get a list of Rfam families using :ref:`Taxonomy search`
+For example, you can get a list of Rfam families using :ref:`searching-rfam:Taxonomy search`
 and get Infernal search results from families found in a specific taxonomic group.
 
 Other
@@ -293,7 +293,7 @@ that have some known functional classification, are evolutionarily conserved
 and have evidence for a secondary structure. The families should not solely be based
 on prediction only, e.g. RNAz, EvoFold, or QRNA predictions, nor solely on transcriptomic data,
 e.g. tiling array or deep sequencing. For more detailed information on how to submit a family,
-please read the rest of the Rfam documentation but, if you have any queries, please do :ref:`contact us`.
+please read the rest of the Rfam documentation but, if you have any queries, please do :ref:`contact-us:Contact us`.
 
 If your family is sufficiently interesting, or if you have several of them,
 you may be interested in publishing your family in the RNA families track
@@ -304,5 +304,5 @@ How can I edit a SEED alignment?
 We do not currently provide public access to edit our alignments.
 This is advantageous in that it maintains our standard of alignments and structures,
 but, if you feel our seed alignment/structure annotations can and should be improved,
-please :ref:`contact us`, preferably supplying us with a new alignment, in Stockholm format,
+please :ref:`contact-us:Contact us`, preferably supplying us with a new alignment, in Stockholm format,
 and we will do our best to incorporate the improvements.

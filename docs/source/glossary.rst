@@ -99,7 +99,7 @@ Type
 A simple functional classification used to organise Rfam families.
 This is our own ontology and does not current directly relate to the ontologies
 used by other databases. For a full list of RNA types in our current ontology
-see the :ref:`search by entry type` section.
+see the :ref:`searching-rfam:search by entry type` section.
 
 WAR
 ---

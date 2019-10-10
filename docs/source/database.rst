@@ -1,4 +1,3 @@
-.. _ftp_help_link:
 Public MySQL Database
 ======================
 
