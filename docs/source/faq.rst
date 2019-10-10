@@ -8,12 +8,17 @@ Documentation
 
 What are "seed" and "full" alignments?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Each family in Rfam has two multiple sequence alignments. The "seed" alignment
-is a hand-curated alignment of known members of the family. This alignment may not contain
+There are two kinds of Rfam multiple sequence alignments:
+
+1. The **seed** alignment is a hand-curated alignment of known members of the family. This alignment may not contain
 all known members of a family, but rather a representative set.
 We use the `Infernal <http://eddylab.org/infernal/>`_ software to build a covariance model
-from this alignment. We then use the covariance model to search the *rfamseq* sequence database
-for other family members.
+from this alignment.
+
+2. The covariance model is used to search the *rfamseq* sequence database
+for other family members and build a **full** alignment including all instances of a family.
+Starting with Rfam 12.0 the full alignments are no longer provided by Rfam, but they can
+be generated as described in the following `protocol <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
 
 What do the scores for hits to Rfam models mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
