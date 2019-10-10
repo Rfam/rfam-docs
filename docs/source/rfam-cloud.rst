@@ -9,7 +9,7 @@ The Rfam cloud environment provides access to the command-line interface for cur
 Background
 ----------
 
-The main Rfam family building pipeline is located on the `EMBL-EBI <https://www.ebi.ac.uk/>`_ computational cluster, so that only the EBI account holders can access it. In order to enable more users to contribute to Rfam, a new version of the pipeline was developed using a `cloud infrastructure <https://www.embassycloud.org/>`_ so that the EBI accounts are not needed. All families built using the cloud pipeline are **reviewed** by the :ref:`Rfam team` before the families are added to Rfam.
+The main Rfam family building pipeline is located on the `EMBL-EBI <https://www.ebi.ac.uk/>`_ computational cluster, so that only the EBI account holders can access it. In order to enable more users to contribute to Rfam, a new version of the pipeline was developed using a `cloud infrastructure <https://www.embassycloud.org/>`_ so that the EBI accounts are not needed. All families built using the cloud pipeline are **reviewed** by the :ref:`rfam-team:Rfam team` before the families are added to Rfam.
 
 Requirements
 ------------
@@ -21,7 +21,7 @@ Requirements
 Requesting an Rfam cloud account
 --------------------------------
 
-Please :ref:`Contact us` to request access to the Rfam family building pipeline. If you intend to use the pipeline for teaching purposes, please let us know in advance to ensure that the pipeline can support the workload.
+Please :ref:`contact-us:Contact us` to request access to the Rfam family building pipeline. If you intend to use the pipeline for teaching purposes, please let us know in advance to ensure that the pipeline can support the workload.
 
 Connecting to Rfam cloud
 ------------------------
@@ -91,7 +91,7 @@ Build a covariance model based on your ``SEED`` alignment and search for similar
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold (the bit score of the last true positive hit) for this family.
+The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold (the bit score of the last true positive hit) for this family. For more information, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
 5. Add sequences to SEED (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -207,4 +207,4 @@ After that, follow the family building instructions from **Step 3**.
 Questions or comments?
 ----------------------
 
-:ref:`Contact us` or `raise an issue <https://github.com/Rfam/rfam-family-pipeline/issues>`_ on GitHub.
+:ref:`contact-us:Contact us` or `raise an issue <https://github.com/Rfam/rfam-family-pipeline/issues>`_ on GitHub.
