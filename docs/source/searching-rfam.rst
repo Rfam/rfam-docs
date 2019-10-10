@@ -8,12 +8,6 @@ access all of the search methods that we offer:
 .. contents::
   :local:
 
-Additionally, every page in the Rfam site includes a `Browse <http://rfam.org/browse>`_ link in
-the page header, which you can use to explore Rfam
-`families <http://rfam.org/families>`_,
-`clans <http://rfam.org/clans>`_,
-and `motifs <http://rfam.org/motifs>`_.
-
 .. HINT::
   For more details about searching Rfam, please see our `paper in Current Protocols in Bioinformatics <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622>`_.
 
@@ -54,9 +48,7 @@ which supports a `REST API <http://www.ebi.ac.uk/ebisearch/documentation.ebi>`_
 that can be used to access the Rfam data programmatically in addition to the :ref:`api:Rfam API`.
 
 Here is an example query that retrieves riboswitch families as well as their descriptions
-and the number of sequences in seed alignments:
-
-.. code-block:: url
+and the number of sequences in seed alignments::
 
     https://www.ebi.ac.uk/ebisearch/ws/rest/rfam?query=riboswitch&format=json&fields=num_seed,description
 
