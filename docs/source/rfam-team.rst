@@ -26,7 +26,7 @@ Previous contributors
 * `Sam Griffiths-Jones <http://orcid.org/0000-0001-6043-807X>`_ - *founding Rfam project leader*
 * `Paul Gardner <http://orcid.org/0000-0002-7808-1213>`_ - *former Rfam project leader*
 * `Sarah Burge <http://orcid.org/0000-0002-2506-927X>`_ - *former Rfam project leader*
-* Ruth Eberhardt
+* `Ruth Eberhardt <https://orcid.org/0000-0001-6152-1369>`_
 * `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
 * John Tate
 * Jennifer Daub
