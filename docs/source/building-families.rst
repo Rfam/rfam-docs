@@ -1,16 +1,6 @@
 How Rfam families are built
 ===========================
 
-*rfamseq* database
-------------------
-
-Starting with Rfam 13.0, the underlying nucleotide sequence database from which
-the RNA families are built (known as *rfamseq*) is based on a reprsentative collection
-of complete genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`_.
-
-*rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
-You can find out the information about *rfamseq* currently in use in the
-`README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
 Seed alignments and secondary structure annotation
 --------------------------------------------------
