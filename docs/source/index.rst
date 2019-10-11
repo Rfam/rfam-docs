@@ -21,7 +21,6 @@ Contents
 
   about-rfam
   building-families
-  rfam-cloud
   glossary
   faq
   rfam-team
@@ -45,6 +44,7 @@ Contents
   :caption: Other
 
   genome-annotation
+  rfam-cloud
   sequence-extraction
   linking-rfam
   citing-rfam
