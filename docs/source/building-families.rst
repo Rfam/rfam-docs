@@ -6,7 +6,7 @@ How Rfam families are built
 Seed alignments and secondary structure annotation
 --------------------------------------------------
 
-Rfam **seed alignments** are small, curated sets of representative sequences
+Rfam :ref:`glossary:Seed alignment` is a small, curated set of representative sequences
 for each family, as opposed to an alignment of all known members. The
 seed alignment also has as a **secondary structure** annotation, which
 represents the conserved secondary structure for these sequences.

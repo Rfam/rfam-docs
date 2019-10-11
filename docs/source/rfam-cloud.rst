@@ -1,5 +1,5 @@
-Using Rfam family building pipeline in the cloud
-=================================================
+Rfam cloud pipeline
+===================
 
 The Rfam cloud environment provides access to the command-line interface for curating Rfam families. It uses the same software and the sequence database as the ones used by the Rfam team. The pipeline allows one to create a new RNA family or update an existing Rfam entry.
 
@@ -33,6 +33,11 @@ Use the login and password provided by the Rfam team to ``ssh`` to Rfam cloud::
 You should see a command line prompt:
 
 .. figure:: images/rfam-cloud-cli.png
+      :alt: Rfam cloud command line prompt
+      :width: 600
+      :align: center
+
+      Rfam cloud command line prompt
 
 To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scripts::
 
@@ -53,14 +58,14 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 2. Prepare a SEED file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-A `SEED <https://rfam.readthedocs.io/en/latest/building-families.html#seed-alignments-and-secondary-structure-annotation>`_ file contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a `Stockholm file <https://en.wikipedia.org/wiki/Stockholm_format>`_ with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA SEED alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
+Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure in :ref:`glossary:WUSS format`, for example see the `tRNA SEED alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 If you already have a ``SEED`` file on your local computer, copy it to Rfam cloud using ``scp``::
 
   scp SEED:username@rfam_ip_address/rfam_test
 
 .. HINT::
-  Alternatively, create the ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local machine.
+  Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
 
 If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file, convert it to Stockholm format and predict a consensus secondary structure.
 
@@ -68,7 +73,7 @@ For a **single sequence** (using RNAfold)::
 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
-For **multiple sequences** (using RNAalifold)::
+For **multiple sequences** (using :ref:`glossary:RNAalifold`)::
 
   create_alignment.pl -fasta file.fasta -mu > align.stockholm
   predict_ss.pl -infile align.stockholm -outfile SEED -ra
@@ -78,7 +83,7 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 3. Find similar sequences using rfsearch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Build a covariance model based on your ``SEED`` alignment and search for similar sequences in the *rfamseq* database::
+Build a covariance model based on your ``SEED`` alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
 
   rfsearch.pl -nodesc -relax -t 30
 

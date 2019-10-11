@@ -15,7 +15,7 @@ all known members of a family, but rather a representative set.
 We use the `Infernal <http://eddylab.org/infernal/>`_ software to build a covariance model
 from this alignment.
 
-2. The covariance model is used to search the *rfamseq* sequence database
+2. The covariance model is used to search the :ref:`glossary:rfamseq` sequence database
 for other family members and build a **full** alignment including all instances of a family.
 Starting with Rfam 12.0 the full alignments are no longer provided by Rfam, but they can
 be generated as described in the following `protocol <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
