@@ -48,14 +48,9 @@ structure annotation in the **SE** and **SS**
 lines of the `Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_
 or in the curation information pages.
 
-Covariance Models
------------------
-
 From the seed alignment, we use the `Infernal software <http://eddylab.org/infernal/>`_ to build a
-probabilistic model (covariance model or CM) for this family. Useful
-references can be found in the :ref:`citing-rfam:Covariance models and stochastic context-free grammars`
-section. This model is then used to search the *rfamseq*
-database for other possible homologs.
+:ref:`glossary:Covariance model (CM)` for this family.
+This model is then used to search the :ref:`glossary:rfamseq` database for other possible homologs.
 
 Expanding the seed (iteration)
 ------------------------------
