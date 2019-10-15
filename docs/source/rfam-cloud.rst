@@ -39,7 +39,7 @@ You should see a command line prompt:
 
       Rfam cloud command line prompt
 
-To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scripts::
+To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scripts (you should see help messages explaining how to use the scripts)::
 
   rfsearch.pl -h
   rfmake.pl -h
@@ -58,7 +58,7 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 2. Prepare a SEED file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure in :ref:`glossary:WUSS format`, for example see the `tRNA SEED alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
+Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 If you already have a ``SEED`` file on your local computer, copy it to Rfam cloud using ``scp``::
 
@@ -67,9 +67,7 @@ If you already have a ``SEED`` file on your local computer, copy it to Rfam clou
 .. HINT::
   Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
 
-If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file, convert it to Stockholm format and predict a consensus secondary structure.
-
-For a **single sequence** (using RNAfold)::
+If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file, convert it to Stockholm format and predict a consensus secondary structure. For a **single sequence** (using RNAfold)::
 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
@@ -83,25 +81,32 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 3. Find similar sequences using rfsearch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Build a covariance model based on your ``SEED`` alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
+Build a :ref:`glossary:Covariance model (CM)` based on your seed alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
 
   rfsearch.pl -nodesc -relax -t 30
 
-- ``-nodesc`` creates a required file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run rfsearch, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
-- ``-relax`` - allow sequences not found in the `rfamseq` database to be included in SEED.
-- ``-t`` - gathering threshold in bits. Usually 30 bits is a good starting point as most families are expected to have a threshold higher than 30.
+.. list-table::
 
-⚠️ **This step can take a long time** depending on your SEED alignment and the availability of computational resources.
+    * - Option
+      - Meaning
+    * - ``-nodesc``
+      - creates a required file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run rfsearch, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
+    * - ``-relax``
+      - allow sequences not found in the :ref:`glossary:rfamseq` database to be included in the seed alignment
+    * - ``-t 30``
+      - :ref:`glossary:Gathering cutoff` in bits. Usually 30 bits is a good starting point as most families are expected to have a threshold higher than 30.
+
+⚠️ **This step can take a long time** depending on the size of the alignment and the availability of computational resources.
 
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold (the bit score of the last true positive hit) for this family. For more information, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
+The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit). For more information, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
 5. Add sequences to SEED (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `SEED` alignment needs to represent the taxonomic diversity and the structural features observed in different instances. A ``SEED`` alignment needs to have **at least 2 sequences** but a larger ``SEED`` alignment is preferred.
+The :ref:`glossary:seed alignment` needs to represent the taxonomic diversity and the structural features observed in different instances of the family. A seed alignment needs to have **at least 2 sequences** but a larger seed alignment is preferred.
 
 Find an accession in the ``outlist`` file that you would like to add to the ``SEED`` (for example, ``AB480043.1``)::
 
@@ -117,7 +122,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 6. Repeat rfsearch with a new threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-🔄 Steps 5 and 6 should be repeated until the SEED alignment can no longer be improved::
+🔄 Steps 5 and 6 should be repeated until the seed alignment can no longer be improved::
 
   rfsearch.pl -t new_cutoff
 
@@ -203,7 +208,7 @@ Download your ``SEED`` and ``DESC`` files to your local machine::
 Updating an existing Rfam family
 --------------------------------
 
-The only difference between creating a new family and updating an existing one is the way the ``SEED`` alignment is retrieved::
+The only difference between creating a new family and updating an existing one is that the ``SEED`` and ``DESC`` files are retrieved from Rfam::
 
   rfco.pl RF0XXXX
 
