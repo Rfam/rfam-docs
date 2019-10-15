@@ -7,7 +7,7 @@ Glossary
 Clan
 ----
 
-Clan is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions. For example, the LSU clan (`CL00112 <http://rfam.org/clan/CL00112>`_) includes 5 families describing different types of large ribosomal subunit RNAs, including bacterial, eukaryotic, and archaeal LSU families.
+An **Rfam clan** is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions. For example, the LSU clan (`CL00112 <http://rfam.org/clan/CL00112>`_) includes 5 families describing different types of large ribosomal subunit RNAs, including bacterial, eukaryotic, and archaeal LSU families.
 
 ClustalW
 --------
@@ -18,6 +18,11 @@ Covariance model (CM)
 ---------------------
 
 A secondary structure profile for a RNA structural alignment (also called profile stochastic context-free grammars). Find out more about :ref:`citing-rfam:Covariance models and stochastic context-free grammars`.
+
+DESC file
+---------
+
+Each family is described using in a ``DESC`` file that includes the information such as family description, database references, RNA type, and publications (see the `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example).
 
 Family
 ------
@@ -34,7 +39,9 @@ A group of RNA sequences which are believed to be evolutionarily related in sequ
 Full alignment
 --------------
 
-An alignment of the set of related sequences which score higher than the manually set threshold values for the CMs of a particular Rfam family.
+An alignment of the set of related sequences which score higher than the manually set threshold values for the covariance model of a particular Rfam family.
+
+As of Rfam 12.0, we no longer automatically generate full alignments for each Rfam family. You may download the Rfam CM and generate your own alignments using Infernal. For details about generating a full alignment, see the Rfam `CPB paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
 
 Gathering cutoff
 ----------------
@@ -123,14 +130,14 @@ Stockholm format
 ----------------
 
 A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination
-of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_.
+of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 Type
 ----
 
-A simple functional classification used to organise Rfam families into RNA types.
-This is our own ontology and does not current directly relate to the ontologies
-used by other databases. For a full list of RNA types in our current ontology
+A simple functional classification used to organise Rfam families into **RNA types**.
+This ontology does not current directly relate to the ontologies
+used by other databases. For a full list of RNA types
 see the :ref:`searching-rfam:search by entry type` section.
 
 WAR
@@ -153,12 +160,12 @@ The Washington University Secondary Structure (WUSS) format is designed to make 
       - basepairs in simple stem loops
     * - ``()``, ``[]``, ``{}``
       - basepairs enclosing multifurcations
-    * - ``-``
+    * - ``-`` (hyphen)
       - internal loops and bulges
-    * - ``,``
+    * - ``,`` (comma)
       - single strand between helices
-    * - ``:``
+    * - ``:`` (semicolon)
       - single stranded residues external to any
         secondary structure
-    * - ``.``
+    * - ``.`` (period)
       - insertions relative to the consensus
