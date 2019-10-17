@@ -18,6 +18,13 @@ Requirements
 2. A command line environment supporting ``ssh`` (for example, bash)
 3. An Rfam cloud account
 
+
+.. TIP::
+  .. image:: https://cdn.brandfolder.io/5H442O3W/as/pl546j-7le8zk-5guop3/Slack_RGB.png
+     :target: https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE
+     :width: 100
+  `Join Rfam Cloud on Slack <https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE>`_ to get help with the pipeline from the Rfam team
+
 Requesting an Rfam cloud account
 --------------------------------
 
@@ -122,7 +129,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 6. Repeat rfsearch with a new threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-🔄 Steps 5 and 6 should be repeated until the seed alignment can no longer be improved::
+🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
   rfsearch.pl -t new_cutoff
 
