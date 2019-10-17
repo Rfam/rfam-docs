@@ -64,6 +64,13 @@ continue to iterate the seed until we have good resolution
 between real and false hits and cannot improve the seed membership
 further.
 
+.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0022.jpg
+    :alt: Building an RNA family using Infernal
+    :width: 600
+    :align: center
+
+    Building an RNA family using Infernal
+
 Important points to remember about seed alignments
 ------------------------------------------------------
 
