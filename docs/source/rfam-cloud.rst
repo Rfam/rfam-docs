@@ -88,9 +88,9 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 3. Find similar sequences using rfsearch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Build a :ref:`glossary:Covariance model (CM)` based on your seed alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
+Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
 
-  rfsearch.pl -nodesc -relax -t 30
+  rfsearch.pl -nodesc -relax -t 30 -cnompi
 
 .. list-table::
 
@@ -99,11 +99,13 @@ Build a :ref:`glossary:Covariance model (CM)` based on your seed alignment and s
     * - ``-nodesc``
       - creates a required file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run rfsearch, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
     * - ``-relax``
-      - allow sequences not found in the :ref:`glossary:rfamseq` database to be included in the seed alignment
+      - allow sequences not found in the :ref:`glossary:rfamseq` database to be included in the seed alignment (recommended)
+    * - ``-cnompi``
+      - do not use the MPI mode (this option should always be used)
     * - ``-t 30``
       - :ref:`glossary:Gathering cutoff` in bits. Usually 30 bits is a good starting point as most families are expected to have a threshold higher than 30.
 
-⚠️ **This step can take a long time** depending on the size of the alignment and the availability of computational resources.
+⚠️ **This step can take a long time** (up to 10 minutes or longer) depending on the size of the alignment and the availability of computational resources.
 
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
