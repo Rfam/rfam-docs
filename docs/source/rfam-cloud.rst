@@ -18,13 +18,6 @@ Requirements
 2. A command line environment supporting ``ssh`` (for example, bash)
 3. An Rfam cloud account
 
-
-.. TIP::
-  .. image:: https://cdn.brandfolder.io/5H442O3W/as/pl546j-7le8zk-5guop3/Slack_RGB.png
-     :target: https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE
-     :width: 100
-  `Join Rfam Cloud on Slack <https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE>`_ to get help with the pipeline from the Rfam team
-
 Requesting an Rfam cloud account
 --------------------------------
 
@@ -51,6 +44,12 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
   rfsearch.pl -h
   rfmake.pl -h
 
+.. TIP::
+  .. image:: https://cdn.brandfolder.io/5H442O3W/as/pl546j-7le8zk-5guop3/Slack_RGB.png
+     :target: https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE
+     :width: 100
+  `Join Rfam Cloud on Slack <https://join.slack.com/t/rfam-cloud/shared_invite/enQtODAwNjg2NjAzNDYzLWFlNjk1MjA4NjI5OWJmMzgzNzg2MTk1NDI5YjQ1MmVkZDA5ZjNhNTFmNzg1NWI0YWM2MWIyNzM4ZTg2OWVkZDE>`_ to get help with the pipeline from the Rfam team
+
 10 steps for building an Rfam family
 ------------------------------------
 
@@ -67,21 +66,16 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 
 Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
+If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called ``file.fasta`` with a **single RNA sequence**, convert it to Stockholm format and predict a consensus secondary structure using RNAfold::
+
+  predict_ss.pl -infile file.fasta -outfile SEED -r
+
 If you already have a ``SEED`` file on your local computer, copy it to Rfam cloud using ``scp``::
 
   scp SEED:username@rfam_ip_address/rfam_test
 
 .. HINT::
   Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
-
-If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file, convert it to Stockholm format and predict a consensus secondary structure. For a **single sequence** (using RNAfold)::
-
-  predict_ss.pl -infile file.fasta -outfile SEED -r
-
-For **multiple sequences** (using :ref:`glossary:RNAalifold`)::
-
-  create_alignment.pl -fasta file.fasta -mu > align.stockholm
-  predict_ss.pl -infile align.stockholm -outfile SEED -ra
 
 Once you have a Stockholm file called ``SEED`` in your working directory, proceed to the next step.
 
@@ -110,7 +104,10 @@ Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed a
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit). For more information, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
+The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
+
+.. NOTE::
+  For detailed instructions, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
 5. Add sequences to SEED (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -143,6 +140,8 @@ This process is known as **iteration** (see :ref:`building-families:Expanding th
 Once the cutoff has been chosen, all the required family files can be generated like this::
 
   rfmake.pl -t gathering_cutoff -a
+
+For more information about setting the ``-t`` parameter, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
 The ``-a`` option creates an ``align`` file with an alignment of all the sequences above the gathering threshold. Reviewing the ``align`` file can help to adjust the threshold, as the unwanted sequences can be excluded by rerunning rfmake with a higher threshold ``-t``.
 
@@ -209,7 +208,7 @@ Download your ``SEED`` and ``DESC`` files to your local machine::
   scp username@rfam_ip_address/rfam_test/SEED:.
   scp username@rfam_ip_address/rfam_test/DESC:.
 
-`Email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_ the files to the Rfam team for review. 🎉🎉🎉
+`Email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_  or Slack the files to the Rfam team for review. 🎉🎉🎉
 
 .. DANGER::
   We encourage you to **always keep a local copy of the important data**!
