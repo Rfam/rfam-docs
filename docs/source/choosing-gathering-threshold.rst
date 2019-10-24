@@ -57,7 +57,7 @@ Consider the following questions:
   - 39.2
   - 39.1
 
-  Notice that there is a sudden drop in bit scores between 69.4 and 41.1 bits. You should carefully examine the sequences immediately before and after the drop and decide whether they belong in the same family. A bit score jump could be an indication of where to put the bit score cutoff (in this example, it could be set at 69.4). Please note that a bit score jump alone does not provide enough evidence for setting gathering cutoff for a family and should be used in combination with other information as explained below.
+  Notice that there is a sudden drop in bit scores between 69.4 and 41.1 bits. You should carefully examine the sequences immediately before and after the drop and decide whether they belong in the same family. A bit score jump could be an indication of where to put the bit score cutoff (in this example, it could be set to 69.0 as it is customary to round the scores to the nearest bit score). Please note that a bit score jump alone does not provide enough evidence for setting gathering cutoff for a family and should be used in combination with other information as explained below.
 
 - **Does the taxonomic distribution of the hits match the expectation?** For example, if you are building an RNA family that is described in the literature as bacterial, it is desirable to set the threshold in a way that excludes non-bacterial hits. Each case should be reviewed individually, as it is possible that the unexpected hits could represent contamination, horizontal gene transfer, or a biologically interesting case.
 
