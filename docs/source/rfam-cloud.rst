@@ -99,7 +99,7 @@ Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed a
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The output files (``species``, ``outlist``, and ``taxinfo``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
+The output files (:ref:`choosing-gathering-threshold:Species file` and :ref:`choosing-gathering-threshold:Outlist file`) can be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
 
 .. NOTE::
   For detailed instructions on how to select the threshold, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
@@ -136,9 +136,14 @@ Once the cutoff has been chosen, all the required family files can be generated 
 
   rfmake.pl -t gathering_cutoff -a
 
-For more information about setting the ``-t`` parameter, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
+The ``-a`` option creates an ``align`` file with an alignment of all the sequences above the gathering threshold. For more information about setting the ``-t`` parameter, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
-The ``-a`` option creates an ``align`` file with an alignment of all the sequences above the gathering threshold. Reviewing the ``align`` file can help to adjust the threshold, as the unwanted sequences can be excluded by rerunning rfmake with a higher threshold ``-t``.
+After running rfmake you should:
+
+- review the :ref:`choosing-gathering-threshold:Align file` to check that the threshold is set correctly.
+- review the :ref:`choosing-gathering-threshold:Taxinfo file` to check that the taxonomic distribution of the family is correct.
+
+Any unwanted sequences can be excluded by rerunning rfmake with a higher threshold ``-t``.
 
 8. Add metadata to the DESC file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
