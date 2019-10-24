@@ -99,7 +99,7 @@ Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed a
 4. Choose a gathering threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
+The output files (``species``, ``outlist``, and ``taxinfo``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
 
 .. NOTE::
   For detailed instructions on how to select the threshold, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
