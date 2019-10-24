@@ -135,7 +135,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
   rfsearch.pl -t new_cutoff
 
-This process is known as **iteration** (see :ref:`building families:Expanding the seed (iteration)` for more information).
+This process is known as **iteration** (see :ref:`building-families:Expanding the seed (iteration)` for more information).
 
 7. Create required family files with rfmake
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
