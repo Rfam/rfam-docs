@@ -28,7 +28,7 @@ Connecting to Rfam cloud
 
 Use the login and password provided by the Rfam team to ``ssh`` to Rfam cloud::
 
-  ssh username@rfam_ip_address
+  ssh username@cloud.rfam.org
 
 You should see a command line prompt:
 
@@ -205,8 +205,8 @@ The ``rqc-all`` script performs multiple quality controls on the family. It chec
 
 Download your ``SEED`` and ``DESC`` files to your local machine::
 
-  scp username@rfam_ip_address/rfam_test/SEED:.
-  scp username@rfam_ip_address/rfam_test/DESC:.
+  scp username@cloud.rfam.org/rfam_test/SEED:.
+  scp username@cloud.rfam.org/rfam_test/DESC:.
 
 `Email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_  or Slack the files to the Rfam team for review. 🎉🎉🎉
 
