@@ -112,13 +112,13 @@ Reviewing the file allows one to better understand the taxonomic distribution of
 Align file
 ----------
 
-The ``align`` file is created by the rfmake program when executed with the ``-a`` option. The file includes an alignment of all the hits listed in the ``species`` file to the covariance model. It can be viewed using ``less``::
+The ``align`` file is created by the rfmake program when executed with the ``-a`` option. It contains a Stockholm alignment with all the hits above the gathering cutoff aligned to the covariance model. It can be viewed using ``less``::
 
     less -S align
 
 It is useful to review the bottom of the alignment as it contains the lowest scoring hits. Ask yourself if the alignment has too many gaps or very large insertions. Are there any sequences that could be excluded by raising the gathering cutoff that would decrease the number of gaps?
 
-⚠️ Do not edit the ``align`` file because it is overwritten every time ``rfsearch.pl -a`` runs - you should edit the SEED alignment instead.
+⚠️ Do not edit the ``align`` file because it is overwritten every time ``rfmake.pl -a`` runs - you should edit the SEED alignment instead.
 
 R-scape secondary structures
 ----------------------------
