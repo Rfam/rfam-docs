@@ -66,16 +66,11 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 
 Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
-If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called ``file.fasta`` with a **single RNA sequence**, convert it to Stockholm format and predict a consensus secondary structure using RNAfold::
+If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called ``file.fasta`` with a **single RNA sequence**, convert it to Stockholm format and predict a consensus secondary structure using RNAfold (the ``-r`` option)::
 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
-If you already have a ``SEED`` file on your local computer, copy it to Rfam cloud using ``scp``::
-
-  scp SEED:username@rfam_ip_address/rfam_test
-
-.. HINT::
-  Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
+Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
 
 Once you have a Stockholm file called ``SEED`` in your working directory, proceed to the next step.
 
@@ -107,7 +102,7 @@ Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed a
 The output files (``species``, ``outlist``, and ``taxonomy``) should be used to determine the gathering threshold for this family (the bit score of the last true positive hit).
 
 .. NOTE::
-  For detailed instructions, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
+  For detailed instructions on how to select the threshold, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
 5. Add sequences to SEED (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -130,7 +125,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
 🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
-  rfsearch.pl -t new_cutoff
+  rfsearch.pl -t new_cutoff -cnompi -relax
 
 This process is known as **iteration** (see :ref:`building-families:Expanding the seed (iteration)` for more information).
 
