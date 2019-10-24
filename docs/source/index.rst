@@ -6,9 +6,7 @@ Rfam Help
 `Rfam <http://rfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
 consensus secondary structures, and predicted homologues.
 
-This documentation is maintained by the :ref:`Rfam team`.
-Please **report any issues** or **contribute** to the text
-on `GitHub <https://github.com/Rfam/rfam-docs>`_.
+This documentation is maintained by the :ref:`rfam-team:Rfam team`. Please `report any issues <https://github.com/Rfam/rfam-docs/issues>`_ or `contribute on GitHub <https://github.com/Rfam/rfam-docs#how-to-contribute>`_.
 
 Contents
 ========
@@ -44,6 +42,7 @@ Contents
   :caption: Other
 
   genome-annotation
+  rfam-cloud
   sequence-extraction
   linking-rfam
   citing-rfam
@@ -54,7 +53,7 @@ Contents
 Get in touch
 ------------
 
-If you have any questions or feedback, feel free to `submit a GitHub issue <https://github.com/Rfam/docs/issues>`_ or email us at **rfam-help@ebi.ac.uk**.
+If you have any questions or feedback, feel free to `submit a GitHub issue <https://github.com/Rfam/rfam-docs/issues>`_ or email us at **rfam-help@ebi.ac.uk**.
 
 .. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
     :alt: Documentation Status

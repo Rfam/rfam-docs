@@ -145,7 +145,7 @@ Explanations of the command line options used in the above command are as follow
 
 :``--cut_ga``:
    specifies that the special Rfam GA (gathering) thresholds be used
-   to determine which hits are reported. See more in the section :ref:`Gathering cutoff`.
+   to determine which hits are reported. See more in the section :ref:`glossary:Gathering cutoff`.
 
 :``--rfam``:
    run in "fast" mode, the same mode used for
@@ -290,22 +290,7 @@ Understanding hit alignment annotation
 
 The alignment contains six lines. Start by looking at the second line
 which ends with CS. The line shows the predicted secondary structure
-of the query sequence in **WUSS format**. The format is a little fancier than simple
-dot-parantheses secondary structure markup which you may be familiar
-with. It’s designed to make it easier to see the secondary structure
-by eyes and follows the following conventions:
-
-  * basepairs in simple stem loops are annotated with ``<>`` characters
-  * basepairs enclosing multifurcations (multiple
-    stem loops) are annotated with ``()``, such as the tRNA acceptor stem in
-    this example. In more complicated structures, ``[]`` and ``{}``
-    annotations also show up to reflect deeper nestings of
-    multifurcations
-  * ``-`` characters mark interior loops and bulges
-  * ``,`` characters mark single-stranded residues in multifurcation loops
-  * ``:`` characters mark single stranded residues external to any
-    secondary structure
-  * insertions relative to this consensus are annotated by a ``.`` character
+of the query sequence in :ref:`glossary:WUSS format`.
 
   For more information see section 9 of the `Infernal User's Guide
   <http://eddylab.org/infernal/Userguide.pdf>`_.

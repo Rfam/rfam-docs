@@ -12,7 +12,7 @@ Rfam references
 `Non‐coding RNA analysis using the Rfam database <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_
 	| I. Kalvari, E.P. Nawrocki, J. Argasinska, N. Quinones‐Olvera, R.D. Finn, A. Bateman and A.I. Petrov
 	| **Current Protocols in Bioinformatics** (2018) e51. doi: 10.1002/cpbi.51
-	
+
 `Rfam 12.0: updates to the RNA families database <http://nar.oxfordjournals.org/content/43/D1/D130>`_
 	| E.P. Nawrocki, S.W. Burge, A. Bateman, J. Daub, R.Y. Eberhardt, S.R. Eddy, E.W. Floden, P.P. Gardner, T.A. Jones, J.T. and R.D. Finn
 	| **Nucleic Acids Research** (2014) doi: 10.1093/nar/gku1063

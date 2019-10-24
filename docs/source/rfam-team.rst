@@ -26,7 +26,7 @@ Previous contributors
 * `Paul Gardner <http://orcid.org/0000-0002-7808-1213>`_ - *former Rfam project leader*
 * `Sarah Burge <http://orcid.org/0000-0002-2506-927X>`_ - *former Rfam project leader*
 * `Joanna Argasinska <https://orcid.org/0000-0003-2678-2824>`_
-* Ruth Eberhardt
+* `Ruth Eberhardt <https://orcid.org/0000-0001-6152-1369>`_
 * `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
 * John Tate
 * Jennifer Daub
@@ -41,4 +41,4 @@ Previous contributors
 
 Rfam is a collaborative venture and we hope to be able to interact
 with as many people as possible to provide a quality database. Please
-:ref:`Contact us` for information.
+:ref:`contact-us:Contact us` for information.

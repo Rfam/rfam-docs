@@ -7,7 +7,7 @@ Glossary
 Clan
 ----
 
-Clan is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions.
+An **Rfam clan** is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions. For example, the LSU clan (`CL00112 <http://rfam.org/clan/CL00112>`_) includes 5 families describing different types of large ribosomal subunit RNAs, including bacterial, eukaryotic, and archaeal LSU families.
 
 ClustalW
 --------
@@ -17,17 +17,31 @@ A general purpose multiple sequence alignment program for DNA (RNA) which we use
 Covariance model (CM)
 ---------------------
 
-A secondary structure profile for a RNA structural alignment (also called profile stochastic context-free grammars).
+A secondary structure profile for a RNA structural alignment (also called profile stochastic context-free grammars). Find out more about :ref:`citing-rfam:Covariance models and stochastic context-free grammars`.
+
+DESC file
+---------
+
+Each family is described using in a ``DESC`` file that includes the information such as family description, database references, RNA type, and publications (see the `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example).
 
 Family
 ------
 
-A group of RNA sequences which we believe are evolutionarily related in sequence or secondary structure.
+A group of RNA sequences which are believed to be evolutionarily related in sequence or secondary structure.
+
+.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0008.jpg
+    :alt: SAM riboswitch Rfam family
+    :width: 600
+    :align: center
+
+    SAM riboswitch Rfam family
 
 Full alignment
 --------------
 
-An alignment of the set of related sequences which score higher than the manually set threshold values for the CMs of a particular Rfam family.
+An alignment of the set of related sequences which score higher than the manually set threshold values for the covariance model of a particular Rfam family.
+
+As of Rfam 12.0, we no longer automatically generate full alignments for each Rfam family. You may download the Rfam CM and generate your own alignments using Infernal. For details about generating a full alignment, see the Rfam `CPB paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
 
 Gathering cutoff
 ----------------
@@ -57,7 +71,18 @@ RNA folding software which folds alignments using a Stochastic Context-Free Gram
 rfamseq
 -------
 
-The underlying nucleotide sequence database on which Rfam is based.
+*Rfamseq* is the underlying nucleotide sequence database on which Rfam is based. Starting with Rfam 13.0, *rfamseq* is based on a collection of complete, non-redundant, and representative genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`_ (find out more in the `Rfam 13.0 paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/#SEC2title>`_).
+
+*rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
+You can find out the information about *rfamseq* currently in use in the
+`README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
+
+.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
+    :alt: Taxonomic composition of Rfamseq 13.0
+    :width: 400
+    :align: center
+
+    Taxonomic composition of Rfamseq 13.0
 
 RNAalifold
 ----------
@@ -74,12 +99,26 @@ in a multiple sequence alignment. R-scape is used to create and improve
 Rfam families, and R-scape visualisations are shown on the secondary structure
 tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
+.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
+    :alt: R-scape visualisation of SAM riboswitch
+    :width: 600
+    :align: center
+
+    R-scape visualisation of SAM riboswitch
+
 Seed alignment
 --------------
 
 A manually curated sample of representative sequences for a family.
 These sequences are aligned and annotated with a consensus secondary structure.
-This alignment is used to build the covariance model for the family.
+This alignment is used to build the covariance model for the family. See :ref:`building-families:Seed alignments and secondary structure annotation` for more information.
+
+.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0010.jpg
+      :alt: SAM riboswitch Seed alignment
+      :width: 600
+      :align: center
+
+      An example seed alignment coloured by secondary structure helical regions
 
 Sequence region
 ---------------
@@ -91,15 +130,15 @@ Stockholm format
 ----------------
 
 A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination
-of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_.
+of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 Type
 ----
 
-A simple functional classification used to organise Rfam families.
-This is our own ontology and does not current directly relate to the ontologies
-used by other databases. For a full list of RNA types in our current ontology
-see the :ref:`search by entry type` section.
+A simple functional classification used to organise Rfam families into **RNA types**.
+This ontology does not current directly relate to the ontologies
+used by other databases. For a full list of RNA types
+see the :ref:`searching-rfam:search by entry type` section.
 
 WAR
 ---
@@ -107,3 +146,26 @@ WAR
 A software tool that enables us to simultaneously run several different methods
 for performing multiple alignment and secondary structure prediction
 for non-coding RNA sequences. See the `WAR  <http://genome.ku.dk/resources/war/>`_ website.
+
+WUSS format
+-----------
+
+The Washington University Secondary Structure (WUSS) format is designed to make it easier to see the secondary structure by eye and follows the following conventions:
+
+.. list-table::
+
+    * - Symbol
+      - Meaning
+    * - ``<>``
+      - basepairs in simple stem loops
+    * - ``()``, ``[]``, ``{}``
+      - basepairs enclosing multifurcations
+    * - ``-`` (hyphen)
+      - internal loops and bulges
+    * - ``,`` (comma)
+      - single strand between helices
+    * - ``:`` (semicolon)
+      - single stranded residues external to any
+        secondary structure
+    * - ``.`` (period)
+      - insertions relative to the consensus

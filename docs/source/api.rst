@@ -8,7 +8,7 @@ Most data in Rfam can be accessed programmatically using a RESTful API
 allowing for integration with other resources.
 
 .. HINT::
-  You can also access the data using a :ref:`Public MySQL Database`
+  You can also access the data using a :ref:`database:Public MySQL Database`
   that contains the latest Rfam release.
 
 Data access
