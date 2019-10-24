@@ -88,8 +88,10 @@ In order to exclude false positives, the rfsearch command scans a large collecti
 
 For example, if the current threshold is 40 bits but the top scoring reversed hit is at 45 bits, it means that the gathering threshold needs to be raised to at least 45 bits.
 
-.. hint::
-    Consider also reviewing the ``outlist`` file which is similar to ``species`` but contains slightly different information, such as sequence descriptions as well as the details about whether the hits were truncated or appear on the reverse strand.
+Outlist file
+------------
+
+The ``outlist`` file is similar to ``species`` but contains slightly different information, such as sequence descriptions as well as the details about whether the hits were truncated or appear on the reverse strand.
 
 Taxinfo file
 -------------
