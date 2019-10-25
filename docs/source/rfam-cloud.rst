@@ -26,9 +26,9 @@ Please :ref:`contact-us:Contact us` to request access to the Rfam family buildin
 Connecting to Rfam cloud
 ------------------------
 
-Use the login and password provided by the Rfam team to ``ssh`` to Rfam cloud::
+Use the username and password provided by the Rfam team to ``ssh`` to Rfam cloud::
 
-  ssh username@cloud.rfam.org
+  ssh <username>@cloud.rfam.org
 
 You should see a command line prompt:
 
@@ -71,6 +71,8 @@ If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
 Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
+
+See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
 
 Once you have a Stockholm file called ``SEED`` in your working directory, proceed to the next step.
 
@@ -125,7 +127,9 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
 🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
-  rfsearch.pl -t new_cutoff -cnompi -relax
+  rfsearch.pl -t new_cutoff -cnompi -relax -ignoresm
+
+The ``-ignoresm`` option overrides the threshold set at the previous iteration and saved in the ``DESC`` file.
 
 This process is known as **iteration** (see :ref:`building-families:Expanding the seed (iteration)` for more information).
 
@@ -203,12 +207,9 @@ The ``rqc-all`` script performs multiple quality controls on the family. It chec
 10. Send SEED and DESC files for review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Download your ``SEED`` and ``DESC`` files to your local machine::
+Download your ``SEED`` and ``DESC`` files to your local machine and send the files to the Rfam team for review by email or Slack. 🎉🎉🎉
 
-  scp username@cloud.rfam.org/rfam_test/SEED:.
-  scp username@cloud.rfam.org/rfam_test/DESC:.
-
-`Email <https://rfam.readthedocs.io/en/latest/contact-us.html>`_  or Slack the files to the Rfam team for review. 🎉🎉🎉
+See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
 
 .. DANGER::
   We encourage you to **always keep a local copy of the important data**!
@@ -221,6 +222,68 @@ The only difference between creating a new family and updating an existing one i
   rfco.pl RF0XXXX
 
 After that, follow the family building instructions from **Step 3**.
+
+Copying files to and from Rfam cloud
+------------------------------------
+
+The Rfam cloud consists of a **login node** that handles the account login and **worker pods** which control the Rfam family building pipeline. When you run ``ssh <username>@cloud.rfam.org`` you are connected directly to your worker pod.
+
+.. figure:: images/rfam-cloud-infrastructure.png
+      :alt: Rfam cloud infrastructure
+      :width: 600
+      :align: center
+
+The login node and the worker pods currently have **different filesystems** which means that if you are on the worker pod you cannot see the files on the login node and vice versa. You can move files to and from login node using ``scp`` or ``sftp`` but then you need to use ``kubectl cp`` to make the files available on the worker pods.
+
+🛠️ Work on unifying the two filesystems is underway which should make moving files to and from Rfam more user-friendly.
+
+Copying files to Rfam cloud
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+🖥️ On your **local machine**::
+
+  scp SEED <username>@cloud.rfam.org:/home/<username>
+
+This copies a file ``SEED`` to your login node. You can also use an `SFTP <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`_ client for this task (for example, `CyberDuck <https://cyberduck.io>`_ on Mac and Windows).
+
+⚙️ On **worker pod**::
+
+  ssh <username>@cloud.rfam.org
+  kubectl get pod —selector=user=<username>,tier=frontend
+
+Record the ``pod_id`` that looks like *rfam-login-pod-<username>-6b9f46fc76-67fhn*, then exit to the login node::
+
+  exit
+
+🗝️ On **login node**::
+
+  kubectl cp SEED <pod_id>:/workdir
+
+Then get back to the worker pod::
+
+  kubectl exec -it <pod_id> bash
+
+The file should appear in your ``workdir`` folder. You can specify other paths in the ``kubectl cp`` command to move the files to any subfolder.
+
+Copying files from Rfam cloud
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+⚙️ On **worker pod**::
+
+  ssh <username>@cloud.rfam.org
+  kubectl get pod --selector=user=<username>,tier=frontend
+
+Record the ``pod_id`` that looks like *rfam-login-pod-<username>-6b9f46fc76-67fhn*, then exit to the login node::
+
+  exit
+
+🗝️ On **login node**::
+
+  kubectl cp <pod_id>:/workdir/SEED .
+
+🖥️ On your **local machine**::
+
+  scp <username>@cloud.rfam.org:/home/<username>/SEED .
 
 Questions or comments?
 ----------------------
