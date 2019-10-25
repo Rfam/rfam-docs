@@ -127,7 +127,9 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
 🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
-  rfsearch.pl -t new_cutoff -cnompi -relax
+  rfsearch.pl -t new_cutoff -cnompi -relax -ignoresm
+
+The ``-ignoresm`` option overrides the threshold set at the previous iteration and saved in the ``DESC`` file.
 
 This process is known as **iteration** (see :ref:`building-families:Expanding the seed (iteration)` for more information).
 
