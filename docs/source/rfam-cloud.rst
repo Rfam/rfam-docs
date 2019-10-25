@@ -249,7 +249,7 @@ This copies a file ``SEED`` to your login node. You can also use an `SFTP <https
 ⚙️ On **worker pod**::
 
   ssh <username>@cloud.rfam.org
-  kubectl get pod —selector=user=<username>,tier=frontend
+  kubectl get pod --selector=user=<username>,tier=frontend
 
 Record the ``pod_id`` that looks like *rfam-login-pod-<username>-6b9f46fc76-67fhn*, then exit to the login node::
 
@@ -288,4 +288,4 @@ Record the ``pod_id`` that looks like *rfam-login-pod-<username>-6b9f46fc76-67fh
 Questions or comments?
 ----------------------
 
-:ref:`contact-us:Contact us` or `raise an issue <https://github.com/Rfam/rfam-family-pipeline/issues>`_ on GitHub.
+:ref:`contact-us:Contact us` by email, `raise an issue <https://github.com/Rfam/rfam-family-pipeline/issues>`_ on GitHub, or get in touch on Slack.
