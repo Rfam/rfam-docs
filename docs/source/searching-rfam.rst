@@ -74,18 +74,10 @@ Both websites use the same version of Infernal and the same set of Rfam covarian
 Single sequence search
 ^^^^^^^^^^^^^^^^^^^^^^
 
-If your sequence is in the EMBL release on which *rfamseq* is based, your
-sequence will already be searched and annotated. You can use the
-Genbank/EMBL accession in a "look up sequence box" on the sequence
-search page or a "jump to" box. Simply paste the accession into
-the box.
-
-.. HINT::
-  The accession version number is not required
-
-You can find out which version of EMBL we are currently using in the
-release `README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_
-on our FTP site.
+If your sequence is found in a genome on which *rfamseq* is based, your
+sequence will already be searched and annotated. You can paste the
+Genbank/EMBL accession in the text search or the "look up sequence box" on the sequence
+search page or a "jump to" box. The accession version number is not required.
 
 Medium scale batch searches (less than 1,000 sequences)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
