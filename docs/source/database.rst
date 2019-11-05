@@ -6,6 +6,9 @@ containing the latest version of Rfam data. The database will be updated with ea
 To access old versions of the database download SQL dumps
 from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
 
+.. HINT::
+  For advanced examples of using the public database, please see our `paper in Current Protocols in Bioinformatics <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622>`_.
+
 Connection details
 ------------------
 
