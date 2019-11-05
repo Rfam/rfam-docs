@@ -64,6 +64,13 @@ Searching a nucleotide sequence (DNA or RNA) against the Rfam library
 of covariance models will identify any regions in your sequence we
 would classify as belonging to one our RNA families.
 
+There are two ways of running sequence searches:
+
+1. `Rfam website <https://rfam.org/search#tabview=tab1>`_
+2. `EBI cmscan service <https://www.ebi.ac.uk/Tools/rna/infernal_cmscan/>`_
+
+Both websites use the same version of Infernal and the same set of Rfam covariance models.
+
 Single sequence search
 ^^^^^^^^^^^^^^^^^^^^^^
 
