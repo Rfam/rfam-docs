@@ -70,7 +70,7 @@ If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called 
 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
-Alternatively, create a ``SEED`` file using the `vi editor <https://www.cs.colostate.edu/helpdocs/vi.html>`_ and paste the file contents from your local computer.
+Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer.
 
 See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
 
