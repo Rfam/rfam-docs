@@ -126,9 +126,9 @@ R-scape secondary structures
 :ref:`glossary:R-scape` analyses RNA multiple sequence alignment to check if the consensus secondary structure is supported by the covariation observed in the alignment. To run R-scape, enter the following commands::
 
     mkdir rscape-seed
-    R-scape --cyk --outdir rscape-seed SEED
+    R-scape --fold --outdir rscape-seed SEED
     mkdir rscape-align
-    R-scape --cyk --outdir rscape-align align
+    R-scape --fold --outdir rscape-align align
 
 The results will appear in the ``rscape-seed`` folder that can be copied to your computer for inspection. A good family will have multiple basepairs highlighted in green, which indicates covariation support. The ``--cyk`` option checks if there is an alternative secondary structure compatible with the alignment. Comparing the regular and the ``--cyk`` secondary structure diagrams may suggest a better structure than the current secondary structure consensus found in the seed alignment.
 
