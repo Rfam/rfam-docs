@@ -70,9 +70,9 @@ If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called 
 
   predict_ss.pl -infile file.fasta -outfile SEED -r
 
-Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer.
+Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer. See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
 
-See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
+It is recommended that the sequences are named in the ``accession:start-end`` format where ``accession`` is an `ENA <http://www.ebi.ac.uk/ena/>`_, `GenBank <https://www.ncbi.nlm.nih.gov/genbank/>`_, or `RNAcentral <https://rnacentral.org>`_ identifier, and ``start-end`` are the coordinates of the RNA in the accession (for example, ``AB003409.1/96-167``). See the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_ for more examples. ⚠️ The sequence name cannot contain the parenthesis characters (``(`` and ``)``).
 
 Once you have a Stockholm file called ``SEED`` in your working directory, proceed to the next step.
 
