@@ -12,6 +12,7 @@ European Bioinformatics Institute
 * `Rob Finn <http://www.ebi.ac.uk/about/people/rob-finn>`_ - Team Leader
 * `Anton Petrov <http://www.ebi.ac.uk/about/people/anton-petrov>`_ - Rfam Project Leader
 * `Ioanna Kalvari <http://www.ebi.ac.uk/about/people/ioanna-kalvari>`_ - Bioinformatician
+* `Nancy Ontiveros <http://www.ebi.ac.uk/about/people/nancy-ontiveros>`_ - Biocurator
 
 Collaborators
 -------------
