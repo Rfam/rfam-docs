@@ -68,7 +68,7 @@ Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that conta
 
 If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called ``file.fasta`` with a **single RNA sequence**, convert it to Stockholm format and predict a consensus secondary structure using RNAfold (the ``-r`` option)::
 
-  predict_ss.pl -infile file.fasta -outfile SEED -r
+  predict_ss.pl -infile <file.fasta> -outfile SEED -r
 
 Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer. See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
 
@@ -118,7 +118,7 @@ Find an accession in the ``outlist`` file that you would like to add to the ``SE
 
 To remove sequences from ``SEED`` (if added in error, for example), create a file with a list of accessions you want to remove using ``grep`` as described above and call it *removeme*. Make sure the accession is exactly the same as in the ``SEED`` file, for example ``NW_002196667.1/1438869-1438941``. Then run the following command::
 
-  rfseed.pl -d -n removeme
+  rfseed.pl -d -n <removeme>
 
 Consider **manually editing the alignment** on your local computer using `RALEE <http://sgjlab.org/ralee/>`_ or `belvu <http://sonnhammer.sbc.su.se/Belvu.html>`_ and re-uploading it as explained in **Step 1**.
 
@@ -127,7 +127,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
 🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
-  rfsearch.pl -t new_cutoff -cnompi -relax -ignoresm
+  rfsearch.pl -t <new_cutoff> -cnompi -relax -ignoresm
 
 The ``-ignoresm`` option overrides the threshold set at the previous iteration and saved in the ``DESC`` file.
 
@@ -138,7 +138,7 @@ This process is known as **iteration** (see :ref:`building-families:Expanding th
 
 Once the cutoff has been chosen, all the required family files can be generated like this::
 
-  rfmake.pl -t gathering_cutoff -a
+  rfmake.pl -t <gathering_cutoff> -a
 
 The ``-a`` option creates an ``align`` file with an alignment of all the sequences above the gathering threshold. For more information about setting the ``-t`` parameter, see :ref:`choosing-gathering-threshold:Choosing gathering threshold`.
 
@@ -193,7 +193,7 @@ Each family is described using in a ``DESC`` file (see the `tRNA DESC file <http
 
 📚 To add literature references, use the following command that automatically imports information from `PubMed <https://www.ncbi.nlm.nih.gov/pubmed/>`_::
 
-  add_ref.pl pubmed_id
+  add_ref.pl <pubmed_id>
 
 ⚠️ The ``GA``, ``TC``, ``NC``, ``BM``, ``CV``, ``SM`` lines are added automatically, please do not change them manually. The ``RN``, ``RM``, ``RT``, ``RA``, and ``RL`` lines are added by the ``add_ref.pl`` script. The ``AC`` field is assigned once the family is stored in the official Rfam database.
 
@@ -219,7 +219,7 @@ Updating an existing Rfam family
 
 The only difference between creating a new family and updating an existing one is that the ``SEED`` and ``DESC`` files are retrieved from Rfam::
 
-  rfco.pl RF0XXXX
+  rfco.pl <RF0XXXX>
 
 After that, follow the family building instructions from **Step 3**.
 
