@@ -19,6 +19,7 @@ Collaborators
 
 * `Sean Eddy <http://orcid.org/0000-0001-6676-4706>`_ (Harvard University) - founding developer and author of Infernal software
 * `Eric Nawrocki <http://orcid.org/0000-0002-2497-3427>`_ (NCBI) - developer of Infernal software
+* `Elena Rivas <https://www.mcb.harvard.edu/directory/elena-rivas/>`_ (Harvard University) - author of R-scape software
 
 Previous contributors
 ---------------------
