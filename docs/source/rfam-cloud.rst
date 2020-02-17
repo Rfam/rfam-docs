@@ -30,6 +30,12 @@ Use the username and password provided by the Rfam team to ``ssh`` to Rfam cloud
 
   ssh <username>@cloud.rfam.org
 
+
+To get access to an interactive session and start using the pipeline run the following command::
+
+  rfcloud --start
+
+
 You should see a command line prompt:
 
 .. figure:: images/rfam-cloud-cli.png
@@ -38,6 +44,7 @@ You should see a command line prompt:
       :align: center
 
       Rfam cloud command line prompt
+
 
 To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scripts (you should see help messages explaining how to use the scripts)::
 
