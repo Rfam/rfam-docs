@@ -59,3 +59,20 @@ If you have any questions or feedback, feel free to `submit a GitHub issue <http
     :alt: Documentation Status
     :scale: 100%
     :target: https://rfam.readthedocs.io/en/latest/?badge=latest
+
+Funding
+=======
+
+Rfam is supported by the `BBSRC <https://bbsrc.ukri.org/>`_ and `Wellcome <https://wellcome.ac.uk/>`_ and is developed at the `EMBL-EBI <https://www.ebi.ac.uk>`_.
+
+.. image:: images/ukri-bbsrc.png
+   :alt: BBSRC logo
+   :width: 140
+
+.. image:: images/wellcome-logo-black.png
+  :alt: Wellcome logo
+  :width: 50
+
+.. image:: images/embl-ebi.png
+  :alt: EMBL-EBI logo
+  :width: 140
