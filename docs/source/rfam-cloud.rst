@@ -53,9 +53,9 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 
 .. TIP::
   .. image:: https://cdn.brandfolder.io/5H442O3W/as/pl546j-7le8zk-5guop3/Slack_RGB.png
-     :target: https://rfam-cloud.slack.com
+     :target: https://join.slack.com/t/rfam-cloud/shared_invite/zt-cp6xxpur-HtwEnAxuK6RhhyTu7c8hGA
      :width: 100
-  `Join Rfam Cloud on Slack <https://rfam-cloud.slack.com>`_ to get help with the pipeline from the Rfam team
+  `Join Rfam Cloud on Slack <https://join.slack.com/t/rfam-cloud/shared_invite/zt-cp6xxpur-HtwEnAxuK6RhhyTu7c8hGA>`_ to get help with the pipeline from the Rfam team
 
 10 steps for building an Rfam family
 ------------------------------------
