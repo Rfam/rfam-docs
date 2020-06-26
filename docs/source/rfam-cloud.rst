@@ -292,6 +292,17 @@ Record the ``pod_id`` that looks like *rfam-login-pod-<username>-6b9f46fc76-67fh
 
   scp <username>@cloud.rfam.org:/home/<username>/SEED .
 
+Tips and tricks
+---------------
+
+- Filter out redundant sequences. For example, to remove redundancy from a file called `align` using 95% identify as a cutoff run::
+
+    esl-weight -f --idf 0.95 align
+
+- Iteratively re-align seed sequences to the CM::
+
+    cmbuild --refine SEED.new CM.new SEED
+
 Questions or comments?
 ----------------------
 
