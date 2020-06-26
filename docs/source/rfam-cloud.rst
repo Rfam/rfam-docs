@@ -60,6 +60,8 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 10 steps for building an Rfam family
 ------------------------------------
 
+✏️ Interested in editing an Rfam family? Skip to :ref:`rfam-cloud:Updating an existing Rfam family`.
+
 1. Create a new folder
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -227,8 +229,9 @@ Updating an existing Rfam family
 The only difference between creating a new family and updating an existing one is that the ``SEED`` and ``DESC`` files are retrieved from Rfam::
 
   rfco.pl <RF0XXXX>
+  cd <RF0XXXX>
 
-After that, follow the family building instructions from **Step 3**.
+After that, follow the family building instructions: :ref:`rfam-cloud:3. Find similar sequences using rfsearch`.
 
 Copying files to and from Rfam cloud
 ------------------------------------
