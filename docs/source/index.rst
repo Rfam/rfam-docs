@@ -49,6 +49,15 @@ Contents
   privacy
   website-updates
 
+License
+-------
+
+Rfam is freely available under the `Creative Commons Zero (“CC0”) licence <http://creativecommons.org/publicdomain/zero/1.0/>`_.
+
+Citing Rfam
+-----------
+
+If you use Rfam in your work, please consider citing the :ref:`Citing-rfam:Rfam references`.
 
 Get in touch
 ------------
