@@ -90,7 +90,7 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 
 Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
 
-  rfsearch.pl -nodesc -relax -t 30 -cnompi
+  rfsearch.pl -nodesc -relax -t 25 -cnompi
 
 .. list-table::
 
