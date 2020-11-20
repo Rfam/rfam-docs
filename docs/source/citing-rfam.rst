@@ -6,8 +6,7 @@ Rfam makes use of a large amount of publicly available data, especially publishe
 Rfam references
 ---------------
 `Rfam 14: expanded coverage of metagenomic, viral and microRNA families <https://doi.org/10.1093/nar/gkaa1047>`_
-	| I. Kalvari, E.P. Nawrocki, N. Ontiveros-Palacios, J. Argasinska, K. Lamkiewicz, M. Marz, S. Griffiths-Jones, C. Toffano-Nioche, 
-	| D. Gautheret, Z. Weinberg, E. Rivas, S.R. Eddy, R.D. Finn, A. Bateman, and A.I. Petrov
+	| I. Kalvari, E.P. Nawrocki, N. Ontiveros-Palacios, J. Argasinska, K. Lamkiewicz, M. Marz, S. Griffiths-Jones, C. Toffano-Nioche, D. Gautheret, Z. Weinberg, E. Rivas, S.R. Eddy, R.D. Finn, A. Bateman, and A.I. Petrov
 	| **Nucleic Acids Research** (2020) doi: 10.1093/nar/gkaa1047
 
 `Rfam 13.0: shifting to a genome-centric resource for non-coding RNA families <https://academic.oup.com/nar/article/4588106>`_
