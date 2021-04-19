@@ -6,7 +6,7 @@ Extract ncRNA sequences
 All Rfam ncRNA sequences become available on the `ftp <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release.
 The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_ and ``esl-sfetch`` tool.
 
-**Requirements:** 
+**Requirements:**
 
 
 1. MySQL Community Server, freely available `here <https://dev.mysql.com/downloads/>`_
@@ -18,27 +18,27 @@ The following is a tutorial on how to extract sequences using the public instanc
 
 
 
-1. Download and install the `Infernal software <http://eddylab.org/infernal/>`_. You can find additional information in the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_. 
+1. Download and install the `Infernal software <http://eddylab.org/infernal/>`_. You can find additional information in the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
 .. seealso:: `Genome annotation <http://rfam.readthedocs.io/en/latest/genome-annotation.html#example-of-using-infernal-and-rfam-to-annotate-rnas-in-an-archaeal-genome>`_ section
 
 2. Add Infernal tools to your **$PATH** using the following command:
-:: 
+::
 	> export PATH="/path/to/infernal-1.1.x/bin:$PATH"
 
 3. Create a new directory and download all fasta files from the FTP using ``wget`` :
-::  
+::
 	> mkdir rfam_sequences && cd rfam_sequences
 	> wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files/* .
 
 4. Decompress all sequence files and merge them in a single fasta file:
-:: 
+::
 	> gunzip *.gz
 	> cat *.fa > Rfam.fa
 
 5. Index the unified sequence file using ``esl-sfetch`` :
 
-:: 
+::
 
 	> esl-sfetch --index Rfam.fa
 
@@ -51,7 +51,7 @@ Example query to retrieve all human ncRNAs:
 
 ::
 
-	select concat(fr.rfamseq_acc,'/',fr.seq_start,'-',fr.seq_end) 
+	select concat(fr.rfamseq_acc,'/',fr.seq_start,'-',fr.seq_end)
 	from full_region fr, genseq gs
 	where gs.rfamseq_acc=fr.rfamseq_acc
 	and fr.is_significant=1
@@ -59,13 +59,13 @@ Example query to retrieve all human ncRNAs:
 	and gs.upid='UP000005640' -- human upid
 	and gs.version=14.0;
 
-.. 
+..
 
 Example query to retrieve all human snoRNAs:
 
-::	
+::
 
-	select concat(fr.rfamseq_acc,'/',fr.seq_start,'-',fr.seq_end) 
+	select concat(fr.rfamseq_acc,'/',fr.seq_start,'-',fr.seq_end)
    	from full_region fr, genseq gs, family f
 	where gs.rfamseq_acc=fr.rfamseq_acc
 	and f.rfam_acc=fr.rfam_acc
@@ -78,8 +78,8 @@ Example query to retrieve all human snoRNAs:
 Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 ::
-	
-	select concat(fr.rfamseq_acc,'/',seq_start,'-',seq_end) 
+
+	select concat(fr.rfamseq_acc,'/',seq_start,'-',seq_end)
 	from full_region fr, rfamseq rs, taxonomy tx
 	where fr.rfamseq_acc=rs.rfamseq_acc
 	and tx.ncbi_id=rs.ncbi_id
@@ -92,14 +92,13 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 7.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
 
 ::
-	
+
 	> mysql -urfamro -hmysql-rfam-public.ebi.ac.uk -P4497 --skip-column-names --database Rfam < query.sql > accessions.txt
 
-.. 
+..
 
 8. Extract the ncRNA sequences in the ``.txt`` file generated in **step 7** from the unified Rfam fasta file from **step 4** using ``esl-fetch``:
 
-:: 
+::
 
 	> esl-sfetch -f Rfam.fa /path/to/accessions.txt > Rfam_ncRNAs.fa
-
