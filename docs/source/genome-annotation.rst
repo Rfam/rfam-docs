@@ -16,7 +16,7 @@ check that the following resources do not provide the annotation for you:
 * `UCSC Genome Browser <http://www.genome.ucsc.edu/>`_
 
 .. HINT::
-  For more details about genome annotation, please see our `paper in Current Protocols in Bioinformatics <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/#S22>`_.
+  For more details about genome annotation, please see our `paper in Current Protocols in Bioinformatics <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/#S22>`_ or follow a Docker-based `tutorial <https://rfam.github.io/rfam-tutorials/>`_ showing how to annotate a viral genome with RNA families.
 
 Example of using Infernal and Rfam to annotate RNAs in an archaeal genome
 -------------------------------------------------------------------------
