@@ -9,13 +9,17 @@ Rfam references
 	| I. Kalvari, E.P. Nawrocki, N. Ontiveros-Palacios, J. Argasinska, K. Lamkiewicz, M. Marz, S. Griffiths-Jones, C. Toffano-Nioche, D. Gautheret, Z. Weinberg, E. Rivas, S.R. Eddy, R.D. Finn, A. Bateman, and A.I. Petrov
 	| **Nucleic Acids Research** (2020) doi: 10.1093/nar/gkaa1047
 
-`Rfam 13.0: shifting to a genome-centric resource for non-coding RNA families <https://academic.oup.com/nar/article/4588106>`_
-	| I. Kalvari, J. Argasinska, N. Quinones-Olvera, E.P. Nawrocki, E. Rivas, S.R. Eddy, A. Bateman, R.D. Finn, and A.I. Petrov
-	| **Nucleic Acids Research** (2017) doi: 10.1093/nar/gkx1038
-
 `Non‐coding RNA analysis using the Rfam database <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_
 	| I. Kalvari, E.P. Nawrocki, J. Argasinska, N. Quinones‐Olvera, R.D. Finn, A. Bateman and A.I. Petrov
 	| **Current Protocols in Bioinformatics** (2018) e51. doi: 10.1002/cpbi.51
+
+`Computational strategies to combat COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research <https://academic.oup.com/bib/article/22/2/642/5955939>`_
+  | Hufsky et al.
+  | **Briefings in Bioinformatics** (2020). doi: 10.1093/bib/bbaa232
+
+`Rfam 13.0: shifting to a genome-centric resource for non-coding RNA families <https://academic.oup.com/nar/article/4588106>`_
+	| I. Kalvari, J. Argasinska, N. Quinones-Olvera, E.P. Nawrocki, E. Rivas, S.R. Eddy, A. Bateman, R.D. Finn, and A.I. Petrov
+	| **Nucleic Acids Research** (2017) doi: 10.1093/nar/gkx1038
 
 `Rfam 12.0: updates to the RNA families database <http://nar.oxfordjournals.org/content/43/D1/D130>`_
 	| E.P. Nawrocki, S.W. Burge, A. Bateman, J. Daub, R.Y. Eberhardt, S.R. Eddy, E.W. Floden, P.P. Gardner, T.A. Jones, J.T. and R.D. Finn
