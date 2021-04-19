@@ -4,7 +4,7 @@ Public MySQL Database
 Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database
 containing the latest version of Rfam data. The database will be updated with each release.
 To access old versions of the database download SQL dumps
-from the `FTP archive <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
+from the `FTP archive <http://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
 
 .. HINT::
   For advanced examples of using the public database, please see our `paper in Current Protocols in Bioinformatics <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622>`_.

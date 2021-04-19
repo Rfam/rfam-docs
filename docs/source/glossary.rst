@@ -75,7 +75,7 @@ rfamseq
 
 *rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
 You can find out the information about *rfamseq* currently in use in the
-`README file <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
+`README file <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
 .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
     :alt: Taxonomic composition of Rfamseq 13.0

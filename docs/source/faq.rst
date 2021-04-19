@@ -102,7 +102,7 @@ Why is my favourite sequence not in the family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The most likely reason is that it is not in the EMBL release that rfamseq is based on.
 With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide database.
-You can check which version we are currently using `here <ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_.
+You can check which version we are currently using `here <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_.
 If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family,
 it is possible that our model may need to be improved.
 Please :ref:`contact-us:Contact us` with the relevant information and we will decide
@@ -183,7 +183,7 @@ or generate them yourself by downloading the covariance model and using the Infe
 
 If you are interested retrieving alignments for multiple families, you can
 download all our seed alignments in Stockholm format flat-files, and the covariance models
-used to generate them, from our `ftp site <ftp://ftp.ebi.ac.uk/pub/databases/Rfam>`_.
+used to generate them, from our `ftp site <http://ftp.ebi.ac.uk/pub/databases/Rfam>`_.
 
 How can I download a subset of sequences from a family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

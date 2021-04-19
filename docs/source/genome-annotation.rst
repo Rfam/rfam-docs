@@ -67,9 +67,9 @@ For more information on customizing the Infernal installation, see
 section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
 2. Download the Rfam library of CMs from
-   `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and the
+   `<http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and the
    Rfam clanin file from
-   `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_ .
+   `<http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_ .
 
 
 ::
@@ -79,8 +79,8 @@ section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.p
    $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin
 
 If you do not have ``wget`` installed and in your path, download the
-files `<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and
-`<ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_
+files `<http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and
+`<http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_
 from a browser.
 
 3. Use the Infernal program cmpress to index the Rfam.cm file
