@@ -9,6 +9,16 @@ Clan
 
 An **Rfam clan** is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions. For example, the LSU clan (`CL00112 <http://rfam.org/clan/CL00112>`_) includes 5 families describing different types of large ribosomal subunit RNAs, including bacterial, eukaryotic, and archaeal LSU families.
 
+`Browse Rfam clans <https://rfam.org/search?q=entry_type:"Clan">`_ or download a list of families belonging to clans (`Rfam.clanin <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_) that can be used by Infernal for automatic clan competition.
+
+Clan competition
+----------------
+
+When several families from the same clan match the same sequence region (for example, both Sarbecovirus 5' UTR and the bCoV-5UTR families match the 5' UTR sequence of SARS-CoV-2), the redundancy can be removed based on the bit scores and lengths of the matching sequences. The process of **redundancy removal** is called clan competition.
+
+All sequences on the Rfam website have already undergone this process, but if you perform searches using Infernal, you may want to skip any potentially redundant hits (see the ``--oskip`` option of the *cmalign* program in the Infernal manual).
+
+
 ClustalW
 --------
 
@@ -17,7 +27,7 @@ A general purpose multiple sequence alignment program for DNA (RNA) which we use
 Covariance model (CM)
 ---------------------
 
-A secondary structure profile for a RNA structural alignment (also called profile stochastic context-free grammars). Find out more about :ref:`citing-rfam:Covariance models and stochastic context-free grammars`.
+A secondary structure profile for a RNA structural alignment (also called profile stochastic context-free grammars). The Rfam covariance models are used by the `Infernal <http://eddylab.org/infernal/>`_ software to find instances of RNA families in RNA or DNA sequences. Find more about :ref:`citing-rfam:Covariance models and stochastic context-free grammars`.
 
 DESC file
 ---------
