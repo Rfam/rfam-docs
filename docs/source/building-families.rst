@@ -1,7 +1,7 @@
 How Rfam families are built
 ===========================
 
-.. Note:: 🆕 If you are interested in building new Rfam families or updating the existing ones, take a look at the :ref:`rfam-cloud:Rfam cloud pipeline`.
+.. Note:: 🆕 If you are interested in building new Rfam families or updating the existing ones, take a look at the :ref:`rfam-cloud:Rfam Cloud pipeline`.
 
 Seed alignments and secondary structure annotation
 --------------------------------------------------

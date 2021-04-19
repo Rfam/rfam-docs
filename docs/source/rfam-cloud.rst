@@ -1,7 +1,7 @@
-Rfam cloud pipeline
+Rfam Cloud pipeline
 ===================
 
-The Rfam cloud environment provides access to the command-line interface for curating Rfam families. It uses the same software and the sequence database as the ones used by the Rfam team. The pipeline allows one to create a new RNA family or update an existing Rfam entry.
+The Rfam Cloud environment provides access to the command-line interface for curating Rfam families. It uses the same software and the sequence database as the ones used by the Rfam team. The pipeline allows one to create a new RNA family or update an existing Rfam entry.
 
 .. contents::
   :local:
@@ -16,17 +16,17 @@ Requirements
 
 1. A computer with internet access (Mac, Linux, or PC)
 2. A command line environment supporting ``ssh`` (for example, bash)
-3. An Rfam cloud account
+3. An Rfam Cloud account
 
-Requesting an Rfam cloud account
+Requesting an Rfam Cloud account
 --------------------------------
 
 Please :ref:`contact-us:Contact us` to request access to the Rfam family building pipeline. If you intend to use the pipeline for teaching purposes, please let us know in advance to ensure that the pipeline can support the workload.
 
-Connecting to Rfam cloud
+Connecting to Rfam Cloud
 ------------------------
 
-Use the username and password provided by the Rfam team to ``ssh`` to Rfam cloud::
+Use the username and password provided by the Rfam team to ``ssh`` to Rfam Cloud::
 
   ssh <username>@cloud.rfam.org
 
@@ -39,11 +39,11 @@ To get access to an interactive session and start using the pipeline run the fol
 You should see a command line prompt:
 
 .. figure:: images/rfam-cloud-cli.png
-      :alt: Rfam cloud command line prompt
+      :alt: Rfam Cloud command line prompt
       :width: 600
       :align: center
 
-      Rfam cloud command line prompt
+      Rfam Cloud command line prompt
 
 
 To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scripts (you should see help messages explaining how to use the scripts)::
@@ -79,7 +79,7 @@ If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called 
 
   predict_ss.pl -infile <file.fasta> -outfile SEED -r
 
-Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer. See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
+Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer. See :ref:`rfam-cloud:Copying files to and from Rfam Cloud` for instructions about moving files to and from Rfam Cloud.
 
 It is recommended that the sequences are named in the ``accession:start-end`` format where ``accession`` is an `ENA <http://www.ebi.ac.uk/ena/>`_, `GenBank <https://www.ncbi.nlm.nih.gov/genbank/>`_, or `RNAcentral <https://rnacentral.org>`_ identifier, and ``start-end`` are the coordinates of the RNA in the accession (for example, ``AB003409.1/96-167``). See the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_ for more examples. ⚠️ The sequence name cannot contain the parenthesis characters (``(`` and ``)``).
 
@@ -218,7 +218,7 @@ The ``rqc-all`` script performs multiple quality controls on the family. It chec
 
 Download your ``SEED`` and ``DESC`` files to your local machine and send the files to the Rfam team for review by email or Slack. 🎉🎉🎉
 
-See :ref:`rfam-cloud:Copying files to and from Rfam cloud` for instructions about moving files to and from Rfam cloud.
+See :ref:`rfam-cloud:Copying files to and from Rfam Cloud` for instructions about moving files to and from Rfam Cloud.
 
 .. DANGER::
   We encourage you to **always keep a local copy of the important data**!
@@ -233,13 +233,13 @@ The only difference between creating a new family and updating an existing one i
 
 After that, follow the family building instructions: :ref:`rfam-cloud:3. Find similar sequences using rfsearch`.
 
-Copying files to and from Rfam cloud
+Copying files to and from Rfam Cloud
 ------------------------------------
 
-The Rfam cloud consists of a **login node** that handles the account login and **worker pods** which control the Rfam family building pipeline. When you run ``ssh <username>@cloud.rfam.org`` you are connected directly to your worker pod.
+The Rfam Cloud consists of a **login node** that handles the account login and **worker pods** which control the Rfam family building pipeline. When you run ``ssh <username>@cloud.rfam.org`` you are connected directly to your worker pod.
 
 .. figure:: images/rfam-cloud-infrastructure.png
-      :alt: Rfam cloud infrastructure
+      :alt: Rfam Cloud infrastructure
       :width: 600
       :align: center
 
@@ -247,7 +247,7 @@ The login node and the worker pods currently have **different filesystems** whic
 
 🛠️ Work on unifying the two filesystems is underway which should make moving files to and from Rfam more user-friendly.
 
-Copying files to Rfam cloud
+Copying files to Rfam Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 🖥️ On your **local machine**::
@@ -275,7 +275,7 @@ Then get back to the worker pod::
 
 The file should appear in your ``workdir`` folder. You can specify other paths in the ``kubectl cp`` command to move the files to any subfolder.
 
-Copying files from Rfam cloud
+Copying files from Rfam Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ⚙️ On **worker pod**::

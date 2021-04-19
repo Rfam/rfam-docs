@@ -1,7 +1,7 @@
 Choosing gathering threshold
 ============================
 
-The :ref:`glossary:Gathering cutoff` (also known as gathering threshold) corresponds to the bit score of the lowest-scoring sequence that is considered part of the family. When creating families using the :ref:`rfam-cloud:Rfam cloud pipeline`, it is important to choose an accurate cutoff value by **reviewing the following 3 files**: ``species``, ``taxinfo``, and ``align``, as well as the :ref:`glossary:R-scape` secondary structure diagrams.
+The :ref:`glossary:Gathering cutoff` (also known as gathering threshold) corresponds to the bit score of the lowest-scoring sequence that is considered part of the family. When creating families using the :ref:`rfam-cloud:Rfam Cloud pipeline`, it is important to choose an accurate cutoff value by **reviewing the following 3 files**: ``species``, ``taxinfo``, and ``align``, as well as the :ref:`glossary:R-scape` secondary structure diagrams.
 
 .. contents:: Table of contents
   :local:
