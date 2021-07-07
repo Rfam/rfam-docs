@@ -10,6 +10,7 @@ European Bioinformatics Institute
 * `Nancy Ontiveros-Palacios <http://www.ebi.ac.uk/about/people/nancy-ontiveros>`_ - Biocurator
 * `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Senior Team Leader
 * `Anton I. Petrov <http://www.ebi.ac.uk/about/people/anton-petrov>`_ - Rfam Project Leader
+* `Emma Cooke <http://www.ebi.ac.uk/about/people/emma-cooke>`_ - Rfam Software Developer
 
 Collaborators
 -------------
