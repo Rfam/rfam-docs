@@ -183,7 +183,13 @@ or generate them yourself by downloading the covariance model and using the Infe
 
 If you are interested retrieving alignments for multiple families, you can
 download all our seed alignments in Stockholm format flat-files, and the covariance models
-used to generate them, from our `ftp site <http://ftp.ebi.ac.uk/pub/databases/Rfam>`_.
+used to generate them, from our `ftp site <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
+
+How can I download a domain-specific subset of covariance models?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The `rfam-taxonomy <https://github.com/Rfam/rfam-taxonomy>`_ project on GitHub contains a list of domain-specific Rfam families.
+For example, you can access Bacteria-specific or Virus-specific Rfam families and generate a domain-specific subset of covariance models
+that can be used with the Infernal software to scan genomes or any other sequences.
 
 How can I download a subset of sequences from a family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
