@@ -47,7 +47,6 @@ Contents
   linking-rfam
   citing-rfam
   privacy
-  website-updates
 
 License
 -------

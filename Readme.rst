@@ -19,7 +19,7 @@ Installation
   source env/bin/activate
 
   # install Python dependencies
-  pip install -r requirements.txt
+  python -m pip install -r requirements.txt
 
   # serve documentation locally at http://127.0.0.1:8000
   cd docs

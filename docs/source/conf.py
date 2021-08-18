@@ -30,6 +30,7 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx_copybutton',
     'sphinx.ext.ifconfig',
     'sphinx.ext.autosectionlabel',
 ]
