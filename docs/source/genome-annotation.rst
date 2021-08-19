@@ -30,10 +30,10 @@ Infernal software package, which you will download in step 1.
 
 ::
 
-  $ wget eddylab.org/infernal/infernal-1.1.2.tar.gz
-  $ tar xf infernal-1.1.2.tar.gz
-  $ cd infernal-1.1.2
-  $ make
+  wget eddylab.org/infernal/infernal-1.1.2.tar.gz
+  tar xf infernal-1.1.2.tar.gz
+  cd infernal-1.1.2
+  make
 
 If you do not have ``wget`` installed and in your path, download infernal-1.1.2.tar.gz `here
 <http://eddylab.org/infernal/infernal-1.1.2.tar.gz>`_.
@@ -41,14 +41,14 @@ If you do not have ``wget`` installed and in your path, download infernal-1.1.2.
 To compile and run a test suite to make sure all is well, you can
 optionally do::
 
-  $ make check
+  make check
 
 You don’t have to install Infernal programs to run them. The newly
 compiled binaries are now in the *src* directory. You can run them
 from there. To install the programs and man pages somewhere on your
 system, do::
 
-  $ make install
+  make install
 
 By default, programs are installed in */usr/local/bin* and man pages
 in */usr/local/share/man/man1/*. You can change the */usr/localprefix* to
@@ -61,7 +61,7 @@ Step 4 below involves the use of one of these
 Easel programs (esl-seqstat). If you do not install these programs,
 you can use the executable files in *easel/miniapps/*. To install them::
 
-  $ cd easel; make install
+  cd easel; make install
 
 For more information on customizing the Infernal installation, see
 section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
@@ -74,9 +74,9 @@ section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.p
 
 ::
 
-   $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz
-   $ gunzip Rfam.cm.gz
-   $ wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin
+   wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz
+   gunzip Rfam.cm.gz
+   wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin
 
 If you do not have ``wget`` installed and in your path, download the
 files `<http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and
@@ -87,7 +87,7 @@ from a browser.
 
 ::
 
-   $ cmpress Rfam.cm
+   cmpress Rfam.cm
 
 This step is required before cmscan can be run in step 5.
 
@@ -111,7 +111,7 @@ this. For this example, we will be annotating the genome of
 this genome can be found in *infernal-1.1.2/tutorial/*, which you
 created in step 1. To determine the total size of this genome, do::
 
-  $ esl-seqstat infernal-1.1.2/mrum-genome.fa
+  esl-seqstat infernal-1.1.2/mrum-genome.fa
 
 .. note:: If you did not install the Easel miniapps in step 1, you can
           run ``esl-seqstat`` from infernal-1.1.2/easel/miniapps/esl-seqstat.
@@ -129,7 +129,7 @@ be used in step 5.
 
 ::
 
-   $ cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin Rfam.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
+   cmscan -Z 5.874406 --cut_ga --rfam --nohmmonly --tblout mrum-genome.tblout --fmt 2 --clanin Rfam.clanin Rfam.cm tutorial/mrum-genome.fa > mrum-genome.cmscan
 
 .. note:: The above cmscan command assumes you are in the
           infernal-1.1.2 directory from step 1. If not, you'll need to
