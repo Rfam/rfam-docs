@@ -9,7 +9,7 @@ Clan
 
 An **Rfam clan** is a group of families that either share a common ancestor but are too divergent to be reasonably aligned or a group of families that could be aligned, but have distinct functions. For example, the LSU clan (`CL00112 <http://rfam.org/clan/CL00112>`_) includes 5 families describing different types of large ribosomal subunit RNAs, including bacterial, eukaryotic, and archaeal LSU families.
 
-`Browse Rfam clans <https://rfam.org/search?q=entry_type:"Clan">`_ or download a list of families belonging to clans (`Rfam.clanin <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_) that can be used by Infernal for automatic clan competition.
+`Browse Rfam clans <https://rfam.org/search?q=entry_type:"Clan">`_ or download a list of families belonging to clans (`Rfam.clanin <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_) that can be used by Infernal for automatic clan competition.
 
 Clan competition
 ----------------
@@ -85,7 +85,7 @@ rfamseq
 
 *rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
 You can find out the information about *rfamseq* currently in use in the
-`README file <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
+`README file <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
 .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
     :alt: Taxonomic composition of Rfamseq 13.0

@@ -9,7 +9,7 @@ sequence alignment and a covariance model (CM).
 You can use the `Rfam website <http://rfam.org>`_
 to obtain information about an individual family, or browse
 the families and genome annotations. Alternatively you can download
-all of the Rfam data from the `FTP site <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
+all of the Rfam data from the `FTP site <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
 Find out more about the project by exploring the latest :ref:`citing-rfam:Rfam references`.
 
 For each family Rfam provides:
