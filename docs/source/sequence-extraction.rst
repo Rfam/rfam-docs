@@ -3,7 +3,7 @@
 Extract ncRNA sequences
 ===================================================
 
-All Rfam ncRNA sequences become available on the `ftp <http://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release.
+All Rfam ncRNA sequences become available on the `ftp <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release.
 The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_ and ``esl-sfetch`` tool.
 
 **Requirements:**
