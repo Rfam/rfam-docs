@@ -357,14 +357,14 @@ than setting a header.
 
 .. code-block:: bash
 
-  curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" http://rfam.org/search/sequence
+  curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" https://rfam.org/search/sequence
 
 **Example output:**
 
 .. code-block:: json
 
   {
-    "resultURL": "http://rfam.org/search/sequence/d9b451d8-96e6-4234-9dbb-aa4806925353",
+    "resultURL": "https://rfam.org/search/sequence/d9b451d8-96e6-4234-9dbb-aa4806925353",
     "opened": "2016-10-31 13:19:06",
     "estimatedTime": "3",
     "jobId": "d9b451d8-96e6-4234-9dbb-aa4806925353"
