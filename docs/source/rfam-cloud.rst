@@ -90,7 +90,7 @@ Once you have a Stockholm file called ``SEED`` in your working directory, procee
 
 Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed alignment and search for similar sequences in the :ref:`glossary:rfamseq` database::
 
-  rfsearch.pl -nodesc -relax -t 25 -cnompi
+  rfsearch.pl -nodesc -relax -t 25
 
 .. list-table::
 
@@ -100,8 +100,6 @@ Build and calibrate a :ref:`glossary:Covariance model (CM)` based on your seed a
       - creates a required file called ``DESC`` that contains the description of the family. You only need to use the ``-nodesc`` flag the first time you run rfsearch, after that you will get an error if you use ``-nodesc`` because a ``DESC`` file already exists.
     * - ``-relax``
       - allow sequences not found in the :ref:`glossary:rfamseq` database to be included in the seed alignment (recommended)
-    * - ``-cnompi``
-      - do not use the MPI mode (this option should always be used)
     * - ``-t 30``
       - :ref:`glossary:Gathering cutoff` in bits. Usually 30 bits is a good starting point as most families are expected to have a threshold higher than 30.
 
@@ -136,7 +134,7 @@ Consider **manually editing the alignment** on your local computer using `RALEE 
 
 🔄 Steps 3 to 6 should be repeated until the seed alignment can no longer be improved::
 
-  rfsearch.pl -t <new_cutoff> -cnompi -relax -ignoresm
+  rfsearch.pl -t <new_cutoff> -relax -ignoresm
 
 The ``-ignoresm`` option overrides the threshold set at the previous iteration and saved in the ``DESC`` file.
 
