@@ -32,7 +32,6 @@ The following is a tutorial on how to extract sequences using the public instanc
 	> gunzip Rfam.fa.gz
 
 4. Index the unified sequence file using ``esl-sfetch`` :
-
 ::
 	> esl-sfetch --index Rfam.fa
 
