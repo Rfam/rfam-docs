@@ -36,7 +36,7 @@ The following is a tutorial on how to extract sequences using the public instanc
 ::
 	> esl-sfetch --index Rfam.fa
 
-.. note:: If the above command is successfull, you should see a ``.ssi`` file generated in your current directory
+.. note:: If the above command is successful, you should see a ``.ssi`` file generated in your current directory
 
 5. Create a ``.sql`` file with a SQL command that fetches the regions of interest.
 
