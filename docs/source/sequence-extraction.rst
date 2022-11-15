@@ -26,25 +26,19 @@ The following is a tutorial on how to extract sequences using the public instanc
 ::
 	> export PATH="/path/to/infernal-1.1.x/bin:$PATH"
 
-3. Create a new directory and download all fasta files from the FTP using ``wget`` :
+3. Download Rfam.fa.gz (combined file of all the fasta files) from the FTP using ``wget`` and then unzip :
 ::
-	> mkdir rfam_sequences && cd rfam_sequences
-	> wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files/* .
+	> wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files/Rfam.fa.gz
+	> gunzip Rfam.fa.gz
 
-4. Decompress all sequence files and merge them in a single fasta file:
-::
-	> gunzip *.gz
-	> cat *.fa > Rfam.fa
-
-5. Index the unified sequence file using ``esl-sfetch`` :
+4. Index the unified sequence file using ``esl-sfetch`` :
 
 ::
-
 	> esl-sfetch --index Rfam.fa
 
 .. note:: If the above command is successfull, you should see a ``.ssi`` file generated in your current directory
 
-6. Create a ``.sql`` file with a SQL command that fetches the regions of interest.
+5. Create a ``.sql`` file with a SQL command that fetches the regions of interest.
 
 
 Example query to retrieve all human ncRNAs:
@@ -89,15 +83,15 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 .. note:: In order for ``esl-sfetch`` to work with the Rfam fasta file, the regions need to be in the format: **rfamseq_acc/seq_start-seq_end**.
 
-7.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
+6.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
 
 ::
 
-	> mysql -urfamro -hmysql-rfam-public.ebi.ac.uk -P4497 --skip-column-names --database Rfam < query.sql > accessions.txt
+	> mysql -u rfamro -h mysql-rfam-public.ebi.ac.uk -P 4497 --skip-column-names --database Rfam < query.sql > accessions.txt
 
 ..
 
-8. Extract the ncRNA sequences in the ``.txt`` file generated in **step 7** from the unified Rfam fasta file from **step 4** using ``esl-fetch``:
+7. Extract the ncRNA sequences in the ``.txt`` file generated in **step 6** from the unified Rfam fasta file from **step 3** using ``esl-fetch``:
 
 ::
 
