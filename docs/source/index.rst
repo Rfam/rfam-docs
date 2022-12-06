@@ -53,6 +53,14 @@ License
 
 Rfam is freely available under the `Creative Commons Zero (“CC0”) licence <http://creativecommons.org/publicdomain/zero/1.0/>`_.
 
+We choose CC0 because:
+
+* It is most in line with the spirit of EMBL-EBI’s Terms of use and places data in the public domain without constraints. We believe that this approach to research data sharing strengthens open science and scientific progress.
+
+* It is the best way to encourage remixing and reuse as it makes clear to any user – academic, commercial or otherwise – that the data are not owned by anyone and therefore can be used freely.
+
+* It saves researchers time when reusing the data, which speeds up the process of science.
+
 Citing Rfam
 -----------
 
