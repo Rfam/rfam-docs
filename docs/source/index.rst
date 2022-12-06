@@ -45,6 +45,7 @@ Contents
   rfam-cloud
   sequence-extraction
   linking-rfam
+  license
   citing-rfam
   privacy
 
