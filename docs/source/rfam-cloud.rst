@@ -73,7 +73,7 @@ To verify that the system works, try calling the ``rfsearch`` and ``rfmake`` scr
 2. Prepare a SEED file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
+Each family has a :ref:`glossary:seed alignment` file called ``SEED`` that contains a multiple sequence alignment of the confirmed instances of a family. To get started, you will need a :ref:`glossary:Stockholm format` file with at least 1 RNA sequence and a consensus secondary structure, for example see the `tRNA seed alignment <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called ``file.fasta`` with a **single RNA sequence**, convert it to Stockholm format and predict a consensus secondary structure using RNAfold (the ``-r`` option)::
 
@@ -81,7 +81,7 @@ If you have a `FASTA <https://en.wikipedia.org/wiki/FASTA_format>`_ file called 
 
 Alternatively, create a ``SEED`` file using the `vi <https://www.cs.colostate.edu/helpdocs/vi.html>`_ or `nano <https://www.howtoforge.com/linux-nano-command/>`_ text editors and paste the file contents from your local computer. See :ref:`rfam-cloud:Copying files to and from Rfam Cloud` for instructions about moving files to and from Rfam Cloud.
 
-It is recommended that the sequences are named in the ``accession:start-end`` format where ``accession`` is an `ENA <http://www.ebi.ac.uk/ena/>`_, `GenBank <https://www.ncbi.nlm.nih.gov/genbank/>`_, or `RNAcentral <https://rnacentral.org>`_ identifier, and ``start-end`` are the coordinates of the RNA in the accession (for example, ``AB003409.1/96-167``). See the `tRNA seed alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_ for more examples. ⚠️ The sequence name cannot contain the parenthesis characters (``(`` and ``)``).
+It is recommended that the sequences are named in the ``accession:start-end`` format where ``accession`` is an `ENA <http://www.ebi.ac.uk/ena/>`_, `GenBank <https://www.ncbi.nlm.nih.gov/genbank/>`_, or `RNAcentral <https://rnacentral.org>`_ identifier, and ``start-end`` are the coordinates of the RNA in the accession (for example, ``AB003409.1/96-167``). See the `tRNA seed alignment <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/SEED>`_ for more examples. ⚠️ The sequence name cannot contain the parenthesis characters (``(`` and ``)``).
 
 Once you have a Stockholm file called ``SEED`` in your working directory, proceed to the next step.
 
@@ -159,7 +159,7 @@ Any unwanted sequences can be excluded by rerunning rfmake with a higher thresho
 8. Add metadata to the DESC file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each family is described using in a ``DESC`` file (see the `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example). The following fields are required:
+Each family is described using in a ``DESC`` file (see the `tRNA DESC file <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example). The following fields are required:
 
 :ID:
     a unique ID, such as *tRNA* or *skipping-rope*. No spaces are allowed.
