@@ -62,6 +62,8 @@ We choose CC0 because:
 
 * It saves researchers time when reusing the data, which speeds up the process of science.
 
+Rfam conforms to the EBI long-term data preservation `policy <https://www.ebi.ac.uk/long-term-data-preservation>`_.
+
 Citing Rfam
 -----------
 
