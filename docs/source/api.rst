@@ -357,25 +357,22 @@ than setting a header.
 
 .. code-block:: bash
 
-  curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" https://rfam.org/search/sequence
+  curl -X 'POST' 'https://batch.rfam.org/submit-job' -H 'accept: application/json' -F 'sequence_file=@test.seq'
 
 **Example output:**
 
 .. code-block:: json
 
   {
-    "resultURL": "https://rfam.org/search/sequence/d9b451d8-96e6-4234-9dbb-aa4806925353",
-    "opened": "2016-10-31 13:19:06",
-    "estimatedTime": "3",
-    "jobId": "d9b451d8-96e6-4234-9dbb-aa4806925353"
+    "resultURL": "https://batch.rfam.org/result/infernal_cmscan-R20240522-154022-0777-68207895-p1m",
+    "jobId": "infernal_cmscan-R20240522-154022-0777-68207895-p1m"
   }
 
 Wait for the search to complete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Having submitted the search, you now need to check the ``resultURL``
-given in the response, which will be the URL that you used for
-submitting the search, but with a job identifier appended.
+given in the response.
 
 Although you can check for results immediately, if you poll before your
 job has completed you won't receive a full response. Instead, the HTTP
@@ -389,9 +386,7 @@ When writing a script to submit searches and retrieve results, **please add
 a short delay** between the submission and the first attempt to retrieve
 results. Most search jobs are returned within four to five seconds of
 submission, depending greatly on the length of the sequence to be
-searched. The ``estimatedTime`` given in the response provides
-a very rough estimate of how long your job should take. You may want
-to wait for this period before polling for the first time.
+searched.
 
 Retrieve results
 ^^^^^^^^^^^^^^^^
@@ -401,38 +396,40 @@ which you can now retrieve results:
 
 .. code-block:: bash
 
-  curl -H "Expect:" -H "Accept: application/json" https://rfam.org/search/sequence/01d3c704-591a-4a85-b7c1-366496c5a63
+  curl -X 'GET' 'https://batch.rfam.org/result/infernal_cmscan-R20240522-154022-0777-68207895-p1m' -H 'accept: application/json'
 
 .. code-block:: json
 
   {
-  	"closed": "2016-10-31 13:20:29",
-  	"searchSequence": "AGTTACGGCCATACCTCAGAGAATATACCGTATCCCGTTCGATCTGCGAAGTTAAGCTCTGAAGGGCGTCGTCAGTACTATAGTGGGTGACCATATGGGAATACGACGTGCTGTAGCTT",
-  	"hits": {
-  		"5S_rRNA": [{
-  			"score": "104.9",
-  			"E": "2.7e-24",
-  			"acc": "RF00001",
-  			"end": "119",
-  			"alignment": {
-  				"user_seq": "#SEQ           1 AGUUACGGCCAUACCUCAGAGAAUAUACCGUAUCCCGUUCGAUCUGCGAAGUUAAGCUCUGAAGGGCGUCGUCAGUACUAUAGUGGGUGACCAUAUGGGAAUACGACGUGCUGUAGCUU 119       ",
-  				"hit_seq": "#CM            1 gccuGcggcCAUAccagcgcgaAagcACcgGauCCCAUCcGaACuCcgAAguUAAGcgcgcUugggCcagggUAGUAcuagGaUGgGuGAcCuCcUGggAAgaccagGugccgCaggcc 119       ",
-  				"ss": "#SS              (((((((((,,,,<<-<<<<<---<<--<<<<<<______>>-->>>>-->>---->>>>>-->><<<-<<----<-<<-----<<____>>----->>->-->>->>>))))))))):           ",
-  				"match": "#MATCH           :: U:C:GCCAUACC ::G:GAA ::ACCG AUCCC+U+CGA CU CGAA::UAAGC:C:: +GGGC: :G  AGUACUA  +UGGGUGACC+  UGGGAA+AC:A:GUGC:G:A ::+           ",
-  				"pp": "#PP              ***********************************************************************************************************************           ",
-  				"nc": "#NC                                                                                                                                                "
-  			},
-  			"strand": "+",
-  			"id": "5S_rRNA",
-  			"GC": "0.49",
-  			"start": "1"
-  		}]
-  	},
-  	"opened": "2016-10-31 13:19:06",
-  	"numHits": 1,
-  	"started": "2016-10-31 13:20:08",
-  	"jobId": "99676096-9F6C-11E6-9647-5251D1B96DDE"
+  "searchSequence": "AGTTACGGCCATACCTCAGAGAATATACCGTATCCCGTTCGATCTGCGAAGTTAAGCTCTGAAGGGCGTCGTCAGTACTATAGTGGGTGACCATATGGGAATACGACGTGCTGTAGCTT",
+  "numHits": 1,
+  "jobId": "infernal_cmscan-R20240522-154022-0777-68207895-p1m",
+  "opened": "2024-05-22 15:40:27",
+  "started": "2024-05-22 15:40:27",
+  "closed": "2024-05-22 15:42:16",
+  "hits": {
+    "5S_rRNA": [
+      {
+        "id": "5S_rRNA",
+        "acc": "RF00001",
+        "start": 1,
+        "end": 119,
+        "strand": "+",
+        "GC": 0.49,
+        "score": 104.9,
+        "E": 4.5e-24,
+        "alignment": {
+          "nc": "#NC                                                                                                                                       ",
+          "ss": "#SS               (((((((((,,,,\u003C\u003C-\u003C\u003C\u003C\u003C\u003C---\u003C\u003C--\u003C\u003C\u003C\u003C\u003C\u003C______\u003E\u003E--\u003E\u003E\u003E\u003E--\u003E\u003E----\u003E\u003E\u003E\u003E\u003E--\u003E\u003E\u003C\u003C\u003C-\u003C\u003C----\u003C-\u003C\u003C-----\u003C\u003C____\u003E\u003E-----\u003E\u003E-\u003E--\u003E\u003E-\u003E\u003E\u003E))))))))): ",
+          "hit_seq": "#CM 1 gccuGcggcCAUAccagcgcgaAagcACcgGauCCCAUCcGaACuCcgAAguUAAGcgcgcUugggCcagggUAGUAcuagGaUGgGuGAcCuCcUGggAAgaccagGugccgCaggcc 119",
+          "match": "#MATCH               :: U:C:GCCAUACC ::G:GAA ::ACCG AUCCC+U+CGA CU CGAA::UAAGC:C:: +GGGC: :G  AGUACUA  +UGGGUGACC+  UGGGAA+AC:A:GUGC:G:A ::+",
+          "user_seq": "#SEQ 1 AGUUACGGCCAUACCUCAGAGAAUAUACCGUAUCCCGUUCGAUCUGCGAAGUUAAGCUCUGAAGGGCGUCGUCAGUACUAUAGUGGGUGACCAUAUGGGAAUACGACGUGCUGUAGCUU 119",
+          "pp": "#PP               *********************************************************************************************************************** "
+        }
+      }
+    ]
   }
+}
 
 .. WARNING::
 
