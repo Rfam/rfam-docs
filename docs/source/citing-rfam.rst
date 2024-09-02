@@ -35,7 +35,7 @@ Rfam references
 
 `Rfam: updates to the RNA families database <https://nar.oxfordjournals.org/cgi/content/full/37/suppl_1/D136/>`_
 	| P.P. Gardner, J. Daub, J.G. Tate, E.P. Nawrocki, D.L. Kolbe, S. Lindgreen, A.C. Wilkinson, R.D. Finn, S. Griffiths-Jones, S.R. Eddy and A. Bateman
-	| **Nucleic Acids Research** (2008)   Database Issue 37:D136-D140
+	| **Nucleic Acids Research** (2009)   Database Issue 37:D136-D140
 
 `The RNA WikiProject: community annotation of RNA families <http://rnajournal.cshlp.org/content/14/12/2462>`_
 	| J. Daub, P.P. Gardner, J. Tate, D. Ramsköld, M. Manske, W.G. Scott, Z. Weinberg, S. Griffiths-Jones and A. Bateman
