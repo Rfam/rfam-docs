@@ -33,7 +33,7 @@ Rfam references
 	| P.P. Gardner, J. Daub, J. Tate, B.L. Moore, I.H. Osuch, S. Griffiths-Jones, R.D. Finn, E.P. Nawrocki, D.L. Kolbe, S.R. Eddy and A. Bateman.
 	| **Nucleic Acids Research** (2011)   doi: 10.1093/nar/gkq1129
 
-`Rfam: updates to the RNA families database <http://nar.oxfordjournals.org/cgi/content/full/gkn766?ijkey=qKsfJKpTARDanrQ&keytype=ref>`_
+`Rfam: updates to the RNA families database <https://nar.oxfordjournals.org/cgi/content/full/37/suppl_1/D136/>`_
 	| P.P. Gardner, J. Daub, J.G. Tate, E.P. Nawrocki, D.L. Kolbe, S. Lindgreen, A.C. Wilkinson, R.D. Finn, S. Griffiths-Jones, S.R. Eddy and A. Bateman
 	| **Nucleic Acids Research** (2008)   Database Issue 37:D136-D140
 
