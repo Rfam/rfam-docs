@@ -19,6 +19,7 @@ Contents
 
   about-rfam
   building-families
+  adding-3d-structures
   glossary
   faq
   rfam-team
