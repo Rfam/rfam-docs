@@ -5,6 +5,10 @@ Rfam makes use of a large amount of publicly available data, especially publishe
 
 Rfam references
 ---------------
+`Rfam 15: RNA families database in 2025 <https://doi.org/10.1093/nar/gkae1023>`_
+	| Nancy Ontiveros-Palacios, Emma Cooke, Eric P Nawrocki, Sandra Triebel, Manja Marz, Elena Rivas, Sam Griffiths-Jones, Anton I Petrov, Alex Bateman, and Blake Sweeney
+	| **Nucleic Acids Research** (2024) doi: 10.1093/nar/gkae1023
+
 `Rfam 14: expanded coverage of metagenomic, viral and microRNA families <https://doi.org/10.1093/nar/gkaa1047>`_
 	| I. Kalvari, E.P. Nawrocki, N. Ontiveros-Palacios, J. Argasinska, K. Lamkiewicz, M. Marz, S. Griffiths-Jones, C. Toffano-Nioche, D. Gautheret, Z. Weinberg, E. Rivas, S.R. Eddy, R.D. Finn, A. Bateman, and A.I. Petrov
 	| **Nucleic Acids Research** (2020) doi: 10.1093/nar/gkaa1047
