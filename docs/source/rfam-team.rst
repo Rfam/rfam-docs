@@ -8,7 +8,7 @@ European Bioinformatics Institute
 ---------------------------------
 
 * `Nancy Ontiveros-Palacios <http://www.ebi.ac.uk/about/people/nancy-ontiveros>`_ - Biocurator
-* `Emma Cooke <http://www.ebi.ac.uk/about/people/emma-cooke>`_ - Rfam Software Developer
+* `Philippa Muston <https://www.ebi.ac.uk/people/person/philippa-muston/>`_ - Software Developer
 * `Blake A. Sweeney <https://www.ebi.ac.uk/about/people/blake-sweeney>`_ - Rfam Project Leader
 * `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Senior Team Leader
 
@@ -31,6 +31,7 @@ Previous contributors
 * `Rob Finn <http://www.ebi.ac.uk/about/people/rob-finn>`_ - *Group Team Leader*
 * `Anton I. Petrov <https://antonpetrov.com>`_ - *former Rfam project leader*
 * `Ioanna Kalvari <https://orcid.org/0000-0001-9424-9197>`_ - *Software developer*
+* `Emma Cooke <https://orcid.org/0000-0002-7894-8112>`_ - *former Rfam Software Developer*
 * `Joanna Argasinska <https://orcid.org/0000-0003-2678-2824>`_ - *Biocurator*
 * `Ruth Eberhardt <https://orcid.org/0000-0001-6152-1369>`_
 * `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
