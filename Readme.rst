@@ -22,7 +22,7 @@ Installation
   python -m pip install -r requirements.txt
 
   # Note - if you are using a newer version of Python (3.13 +) you may need to use updated dependencies instead
-  python -m pip install -r requirements-local.txt
+  python -m pip install -r requirements-dev.txt
 
   # serve documentation locally at http://127.0.0.1:8000
   cd docs
