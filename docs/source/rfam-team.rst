@@ -1,40 +1,44 @@
+.. role:: raw-html(raw)
+   :format: html
+
 Rfam team
 =========
-
-The `Rfam database <http://rfam.org>`_ is curated and maintained
-at the `European Bioinformatics Institute <http://www.ebi.ac.uk>`_ in Cambridge, UK.
+The :raw-html:`<a href="http://rfam.org" target="_blank" rel="noopener noreferrer">Rfam database</a>` is curated and maintained
+at the :raw-html:`<a href="http://www.ebi.ac.uk" target="_blank" rel="noopener noreferrer">European Bioinformatics Institute</a>` in Cambridge, UK.
 
 European Bioinformatics Institute
----------------------------------
+----------------------------------
 
-* `Nancy Ontiveros-Palacios <http://www.ebi.ac.uk/about/people/nancy-ontiveros>`_ - Biocurator
-* `Philippa Muston <https://www.ebi.ac.uk/people/person/philippa-muston/>`_ - Software Developer
-* `Blake A. Sweeney <https://www.ebi.ac.uk/about/people/blake-sweeney>`_ - Rfam Project Leader
-* `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Senior Team Leader
+* :raw-html:`<a href="http://www.ebi.ac.uk/about/people/nancy-ontiveros" target="_blank" rel="noopener noreferrer">Nancy Ontiveros-Palacios</a>` - Biocurator
+* :raw-html:`<a href="https://www.ebi.ac.uk/people/person/philippa-muston/" target="_blank" rel="noopener noreferrer">Philippa Muston</a>` - Software Developer
+* :raw-html:`<a href="https://www.ebi.ac.uk/people/person/isaac-jandalala/" target="_blank" rel="noopener noreferrer">Isaac Jandalala</a>` - Software Developer
+* :raw-html:`<a href="https://www.ebi.ac.uk/people/person/pedro-madrigal/" target="_blank" rel="noopener noreferrer">Pedro Madrigal</a>` - Rfam Project Leader
+* :raw-html:`<a href="http://www.ebi.ac.uk/about/people/alex-bateman" target="_blank" rel="noopener noreferrer">Alex Bateman</a>` - Senior Team Leader
 
 Collaborators
 -------------
 
-* `Sean Eddy <http://orcid.org/0000-0001-6676-4706>`_ (Harvard University) - founding developer and author of Infernal software
-* `Eric Nawrocki <http://orcid.org/0000-0002-2497-3427>`_ (NCBI) - developer of the Infernal software
-* `Elena Rivas <https://www.mcb.harvard.edu/directory/elena-rivas/>`_ (Harvard University) - developer of the R-scape software
-* `Manja Marz <https://orcid.org/0000-0003-4783-8823>`_ and `Kevin Lamkiewicz <https://orcid.org/0000-0002-6375-6441>`_ (Friedrich Schiller University Jena) - collaborators on the `Rfam Viruses project <https://rfam.org/viruses>`_
-* `Sam Griffiths-Jones <http://orcid.org/0000-0001-6043-807X>`_ (University of Manchester) - *founding Rfam project leader* and a collaborator on the `microRNA project <https://rfam.org/microrna>`_
-* `Daniel Gautheret <https://orcid.org/0000-0002-1508-8469>`_ and `Claire Toffano-Nioche <https://orcid.org/0000-0003-4134-6844>`_ (University of Paris-Saclay) - collaborators on the `Rfam Cloud project <https://rfam.org/cloud>`_
-* `Zasha Weinberg <http://orcid.org/0000-0002-6681-3624>`_ (University of Leipzig) - developer of the ZWD database
+* :raw-html:`<a href="http://orcid.org/0000-0001-6676-4706" target="_blank" rel="noopener noreferrer">Sean Eddy</a>` (Harvard University) - founding developer and author of Infernal software
+* :raw-html:`<a href="http://orcid.org/0000-0002-2497-3427" target="_blank" rel="noopener noreferrer">Eric Nawrocki</a>` (NCBI) - developer of the Infernal software
+* :raw-html:`<a href="https://www.mcb.harvard.edu/directory/elena-rivas/" target="_blank" rel="noopener noreferrer">Elena Rivas</a>` (Harvard University) - developer of the R-scape software
+* :raw-html:`<a href="https://orcid.org/0000-0003-4783-8823" target="_blank" rel="noopener noreferrer">Manja Marz</a>` and :raw-html:`<a href="https://orcid.org/0000-0002-6375-6441" target="_blank" rel="noopener noreferrer">Kevin Lamkiewicz</a>` (Friedrich Schiller University Jena) - collaborators on the :raw-html:`<a href="https://rfam.org/viruses" target="_blank" rel="noopener noreferrer">Rfam Viruses project</a>`
+* :raw-html:`<a href="http://orcid.org/0000-0001-6043-807X" target="_blank" rel="noopener noreferrer">Sam Griffiths-Jones</a>` (University of Manchester) - *founding Rfam project leader* and a collaborator on the :raw-html:`<a href="https://rfam.org/microrna" target="_blank" rel="noopener noreferrer">microRNA project</a>`
+* :raw-html:`<a href="https://orcid.org/0000-0002-1508-8469" target="_blank" rel="noopener noreferrer">Daniel Gautheret</a>` and :raw-html:`<a href="https://orcid.org/0000-0003-4134-6844" target="_blank" rel="noopener noreferrer">Claire Toffano-Nioche</a>` (University of Paris-Saclay) - collaborators on the :raw-html:`<a href="https://rfam.org/cloud" target="_blank" rel="noopener noreferrer">Rfam Cloud project</a>`
+* :raw-html:`<a href="http://orcid.org/0000-0002-6681-3624" target="_blank" rel="noopener noreferrer">Zasha Weinberg</a>` (University of Leipzig) - developer of the ZWD database
 
 Previous contributors
 ---------------------
 
-* `Paul Gardner <http://orcid.org/0000-0002-7808-1213>`_ - *former Rfam project leader*
-* `Sarah Burge <http://orcid.org/0000-0002-2506-927X>`_ - *former Rfam project leader*
-* `Rob Finn <http://www.ebi.ac.uk/about/people/rob-finn>`_ - *Group Team Leader*
-* `Anton I. Petrov <https://antonpetrov.com>`_ - *former Rfam project leader*
-* `Ioanna Kalvari <https://orcid.org/0000-0001-9424-9197>`_ - *Software developer*
-* `Emma Cooke <https://orcid.org/0000-0002-7894-8112>`_ - *former Rfam Software Developer*
-* `Joanna Argasinska <https://orcid.org/0000-0003-2678-2824>`_ - *Biocurator*
-* `Ruth Eberhardt <https://orcid.org/0000-0001-6152-1369>`_
-* `Evan Floden <http://orcid.org/0000-0002-5431-190X>`_
+* :raw-html:`<a href="http://orcid.org/0000-0002-7808-1213" target="_blank" rel="noopener noreferrer">Paul Gardner</a>` - *former Rfam project leader*
+* :raw-html:`<a href="http://orcid.org/0000-0002-2506-927X" target="_blank" rel="noopener noreferrer">Sarah Burge</a>` - *former Rfam project leader*
+* :raw-html:`<a href="http://www.ebi.ac.uk/about/people/rob-finn" target="_blank" rel="noopener noreferrer">Rob Finn</a>` - *Group Team Leader*
+* :raw-html:`<a href="https://antonpetrov.com" target="_blank" rel="noopener noreferrer">Anton I. Petrov</a>` - *former Rfam project leader*
+* :raw-html:`<a href="https://orcid.org/0000-0002-6497-2883" target="_blank" rel="noopener noreferrer">Blake A. Sweeney</a>` - *former Rfam project leader*
+* :raw-html:`<a href="https://orcid.org/0000-0001-9424-9197" target="_blank" rel="noopener noreferrer">Ioanna Kalvari</a>` - *Software developer*
+* :raw-html:`<a href="https://orcid.org/0000-0002-7894-8112" target="_blank" rel="noopener noreferrer">Emma Cooke</a>` - *former Rfam Software Developer*
+* :raw-html:`<a href="https://orcid.org/0000-0003-2678-2824" target="_blank" rel="noopener noreferrer">Joanna Argasinska</a>` - *Biocurator*
+* :raw-html:`<a href="https://orcid.org/0000-0001-6152-1369" target="_blank" rel="noopener noreferrer">Ruth Eberhardt</a>`
+* :raw-html:`<a href="http://orcid.org/0000-0002-5431-190X" target="_blank" rel="noopener noreferrer">Evan Floden</a>`
 * John Tate
 * Jennifer Daub
 * Ben Moore
