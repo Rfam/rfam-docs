@@ -307,8 +307,3 @@ if os.environ.get("READTHEDOCS", "") == "True":
         html_context = {}
     html_context["READTHEDOCS"] = True
 
-# To make external links open in a new tab
-rst_prolog = """
-.. role:: raw-html(raw)
-   :format: html
-"""
