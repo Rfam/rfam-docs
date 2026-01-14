@@ -180,14 +180,15 @@ The following types of secondary structure diagrams are supported:
 * *maxcm* (maximum CM parse)
 * *norm* (normal)
 * *rscape* (`R-scape`_ analysis of Rfam SEED alignment)
-* *rscape-cyk* (secondary structure predicted by `R-scape`_ based on Rfam SEED alignment)
+* *rscape-cacofold* (secondary structure predicted by `R-scape`_ based on Rfam SEED alignment)
+* *DEPRECIATED: rscape-cyk* (this endpoint is no longer in use. Use rscape-cacofold instead)
 
 **Examples:**
 
 * https://rfam.org/family/snoZ107_R87/image/norm
 * https://rfam.org/family/RF00360/image/cov
 * https://rfam.org/family/RF00360/image/rscape
-* https://rfam.org/family/RF00360/image/rscape-cyk
+* https://rfam.org/family/RF00360/image/rscape-cacofold
 
 Covariance models
 +++++++++++++++++
