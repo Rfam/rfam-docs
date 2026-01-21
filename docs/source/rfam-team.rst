@@ -13,6 +13,7 @@ European Bioinformatics Institute
 * :raw-html:`<a href="https://www.ebi.ac.uk/people/person/philippa-muston/" target="_blank" rel="noopener noreferrer">Philippa Muston</a>` - Software Developer
 * :raw-html:`<a href="https://www.ebi.ac.uk/people/person/isaac-jandalala/" target="_blank" rel="noopener noreferrer">Isaac Jandalala</a>` - Software Developer
 * :raw-html:`<a href="https://www.ebi.ac.uk/people/person/pedro-madrigal/" target="_blank" rel="noopener noreferrer">Pedro Madrigal</a>` - Rfam Project Leader
+* :raw-html:`<a href="https://www.ebi.ac.uk/people/person/victoria-begley/" target="_blank" rel="noopener noreferrer">Victoria Begley</a>` - Bioinformatician
 * :raw-html:`<a href="http://www.ebi.ac.uk/about/people/alex-bateman" target="_blank" rel="noopener noreferrer">Alex Bateman</a>` - Senior Team Leader
 
 Collaborators
