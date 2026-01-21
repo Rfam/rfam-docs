@@ -181,7 +181,7 @@ The following types of secondary structure diagrams are supported:
 * *norm* (normal)
 * *rscape* (`R-scape`_ analysis of Rfam SEED alignment)
 * *rscape-cacofold* (secondary structure predicted by `R-scape`_ based on Rfam SEED alignment)
-* *DEPRECIATED: rscape-cyk* (this endpoint is no longer in use. Use rscape-cacofold instead)
+* *DEPRECATED: rscape-cyk* (this endpoint is no longer in use. Use rscape-cacofold instead)
 
 **Examples:**
 
