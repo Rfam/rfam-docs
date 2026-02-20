@@ -375,7 +375,7 @@ Guide <http://eddylab.org/infernal/Userguide.pdf>`_.
 
 One column that requires explanation here is the **"olp"** (overlap) column, which
 indicates which hits overlap with one or more other hits. There are
-three possible characters in this column:
+four possible characters in this column:
 
 :``*``:
  This hit's coordinates in the query sequence do not overlap with the
@@ -388,10 +388,14 @@ three possible characters in this column:
    B's E-value or if hit A and hit B have equal E-values but hit A
    has a higher bit score than hit B.
 
+:``$``:
+   Indicates that this hit overlaps with at least one "better" hit on
+   the same strand, but none of those better hits are annotated with
+   ``^``. Introduced in Infernal 1.1.4.
+
 :``=``:
-   Indicates that this hit does overlap with at least one other hit
-   on the same strand that is a "better" hit, given the definition of
-   "better" above.
+   Indicates that this hit does overlap with at least one "better" hit
+   on the same strand, and that better hit is annotated with ``^``.
 
 Removing lower-scoring overlaps from a tblout file
 --------------------------------------------------
@@ -403,7 +407,7 @@ sequence dataset. To do this for the example genome annotation file
 ``mrum-genome.tblout``, and to save the remaining hits to a new file.
 ``mrum-genome.deoverlapped.tblout``, use the following ``grep`` command::
 
-  grep -v " = " mrum-genome.tblout > mrum-genome.deoverlapped.tblout
+  grep -Ev " [=$] " mrum-genome.tblout > mrum-genome.deoverlapped.tblout
 
 Expected running times
 ----------------------
