@@ -407,7 +407,7 @@ sequence dataset. To do this for the example genome annotation file
 ``mrum-genome.tblout``, and to save the remaining hits to a new file.
 ``mrum-genome.deoverlapped.tblout``, use the following ``grep`` command::
 
-  grep -Ev " [=$] " mrum-genome.tblout > mrum-genome.deoverlapped.tblout
+  grep -v " = " mrum-genome.tblout > mrum-genome.deoverlapped.tblout
 
 Expected running times
 ----------------------
