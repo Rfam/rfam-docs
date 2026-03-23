@@ -1,7 +1,7 @@
 About Rfam
 ==========
 
-The `Rfam <http://rfam.org>`_ database is a collection of RNA sequence families of
+The `Rfam <http://rfam.org>`_ database is a collection of non-coding RNA sequence families of
 structural RNAs including non-coding RNA genes as well as
 cis-regulatory elements. Each family is represented by a multiple
 sequence alignment and a covariance model (CM).
