@@ -3,7 +3,7 @@ Privacy
 
 This section outlines the ways in which the Rfam website handles information about users. This should not be read as a legal document, but as a description of how we handle information that could be considered sensitive. It should be read in conjunction with the privacy policy documents of the individual Rfam consortium member sites. If you have any concerns about the way that information is used in the website, please contact us at the address given at the bottom of the page and we will be more than happy to discuss your concerns.
 
-Although we make every possible effort to keep this site and the data that it manipulates safe and secure, we make **no claim** to be able to protect sensitive or privileged information. If you are at all concerned about sensitive information being released, please do not use the site and consider installing the Rfam database and/or this website locally.
+Although we make every possible effort to keep this site and the data that it manipulates safe and secure, we make **no claim** to be able to protect sensitive or privileged information. If you are at all concerned about sensitive information being released, please do not use the site and instead access the `Rfam public database <https://docs.rfam.org/en/latest/database.html>`_ directly.
 
 Google Analytics
 ----------------
@@ -21,7 +21,7 @@ Although our servers do collect information about your `IP address <http://en.wi
 
 Searches
 --------
-The sequence search feature of the site allows you to upload a DNA or or RNA sequence to be searched against our library of CMs. The sequence that you upload is stored in a database and is retrieved by a set of scripts that actually perform the search. Although we do not have any information that could be used to link that sequence to you personally, you should be aware that the sequence itself **is accessible** to system administrators and other users who maintain the Rfam site.
+The sequence search feature of the site allows you to upload a DNA or RNA sequence to be searched against our library of CMs. The sequence that you upload is stored in a database and is retrieved by a set of scripts that actually perform the search. Although we do not have any information that could be used to link that sequence to you personally, you should be aware that the sequence itself **is accessible** to system administrators and other users who maintain the Rfam site.
 
 The batch search function allows you to submit larger searches, the results of which are emailed to you. Obviously, this requires you to provide identifiable information, namely an email address. However, beyond the routine backups of our databases, we do not store any information about email addresses and sequences in the longer term and we make no attempt to keep track of the searches that a particular user may be performing.
 
