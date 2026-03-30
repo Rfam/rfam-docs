@@ -43,7 +43,6 @@ Contents
   :caption: Other
 
   genome-annotation
-  rfam-cloud
   sequence-extraction
   linking-rfam
   license

@@ -64,23 +64,23 @@ Single sequence search
 
 The `Rfam sequence search <https://rfam.org/search#tabview=tab1>`_ is integrated with the `RNAcentral sequence search <https://rnacentral.org/sequence-search>`_ so that in addition to the Rfam classification each query sequence is also searched against a comprehensive collection of ncRNA sequence from RNAcentral. The predicted secondary structure, if available, is visualised in standard orientations using `R2DT <https://rnacentral.org/r2dt>`_.
 
-.. image:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7779021/bin/gkaa1047fig4.jpg
+.. image:: images/gkaa1047fig4.jpg
    :alt: Screenshot of Rfam sequence search
 
-Medium scale batch searches (less than 1,000 sequences)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Medium scale batch searches (less than 100 sequences)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have multiple nucleotide sequences to search, you can use our
 batch upload facility to upload a file of your sequences in FASTA
 format. Information on the format for this file can be found under the
-more link `here <http://rfam.org/search>`_. We will
+more link `here <https://rfam.org/search#tabview=tab1>`_. We will
 search your sequences against the Rfam library of covariance models and email the results
 back to you, usually within 48 hours. We request that you search a
-maximum of 1000 sequences in each file. Each sequence may be up to 200kb
-in length.
+maximum of 100 sequences in each file. Each sequence may be up to 7,000
+nucleotides in length.
 
-Large scale batch searches (more than 1,000 sequences)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Large scale batch searches (more than 100 sequences)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have a large number of nucleotide searches, it may be more
 convenient to run Infernal searches locally (see section :ref:`genome-annotation:Genome annotation`).
