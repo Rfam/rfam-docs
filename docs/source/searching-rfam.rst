@@ -62,7 +62,7 @@ would classify as belonging to one our RNA families.
 Single sequence search
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The `Rfam sequence search <https://rfam.org/search#tabview=tab1>`_ is integrated with the `RNAcentral sequence search <https://rnacentral.org/sequence-search>`_ so that in addition to the Rfam classification each query sequence is also searched against a comprehensive collection of ncRNA sequence from RNAcentral. The predicted secondary structure, if available, is visualised in standard orientations using `R2DT <https://rnacentral.org/r2dt>`_.
+The `Rfam sequence search <https://rfam.org/search#tabview=tab1>`_ is integrated with the `RNAcentral sequence search <https://rnacentral.org/sequence-search>`_ so that in addition to the Rfam classification each query sequence is also searched against a comprehensive collection of ncRNA sequence from RNAcentral. The predicted secondary structure, if available, is visualised in standard orientations using `R2DT <https://rnacentral.org/r2dt>`_. Sequence Search is powered by the Job Dispatcher (JD) team at EMBL-EBI.
 
 .. image:: images/gkaa1047fig4.jpg
    :alt: Screenshot of Rfam sequence search
