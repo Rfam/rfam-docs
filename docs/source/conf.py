@@ -235,7 +235,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Rfam.tex', u'Rfam Documentation',
+    (master_doc, 'rfam.tex', u'Rfam Documentation',
      u'Rfam Team', 'manual'),
 ]
 
