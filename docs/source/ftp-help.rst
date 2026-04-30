@@ -1,7 +1,7 @@
 Rfam FTP Site
 =============
 
-The following list describes a few of the important files in the
+The following list describes a few of the important files on the
 Rfam `FTP site <https://ftp.ebi.ac.uk/pub/databases/Rfam>`_.
 Some of these files may be very large (of the order of several hundred megabytes).
 Please check the sizes before trying to download them over a slow connection.
@@ -10,30 +10,30 @@ Documentation
 -------------
 
 `README <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_
-  Release Notes
+  Release Notes.
 `COPYING <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/COPYING>`_
-  Public Domain Information for Rfam
+  Public Domain Information for Rfam.
 `USERMAN <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/USERMAN>`_
-  A description of the Rfam flatfile formats
+  A description of the Rfam flatfile formats.
 
 Sequences, Alignments, Models and Trees
 ---------------------------------------
 
 `Rfam.tar.gz <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.tar.gz>`_
-  Rfam covariance models in ascii INFERNAL format
+  Rfam covariance models in ASCII INFERNAL format
 `Rfam.seed.gz <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.seed.gz>`_
   Annotated seed alignments in STOCKHOLM format
 `Rfam.seed_tree.tar.gz <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.seed_tree.tar.gz>`_
   Annotated tree files for each seed alignment
 `Rfam.full_region.gz <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.full_region.gz>`_
   List of sequence regions making up the full family membership for each family
-`fasta_files <http://http.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_
+`fasta_files <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_
   Directory containing the sequences for all significant hits per family
 
 Rfam database dumps
 -------------------
 
 `database_files <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/database_files>`_
-  Directory containing MYSQL dump of the the Rfam database data, tables and mysql database schema
+  Directory containing a MySQL dump of the Rfam database data, tables, and schema
 
-.. hint:: For direct access to the database please visit :ref:`database:Public MySQL Database`
+.. hint:: For direct access to the database, please visit :ref:`database:Public MySQL Database`
