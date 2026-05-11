@@ -2,8 +2,8 @@ Public MySQL Database
 ======================
 
 Rfam provides a public read-only `MySQL <https://www.mysql.com/>`_ database
-containing the latest version of Rfam data. The database will be updated with each release.
-To access old versions of the database download SQL dumps
+containing the latest version of Rfam data. The database is updated with each release.
+To access old versions of the database, download SQL dumps
 from the `FTP archive <https://ftp.ebi.ac.uk/pub/databases/Rfam/>`_.
 
 .. HINT::
@@ -26,13 +26,13 @@ Connection details
 | database     | Rfam                         |
 +--------------+------------------------------+
 
-You can connect to the database on command line:
+You can connect to the database on the command line:
 
 .. code-block:: bash
 
   mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam
 
-or use MySQL clients such as `MySQL Workbench <http://dev.mysql.com/downloads/workbench/>`_ or `Sequel Pro <http://www.sequelpro.com/>`_.
+or use MySQL clients such as `MySQL Workbench <http://dev.mysql.com/downloads/workbench/>`_ or `Sequel Ace <https://sequel-ace.com/>`_.
 
 If your computer is behind a firewall, please ensure that outgoing TCP/IP connections to the corresponding ports are allowed.
 
@@ -44,9 +44,9 @@ The most important tables are listed below and can be used as starting points fo
 =================    ================================================================================================================================
 Table                 Description
 =================    ================================================================================================================================
-family                 a list of all Rfam families and family specific information (family accession, family name, description etc.)
-rfamseq                a list of all analysed sequences including INSDC accessions, taxonomy id etc.
-full_region            a list of all sequences annotated with Rfam families including  INSDC accessions, start and end coordinates, bit scores etc.
+family                 a list of all Rfam families and family-specific information (family accession, family name, description, etc.)
+rfamseq                a list of all analysed sequences including INSDC accessions, taxonomy id, etc.
+full_region            a list of all sequences annotated with Rfam families including INSDC accessions, start and end coordinates, bit scores, etc.
 clan                   description of all Rfam clans
 clan_membership        a list of all Rfam families per clan
 taxonomy               NCBI taxonomy identifiers

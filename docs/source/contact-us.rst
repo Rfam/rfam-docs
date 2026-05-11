@@ -16,12 +16,16 @@ You can see blog posts that are specific to Rfam `here <https://xfam.wordpress.c
 
 RSS feed
 --------
-You can keep in touch with the latest goings by subscribing
+You can keep in touch with the latest news by subscribing
 to the `RSS <http://xfam.wordpress.com/tag/rfam/feed/>`_ feed from the Xfam blog.
 
-Twitter
--------
-You can `follow <https://twitter.com/RfamDB>`_ the RfamDB team at EMBL-EBI.
+LinkedIn
+--------
+You can `follow <https://www.linkedin.com/company/embl-ebi-rna-resources>`_ the EMBL-EBI RNA Resources team on LinkedIn.
+
+X
+-
+You can `follow <https://x.com/RfamDB>`_ the RfamDB team at EMBL-EBI.
 
 Submit an alignment
 -------------------

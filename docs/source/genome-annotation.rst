@@ -69,7 +69,7 @@ section 2 of the `Infernal User's Guide <http://eddylab.org/infernal/Userguide.p
 2. Download the Rfam library of CMs from
    `<https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz>`_ and the
    Rfam clanin file from
-   `<https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_ .
+   `<https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.clanin>`_.
 
 
 ::
@@ -121,7 +121,7 @@ nucleotides::
 
   Total # of residues: 2937203
 
-Because we want millions of nucleotides on both strands, we multiple
+Because we want millions of nucleotides on both strands, we multiply
 this by 2, and divide by 1,000,000 to get 5.874406. This number will
 be used in step 5.
 
@@ -139,7 +139,7 @@ be used in step 5.
 Explanations of the command line options used in the above command are as follows:
 
 :``-Z 5.874406``:
-   the sequence database size in millions of nucleotides is 5.874406, it is the
+   the sequence database size in millions of nucleotides is 5.874406; it is the
    number computed in step 4. This option
    ensures that the reported E-values are accurate.
 
@@ -149,7 +149,7 @@ Explanations of the command line options used in the above command are as follow
 
 :``--rfam``:
    run in "fast" mode, the same mode used for
-   Rfam annotation and determination of GA thresholds
+   Rfam annotation and determination of GA thresholds.
 
 :``--nohmmonly``:
    all models, even those with zero basepairs, are run in CM mode (not
@@ -189,7 +189,7 @@ output files: ``mrum-genome.cmscan`` (standard output of cmscan) and
 cmscan standard output
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The first section of Infernal program's standard output is the header, telling you what
+The first section of the Infernal program's standard output is the header, telling you what
 program you ran, on what, and with what options:
 
 .. literalinclude:: mrum-genome.cmscan
@@ -250,9 +250,9 @@ Guide <http://eddylab.org/infernal/Userguide.pdf>`_).
 You may have noticed that some of these hits overlap with each
 other. For example, the LSU_rRNA_archaea and LSU_rRNA_bacteria hits
 from 762872-765862 and 762874-765862 almost completely overlap. This
-is because both models recognized this archael LSU rRNA sequence in
+is because both models recognized this archaeal LSU rRNA sequence in
 this genome. Note that the LSU_rRNA_archaea score (2763.5 bits) is
-better than the LSU_rRNA_bacteria score (1872.9) indicating that the
+better than the LSU_rRNA_bacteria score (1872.9), indicating that the
 LSU_rRNA_archaea model is a better match (even though both hits have
 an E-value of 0).
 
@@ -288,7 +288,7 @@ Understanding hit alignment annotation
             relationship between the alignment and the secondary
             structure of the Rfam tRNA model.
 
-The alignment contains six lines. Start by looking at the second line
+The alignment contains six lines. Start by looking at the second line,
 which ends with CS. The line shows the predicted secondary structure
 of the query sequence in :ref:`glossary:WUSS format`.
 
@@ -306,10 +306,10 @@ by the model at their alignment positions will be marked with a ``v``:
 A:A, A:C, A:G, C:A, C:C, C:U, G:A, G:G, U:U, and U:C. The NC
 annotation makes it easy to quickly identify suspicious basepairs in a
 hit. For this example, there is a single basepair that is negative
-scoring and non-canonical, it is the U:U pair between model positions
+scoring and non-canonical: it is the U:U pair between model positions
 13 and 21.
 
-The third line shows that consensus of the tRNA model. The highest
+The third line shows the consensus of the tRNA model. The highest
 scoring residue sequence is shown. Upper case residues are highly
 conserved. Lower case residues are weakly conserved or
 unconserved. Dots (``.``) in this line indicate insertions in the target
@@ -329,7 +329,7 @@ upper case; if the observed residue has a score of ≥ 0, a ``+``
 character is shown; else there is a space, indicating a negative
 contribution to the alignment score.
 
-The fifth line, beginning with NC 013790.1 is the target
+The fifth line, beginning with NC 013790.1, is the target
 sequence. Dashes (``-``) in this line indicate deletions in the target
 sequence with respect to the model.
 
@@ -353,7 +353,7 @@ cmscan tabular output
 The cmscan tabular output file ``mrum-genome.tblout`` contains much of
 the information in the standard output, as well as some additional
 information in a tabular format that is easy to manipulate using
-common unix programs like ``grep`` and ``awk``.
+common Unix programs like ``grep`` and ``awk``.
 
 The top of the file has headers for each column. The first 25 hits are
 shown below:
@@ -418,7 +418,7 @@ hours. However, you can parallelize by splitting up the input genome
 sequence file into multiple files (if the genome has multiple
 chromosomes) and running cmscan separately on each individual
 file. Also, you can run cmscan with multiple threads, as explained
-more below.
+below.
 
 The following timings are from Table 2 of (`Nawrocki et al., 2015
 <http://nar.oxfordjournals.org/content/43/D1/D130>`_). All searches
@@ -440,7 +440,7 @@ processors.
 +------------------------------------+------------+------------------+---------+
 
 cmscan will run in **multithreaded mode** by default, if
-multiple processors are available. Running with 8 threads with 8 cores
+multiple processors are available. Running with 8 threads on 8 cores
 should reduce the running times listed in the table above by about
 4-fold (reflecting about 50% efficiency versus single threaded).
 
@@ -485,7 +485,7 @@ In addition, specific RNA genes appear to have
 undergone massive **pseudogene expansions** in certain genomes. For
 example, searching the human genome using the Rfam
 `U6 family <http://rfam.org/family/RF00026>`_
-yields over 1000 hits, all with very high score. These are not "false
+yields over 1000 hits, all with very high scores. These are not "false
 positives" in the sequence analysis sense, because they are closely
 related by sequence to the real U6 genes, but they completely
 overwhelm the small number (only 10s) of expected real U6 genes.

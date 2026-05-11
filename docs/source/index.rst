@@ -58,7 +58,7 @@ We choose CC0 because:
 
 * It is most in line with the spirit of EMBL-EBI’s Terms of use and places data in the public domain without constraints. We believe that this approach to research data sharing strengthens open science and scientific progress.
 
-* It is the best way to encourage remixing and reuse as it makes clear to any user – academic, commercial or otherwise – that the data are not owned by anyone and therefore can be used freely.
+* It is the best way to encourage remixing and reuse as it makes clear to any user – academic, commercial, or otherwise – that the data are not owned by anyone and therefore can be used freely.
 
 * It saves researchers time when reusing the data, which speeds up the process of science.
 
@@ -67,7 +67,7 @@ Rfam conforms to the EBI long-term data preservation `policy <https://www.ebi.ac
 Citing Rfam
 -----------
 
-If you use Rfam in your work, please consider citing the :ref:`Citing-rfam:Rfam references`.
+If you use Rfam in your work, please cite the :ref:`Citing-rfam:Rfam references`.
 
 Get in touch
 ------------
@@ -82,7 +82,7 @@ If you have any questions or feedback, feel free to `submit a GitHub issue <http
 Funding
 =======
 
-Rfam is supported by the `BBSRC <https://bbsrc.ukri.org/>`_ and `Wellcome <https://wellcome.ac.uk/>`_ and is developed at the `EMBL-EBI <https://www.ebi.ac.uk>`_.
+Rfam is supported by the `BBSRC <https://bbsrc.ukri.org/>`_ and `Wellcome <https://wellcome.ac.uk/>`_, and is developed at the `EMBL-EBI <https://www.ebi.ac.uk>`_.
 
 .. image:: images/ukri-bbsrc.png
    :alt: BBSRC logo
