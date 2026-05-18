@@ -51,9 +51,14 @@ Rfam references
 
 Other contributions
 -------------------
+`Viral non-coding RNA structure annotation and API-based data retrieval with Rfam and R2DT <https://doi.org/10.64898/2026.05.10.724034>`_
+	| P. Muston, S. Triebel, et al.
+	| **bioRxiv** (2026) doi: 10.64898/2026.05.10.724034
+
 `Computational strategies to combat COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research <https://academic.oup.com/bib/article/22/2/642/5955939>`_
-	| Hufsky et al.
+	| F. Hufsky et al.
 	| **Briefings in Bioinformatics** (2020) doi: 10.1093/bib/bbaa232
+
 
 Covariance models and stochastic context-free grammars
 -------------------------------------------------------
