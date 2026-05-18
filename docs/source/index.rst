@@ -1,7 +1,12 @@
 Rfam Help
 =========
 
-|docs|
+.. only:: html
+
+   .. image:: https://readthedocs.org/projects/rfam/badge/?version=latest
+       :alt: Documentation Status
+       :scale: 100%
+       :target: https://rfam.readthedocs.io/en/latest/?badge=latest
 
 `Rfam <http://rfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
 consensus secondary structures, and predicted homologues.
@@ -73,11 +78,6 @@ Get in touch
 ------------
 
 If you have any questions or feedback, feel free to `submit a GitHub issue <https://github.com/Rfam/rfam-docs/issues>`_ or email us at **rfam-help@ebi.ac.uk**.
-
-.. |docs| image:: https://readthedocs.org/projects/rfam/badge/?version=latest
-    :alt: Documentation Status
-    :scale: 100%
-    :target: https://rfam.readthedocs.io/en/latest/?badge=latest
 
 Funding
 =======
