@@ -318,14 +318,14 @@ sequence with respect to the model.
 The fourth line shows where the alignment score is coming from. For a
 consensus basepair, if the observed pair is the highest-scoring
 possible pair according to the consensus, both residues are shown in
-upper case; if a pair has a score of ≥ 0, both residues are annotated
+upper case; if a pair has a score of >= 0, both residues are annotated
 by ``:`` characters (indicating an acceptable compensatory basepair);
 else, there is a space, indicating that a negative contribution of
 this pair to the alignment score. Note that the NC line will only mark
 a subset of these negative scoring pairs with a v, as discussed
 above. For a single-stranded consensus residue, if the observed
 residue is the highest scoring possibility, the residue is shown in
-upper case; if the observed residue has a score of ≥ 0, a ``+``
+upper case; if the observed residue has a score of >= 0, a ``+``
 character is shown; else there is a space, indicating a negative
 contribution to the alignment score.
 
