@@ -39,12 +39,14 @@ Family
 
 A group of RNA sequences which are believed to be evolutionarily related in sequence or secondary structure.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0008.jpg
-    :alt: SAM riboswitch Rfam family
-    :width: 600
-    :align: center
+.. only:: html
 
-    SAM riboswitch Rfam family
+   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0008.jpg
+       :alt: SAM riboswitch Rfam family
+       :width: 600
+       :align: center
+
+       SAM riboswitch Rfam family
 
 Full alignment
 --------------
@@ -87,12 +89,14 @@ rfamseq
 You can find out the information about *rfamseq* currently in use in the
 `README file <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
-    :alt: Taxonomic composition of Rfamseq 13.0
-    :width: 400
-    :align: center
+.. only:: html
 
-    Taxonomic composition of Rfamseq 13.0
+   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
+       :alt: Taxonomic composition of Rfamseq 13.0
+       :width: 400
+       :align: center
+
+       Taxonomic composition of Rfamseq 13.0
 
 RNAalifold
 ----------
@@ -109,12 +113,14 @@ in a multiple sequence alignment. R-scape is used to create and improve
 Rfam families, and R-scape visualisations are shown on the secondary structure
 tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
-    :alt: R-scape visualisation of SAM riboswitch
-    :width: 600
-    :align: center
+.. only:: html
 
-    R-scape visualisation of SAM riboswitch
+   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
+       :alt: R-scape visualisation of SAM riboswitch
+       :width: 600
+       :align: center
+
+       R-scape visualisation of SAM riboswitch
 
 Seed alignment
 --------------
@@ -123,12 +129,14 @@ A manually curated sample of representative sequences for a family.
 These sequences are aligned and annotated with a consensus secondary structure.
 This alignment is used to build the covariance model for the family. See :ref:`building-families:Seed alignments and secondary structure annotation` for more information.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0010.jpg
-      :alt: SAM riboswitch Seed alignment
-      :width: 600
-      :align: center
+.. only:: html
 
-      An example seed alignment coloured by secondary structure helical regions
+   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0010.jpg
+         :alt: SAM riboswitch Seed alignment
+         :width: 600
+         :align: center
+
+         An example seed alignment coloured by secondary structure helical regions
 
 Sequence region
 ---------------

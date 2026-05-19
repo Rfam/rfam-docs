@@ -132,9 +132,11 @@ R-scape secondary structures
 
 The results will appear in the ``rscape-seed`` folder that can be copied to your computer for inspection. A good family will have multiple basepairs highlighted in green, which indicates covariation support. The ``--cyk`` option checks if there is an alternative secondary structure compatible with the alignment. Comparing the regular and the ``--cyk`` secondary structure diagrams may suggest a better structure than the current secondary structure consensus found in the seed alignment.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
-    :alt: R-scape visualisation of SAM riboswitch
-    :width: 600
-    :align: center
+.. only:: html
 
-    R-scape visualisation of SAM riboswitch
+   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
+       :alt: R-scape visualisation of SAM riboswitch
+       :width: 600
+       :align: center
+
+       R-scape visualisation of SAM riboswitch
