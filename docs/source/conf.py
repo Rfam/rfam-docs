@@ -216,6 +216,10 @@ htmlhelp_basename = 'Rfamdoc'
 latex_elements = {
     # Map ≥ to \geq so pdflatex doesn't abort on this common math symbol
     'preamble': r'\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}',
+    # Sphinx 8 auto-loads fontawesome5 for admonition icons when the .sty is
+    # present.  RTD's texlive 2022/Debian ships fontawesome5 but its OTF fonts
+    # are broken under pdflatex, causing a hard crash.  Disable icons entirely.
+    'sphinxsetup': 'iconpackage=none',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
