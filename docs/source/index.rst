@@ -5,7 +5,6 @@ Rfam Help
 
    .. image:: https://readthedocs.org/projects/rfam/badge/?version=latest
        :alt: Documentation Status
-       :scale: 100%
        :target: https://rfam.readthedocs.io/en/latest/?badge=latest
 
 `Rfam <http://rfam.org/>`_ is a collection of non-coding RNA families represented by manually curated sequence alignments,
