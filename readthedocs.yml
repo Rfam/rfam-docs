@@ -11,6 +11,7 @@ build:
     python: "3.11"
   jobs:
     post_build:
+      - echo "=== pdflatex log (last 80 lines) ===" && tail -80 $READTHEDOCS_OUTPUT/pdf/rfam.log || echo "no rfam.log found"
       - test -d $READTHEDOCS_OUTPUT/pdf && find $READTHEDOCS_OUTPUT/pdf -maxdepth 1 -type f ! -name "rfam.pdf" -delete || true
 
 # Build documentation in the docs/ directory with Sphinx
