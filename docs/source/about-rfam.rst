@@ -19,8 +19,8 @@ For each family, Rfam provides:
   the online encyclopedia Wikipedia.
 
 **Sequences**
-  Information about sequences in the family, including ID sequence, bit score, SEED
-  or FULL sequence reference, sequence start and end coordinates, sequence description, and the species name. The tab also provides direct links to download the alignment sequences (“Download all sequences”) and the associated sequence metadata information (“Download region list”).
+  Information about sequences in the family, including the sequence ID, bit score,
+  whether the sequence belongs to the SEED or FULL alignment, sequence start and end coordinates, sequence description, and species name. The tab also provides direct links to download the alignment sequences (“Download all sequences”) and the associated sequence metadata information (“Download region list”).
 
 **Seed alignment**
   A curated alignment containing a representative set of sequences together with a consensus secondary structure annotation. Rfam structures are based on expert-reported secondary structure annotations where available; otherwise, predictive methods such as RNAfold, RNAalifold, or related tools are applied.
