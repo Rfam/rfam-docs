@@ -26,7 +26,7 @@ For each family, Rfam provides:
   A curated alignment containing a representative set of sequences together with a consensus secondary structure annotation. Rfam structures are based on expert-reported secondary structure annotations where available; otherwise, predictive methods such as RNAfold, RNAalifold, or related tools are applied.
 
 **Secondary structure**
-  Rfam provides two secondary structure representations: the Rfam structure and the R-scape optimized structure. The Rfam structure relies on expert-reported secondary structure where available, whereas the R-scape-optimized structure is inferred to maximize statistically supported covarying base pairs. Additionally, multiple measures of sequence and structural conservation are available through the Visualization Type menu.
+  Rfam provides two secondary structure representations: the Rfam structure and the R-scape optimized structure. The Rfam structure relies on expert-reported secondary structure where available, whereas the R-scape optimized structure is inferred to maximize statistically supported covarying base pairs. Additionally, multiple measures of sequence and structural conservation are available through the Visualization Type menu.
 
 **Species**
   Interactive tree graphic displaying species distribution for the full
