@@ -45,7 +45,4 @@ For each family Rfam provides:
   Links to external databases and references to other data sources
 
 **Curation**
-  Covariance model files contain information summarising
-  the family, including the author of alignment, references for
-  sources of sequence and/or structure, the number of sequences in each
-  alignment, score thresholds and score distributions
+  This section is divided into two subsections: alignment source information and model information. The alignment source information includes the SEED alignment reference, structure source reference, RNA type, authors, and the number of sequences in the SEED and FULL alignments. The model information includes the build, calibration, and search commands, as well as the gathering, trusted, and noise cutoffs. A direct link to download the family covariance model is also provided.
