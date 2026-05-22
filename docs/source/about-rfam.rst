@@ -20,16 +20,15 @@ For each family, Rfam provides:
 
 **Sequences**
   Information about sequences in the family, including bit score, seed
-  and full alignments, region coordinates, sequence description from
+  and full alignments, region coordinates, and sequence description from
   the EMBL nucleotide database, and the species name
   Provides direct links to download the full alignment sequences (“Download all sequences”) and the associated sequence metadata information (“Download region list”).
 
 **Seed alignment**
-  A curated alignment containing a small set of representative sequences
-  and a consensus secondary structure annotation
+  A curated alignment containing a representative set of sequences together with a consensus secondary structure annotation. Rfam structures are based on expert-reported secondary structure annotations where available; otherwise, predictive methods such as RNAfold, RNAalifold, or related tools are applied.
 
 **Secondary structure**
-  The Rfam structure is based on expert-curated secondary structure annotations where available, whereas the R-scape optimized structure aims to maximize statistically supported covarying base pairs.
+  The Rfam structure is based on expert-reported secondary structure where available, whereas the R-scape optimized structure aims to maximize statistically supported covarying base pairs.
 
 **Species**
   Interactive tree graphic displaying species distribution for the full
