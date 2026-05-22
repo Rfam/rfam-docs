@@ -36,13 +36,13 @@ For each family Rfam provides:
   alignment.
 
 **Trees**
-  Phylogenetic trees are available for the seed and the full alignment
+  Phylogenetic trees are available for the reference alignment (SEED alignment) and can be displayed using either species names or sequence accessions. The tree can also be downloaded in Newick format.
 
 **Structures**
   Mappings between PDB structures and Rfam annotations
 
 **Database references**
-  Links to external databases and references to other data sources
+  Main literature references for the family, together with links to additional cross-references, are provided. These references correspond to the publications associated with the family at the time of deposition.
 
 **Curation**
   This section is divided into two subsections: alignment source information and model information. The alignment source information includes the SEED alignment reference, structure source reference, RNA type, authors, and the number of sequences in the SEED and FULL alignments. The model information includes the build, calibration, and search commands, as well as the gathering, trusted, and noise cutoffs. A direct link to download the family covariance model is also provided.
