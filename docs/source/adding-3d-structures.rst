@@ -79,8 +79,8 @@ is updated after reviewing each of the PDB SS. The updates can reflect:
   provide the best-supported structure.
 - Base pairs in riboswitches or RNAs with ligands. Some PDBs with
   ligands prevent the formation of base pairs in their bound
-  conformation. If there is support for base pairs in an unbound
-  structure, these base pairs have to be included in the SS_cons.
+  conformation. If there is *support for base pairs in an unbound
+  structure*, these base pairs have to be included in the SS_cons.
 - When the RNA is compromised by interacting with proteins or RNAs, the
   SS_cons needs to be corrected to avoid reflecting extra structural
   elements that are not supported by the structures.
@@ -94,7 +94,7 @@ align variable regions. Some supported refinements are:
 
 1. When the 3D structure supports a longer or shorter ncRNA, consider
    extending or trimming the alignment to represent a more accurate
-   model. Sequence length has to be reflected in all the alignment
+   model. The sequence length has to be reflected in all the alignment
    sequences, and the improvement in the family has to be confirmed in
    terms of keeping or improving the annotation of the family in the
    current annotation dataset of Rfam.
