@@ -49,9 +49,9 @@ A group of RNA sequences which are believed to be evolutionarily related in sequ
 Full alignment (FULL)
 --------------
 
-An alignment of the set of related sequences which score higher than the manually set threshold values for the covariance model of a particular Rfam family.
+An alignment of the set of related sequences that score higher than the manually set threshold values for the covariance model of a particular Rfam family.
 
-As of Rfam 12.0, we no longer automatically generate full alignments for each Rfam family. You may download the Rfam CM and generate your own alignments using Infernal. For details about generating a full alignment, see the Rfam `Curr Protoc Bioinformatics paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
+For details about generating a full alignment, see the Rfam `Curr Protoc Bioinformatics paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
 
 Gathering cutoff
 ----------------
@@ -83,16 +83,16 @@ Rfamseq
 
 *Rfamseq* Rfamseq is a representative, reduced-redundancy set of genome sequences against which ncRNA family models are searched to evaluate phylogenetic distribution and define gathering thresholds. It provides the sequence space used to assess ncRNA family models across phylogenetic diversity. Starting with Rfam 13.0, *Rfamseq* is based on a collection of complete, non-redundant, and representative genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`. The more recent reported *Rfamseq* version is reported in Rfam 15.0. See the `Rfam 15.0 publication <https://pmc.ncbi.nlm.nih.gov/articles/PMC11701678/>`_.
 
-*rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
+*rfamseq* is usually updated with each major Rfam release, e.g., 14.0 or 15.0.
 You can find out the information about *rfamseq* currently in use in the
 `README file <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
-    :alt: Taxonomic composition of Rfamseq 13.0
+.. Table:: https://pmc.ncbi.nlm.nih.gov/articles/PMC11701678/table/tbl1/
+    :alt: The number of genomes in Rfamseq corresponding to release 14.0 and 15.0
     :width: 400
     :align: center
 
-    Taxonomic composition of Rfamseq 13.0
+    The number of genomes in Rfamseq corresponding to release 14.0 and 15.0
 
 RNAalifold
 ----------
@@ -109,7 +109,7 @@ in a multiple sequence alignment. R-scape is used to create and improve
 Rfam families, and R-scape visualisations are shown on the secondary structure
 tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
+.. figure:: https://pmc.ncbi.nlm.nih.gov/articles/PMC6754622/figure/F8/
     :alt: R-scape visualisation of SAM riboswitch
     :width: 600
     :align: center
@@ -140,22 +140,16 @@ Stockholm format
 ----------------
 
 A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination
-of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
+of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 Type
 ----
 
-A simple functional classification used to organise Rfam families into **RNA types**.
-This ontology does not current directly relate to the ontologies
+A representative functional classification used to organise Rfam families into **RNA types**.
+This ontology does not currently directly relate to the ontologies
 used by other databases. For a full list of RNA types
 see the :ref:`searching-rfam:search by entry type` section.
 
-WAR
----
-
-A software tool that enables us to simultaneously run several different methods
-for performing multiple alignment and secondary structure prediction
-for non-coding RNA sequences. See the `WAR  <http://genome.ku.dk/resources/war/>`_ website.
 
 WUSS format
 -----------
