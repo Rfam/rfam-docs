@@ -100,6 +100,10 @@ RNAalifold
 Folds pre-computed alignments using a combination of free-energy and covariation measures.
 Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_.
 
+RNAfold
+-------
+Predicts minimum free energy structures and base pair probabilities from single RNA sequences. Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_. 
+
 R-scape
 -------
 
