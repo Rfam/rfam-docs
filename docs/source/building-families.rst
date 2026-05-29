@@ -33,7 +33,7 @@ original publications to clarify.
 
 Alternatively, where this information is not available from the
 literature, we will generate an alignment and secondary structure
-prediction using various software, such as :ref:`glossary:WAR` or :ref:`glossary:RNAalifold`. This
+prediction using various software, such as :ref:`glossary:RNAfold` or :ref:`glossary:RNAalifold`. This
 software allows us to cherry-pick the best alignment and secondary
 structure prediction. Historically, the methods used to
 make these alignments and folding predictions have varied.
