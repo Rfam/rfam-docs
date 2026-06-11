@@ -14,7 +14,7 @@ There are two kinds of Rfam multiple sequence alignments:
 all known members of a family, but rather a representative set.
 We use the `Infernal <http://eddylab.org/infernal/>`_ software to build a covariance model from this alignment.
 
-2. The covariance model is used to search the :ref:`glossary:rfamseq` sequence database for other family members and build a **FULL** alignment including all instances of a family.
+2. The covariance model is used to search the :ref:`glossary:Rfamseq` sequence database for other family members and build a **FULL** alignment including all instances of a family.
 
 What do the scores for hits to Rfam models mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
