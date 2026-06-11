@@ -22,7 +22,7 @@ All sequences on the Rfam website have already undergone this process, but if yo
 ClustalW
 --------
 
-A general purpose multiple sequence alignment program for DNA (RNA) which we use while building our SEED alignments. See the `Clustal web server <http://www.clustal.org>`_.
+A general purpose multiple sequence alignment program for DNA (RNA) which we use while building our SEED alignments. See the `Clustal web server <https://www.ebi.ac.uk/jdispatcher/msa/clustalo>`_.
 
 Covariance model (CM)
 ---------------------
@@ -32,28 +32,26 @@ A secondary structure profile for a RNA structural alignment (also called profil
 DESC file
 ---------
 
-Each family is described using in a ``DESC`` file that includes the information such as family description, database references, RNA type, and publications (see the `tRNA DESC file <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example).
+Each family is described using in a ``DESC`` file that includes the information such as family description, database references, RNA type, and publications (see the `tRNA DESC file <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/DESC>`_ as an example).
 
 Family
 ------
 
 A group of RNA sequences which are believed to be evolutionarily related in sequence or secondary structure.
 
-.. only:: html
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8c7b/6754622/22c655713cfe/nihms-1047076-f0008.jpg
+    :alt: SAM riboswitch Rfam family
+    :width: 600
+    :align: center
 
-   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0008.jpg
-       :alt: SAM riboswitch Rfam family
-       :width: 600
-       :align: center
+    SAM riboswitch Rfam family
 
-       SAM riboswitch Rfam family
-
-Full alignment
+Full alignment (FULL)
 --------------
 
-An alignment of the set of related sequences which score higher than the manually set threshold values for the covariance model of a particular Rfam family.
+An alignment of the set of related sequences that score higher than the manually set threshold values for the covariance model of a particular Rfam family.
 
-As of Rfam 12.0, we no longer automatically generate full alignments for each Rfam family. You may download the Rfam CM and generate your own alignments using Infernal. For details about generating a full alignment, see the Rfam `CPB paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
+For details about generating a full alignment, see the Rfam `Curr Protoc Bioinformatics paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
 
 Gathering cutoff
 ----------------
@@ -61,7 +59,7 @@ Gathering cutoff
 The bit score gathering threshold (GA cutoff), set by Rfam curators when building the family.
 All sequences that score at or above this threshold will be included in the full alignment
 and are believed to be true homologs to the model.
-For more information see `Nawrocki et al., 2015 <http://nar.oxfordjournals.org/content/43/D1/D130>`_.
+For more information, see `Nawrocki et al., 2015 <http://nar.oxfordjournals.org/content/43/D1/D130>`_.
 
 Infernal
 --------
@@ -73,36 +71,38 @@ See the `Infernal website <http://eddylab.org/infernal>`_ for more details.
 MFOLD
 -----
 
-RNA structure prediction algorithm which utilises minimum free energy information. See the `MFOLD <http://unafold.rna.albany.edu/?q=mfold>`_ website.
+RNA structure prediction algorithm which utilises minimum free energy information. See the `MFOLD publication <https://doi.org/10.1093/nar/gkg595>`_.
 
 Pfold
 -----
 
-RNA folding software which folds alignments using a Stochastic Context-Free Grammars (SCFG) trained on rRNA alignments. It takes an alignment of RNA sequences as input and predicts a common structure for all sequences. See the `Pfold <http://www.daimi.au.dk/~compbio/rnafold/>`_ website.
+RNA folding software which folds alignments using a Stochastic Context-Free Grammars (SCFG) trained on rRNA alignments. It takes an alignment of RNA sequences as input and predicts a common structure for all sequences. See the `Pfold publication <https://pmc.ncbi.nlm.nih.gov/articles/PMC169020/>`_.
 
-rfamseq
+Rfamseq
 -------
 
-*Rfamseq* is the underlying nucleotide sequence database on which Rfam is based. Starting with Rfam 13.0, *rfamseq* is based on a collection of complete, non-redundant, and representative genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`_ (find out more in the `Rfam 13.0 paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/#SEC2title>`_).
+*Rfamseq* Rfamseq is a representative, reduced-redundancy set of genome sequences against which ncRNA family models are searched to evaluate phylogenetic distribution and define gathering thresholds. It provides the sequence space used to assess ncRNA family models across phylogenetic diversity. Starting with Rfam 13.0, *Rfamseq* is based on a collection of complete, non-redundant, and representative genomes maintained by `UniProt <http://www.uniprot.org/proteomes>`. The more recent reported *Rfamseq* version is reported in Rfam 15.0. See the `Rfam 15.0 publication <https://pmc.ncbi.nlm.nih.gov/articles/PMC11701678/>`_.
 
-*rfamseq* is usually updated with each major Rfam release, e.g., 12.0 or 13.0.
+*rfamseq* is usually updated with each major Rfam release, e.g., 14.0 or 15.0.
 You can find out the information about *rfamseq* currently in use in the
 `README file <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
-.. only:: html
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/76b3/11701678/bf17a771d02a/gkae1023fig1.jpg
+    :alt: The taxonomic distribution of cellular organisms in Rfamseq 15 organized by the phylogenetic kingdom.
+    :width: 400
+    :align: center
 
-   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig2.jpg
-       :alt: Taxonomic composition of Rfamseq 13.0
-       :width: 400
-       :align: center
-
-       Taxonomic composition of Rfamseq 13.0
+    The taxonomic distribution of cellular organisms in Rfamseq 15 organized by the phylogenetic kingdom.
 
 RNAalifold
 ----------
 
 Folds pre-computed alignments using a combination of free-energy and covariation measures.
 Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_.
+
+RNAfold
+-------
+Predicts minimum free energy structures and base pair probabilities from single RNA sequences. Part of the `Vienna package <http://www.tbi.univie.ac.at/RNA/>`_. 
 
 R-scape
 -------
@@ -113,30 +113,26 @@ in a multiple sequence alignment. R-scape is used to create and improve
 Rfam families, and R-scape visualisations are shown on the secondary structure
 tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
-.. only:: html
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/236e/5753348/9493552abea5/gkx1038fig5.jpg
+    :alt: R-scape visualisation of SAM riboswitch
+    :width: 600
+    :align: center
+    
+    R-scape visualisation of SAM riboswitch
 
-   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753348/bin/gkx1038fig5.jpg
-       :alt: R-scape visualisation of SAM riboswitch
-       :width: 600
-       :align: center
-
-       R-scape visualisation of SAM riboswitch
-
-Seed alignment
+Seed alignment (SEED)
 --------------
 
 A manually curated sample of representative sequences for a family.
 These sequences are aligned and annotated with a consensus secondary structure.
 This alignment is used to build the covariance model for the family. See :ref:`building-families:Seed alignments and secondary structure annotation` for more information.
 
-.. only:: html
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0fff/13192927/b95ca1aa9060/nihpp-2026.05.10.724034v1-f0012.jpg
+      :alt: SEED alignment view of Rfam family RF00164
+      :width: 600
+      :align: center
 
-   .. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0010.jpg
-         :alt: SAM riboswitch Seed alignment
-         :width: 600
-         :align: center
-
-         An example seed alignment coloured by secondary structure helical regions
+      An example of SEED alignment view of Rfam family RF00164 implemented with the Nightingale framework.
 
 Sequence region
 ---------------
@@ -148,22 +144,16 @@ Stockholm format
 ----------------
 
 A multiple sequence alignment format used by Rfam (and Pfam) for the dissemination
-of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://xfamsvn.ebi.ac.uk/svn/data_repos/trunk/Families/RF00005/SEED>`_.
+of protein and RNA sequence alignments. For more information see the `Wikipedia article on Stockholm format <https://en.wikipedia.org/wiki/Stockholm_format>`_ or the `Rfam tRNA alignment <https://svn.rfam.org/svn/data_repos/trunk/Families/RF00005/SEED>`_.
 
 Type
 ----
 
-A simple functional classification used to organise Rfam families into **RNA types**.
-This ontology does not current directly relate to the ontologies
+A representative functional classification used to organise Rfam families into **RNA types**.
+This ontology does not currently directly relate to the ontologies
 used by other databases. For a full list of RNA types
 see the :ref:`searching-rfam:search by entry type` section.
 
-WAR
----
-
-A software tool that enables us to simultaneously run several different methods
-for performing multiple alignment and secondary structure prediction
-for non-coding RNA sequences. See the `WAR  <http://genome.ku.dk/resources/war/>`_ website.
 
 WUSS format
 -----------

@@ -6,19 +6,15 @@ Frequently Asked Questions
 Documentation
 --------------
 
-What are "seed" and "full" alignments?
+What are "SEED" and "FULL" alignments?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 There are two kinds of Rfam multiple sequence alignments:
 
-1. The **seed** alignment is a hand-curated alignment of known members of the family. This alignment may not contain
+1. The **SEED** alignment is a hand-curated alignment of known members of the family. This alignment may not contain
 all known members of a family, but rather a representative set.
-We use the `Infernal <http://eddylab.org/infernal/>`_ software to build a covariance model
-from this alignment.
+We use the `Infernal <http://eddylab.org/infernal/>`_ software to build a covariance model from this alignment.
 
-2. The covariance model is used to search the :ref:`glossary:rfamseq` sequence database
-for other family members and build a **full** alignment including all instances of a family.
-Starting with Rfam 12.0 the full alignments are no longer provided by Rfam, but they can
-be generated as described in the following `protocol <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/>`_.
+2. The covariance model is used to search the :ref:`glossary:Rfamseq` sequence database for other family members and build a **FULL** alignment including all instances of a family.
 
 What do the scores for hits to Rfam models mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,25 +38,21 @@ with low positive bits scores by chance.
 
 Where does your secondary structure annotation come from?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ideally, when we build a seed alignment, the initial secondary structure annotation
+Ideally, when we build a SEED alignment, the initial secondary structure annotation
 is obtained from the literature. In these cases the secondary structure is usually available
-only for a few of the member sequences in the seed. Our aim is to generate models
-that represent conserved secondary structure, so when we begin to expand the membership of the seed
+only for a few of the member sequences in the SEED. Our aim is to generate models
+that represent conserved secondary structure, so when we begin to expand the membership of the SEED
 to be as representative as possible, we will only retain the secondary structure annotation
 that is conserved between the majority of sequences. You should also note that the annotations
-obtained from the literature may be experimentally validated or they may be RNA folding predictions
-(commonly `MFOLD <http://unafold.rna.albany.edu/?q=mfold>`_). We do not discriminate
+obtained from the literature may be experimentally validated or they may be RNA folding predictions. We do not discriminate
 between the two and you will need to refer to the original publications to clarify.
 
 In those cases where no secondary structure prediction is available in the literature,
-but where we have good set of seed sequences, we frequently use a local installation
-of the `WAR software <http://genome.ku.dk/resources/war/>`_ which allows us to cherry pick
-the best alignment and secondary structure prediction from multiple tools.
-Historically, the folding prediction tools used has varied and the method used will be indicated.
+but where we have good set of SEED sequences, we use `RNAalifold <http://rna.tbi.univie.ac.at/cgi-bin/RNAWebSuite/RNAalifold.cgi>`_ from `The ViennaRNA Package <http://rna.tbi.univie.ac.at/>`_ for aligning the sequences following a secondary structure as a reference.
 
 You can find the alignment and structure source for each family in the curation tab,
 or in the SE and SS lines in the Stockholm file. Where the source is obtained from the literature,
-we will provide the PubMed identifier (PMID). You should also note that the seed alignments
+we will provide the PubMed identifier (PMID). You should also note that the SEED alignments
 often get updated between releases and may be manually adjusted by the curator.
 As a result, attempts to obtain the same structure using the same prediction method,
 may not return exactly the same structure as shown on the Rfam SEED alignment.
@@ -69,13 +61,13 @@ We usually indicate where the a structure has been manually edited.
 What is your definition of an RNA family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will group sequences into a "family" where we can identify sequence or secondary structure conservation
-using our covariation models. This is decided when we build our seed alignment
+using our covariation models. This is decided when we build our SEED alignment
 and search the CM against rfamseq. From the resulting searches we decide where the cutoff threshold should be.
 
 When we set this cut off threshold, we are essentially deciding that any sequences
 that score above the threshold are true, homologous members of the family,
 whilst those below are "chance hits". This discrimination between true and false is usually very clear
-if we have a representative seed alignment.
+if we have a representative SEED alignment.
 
 Occasionally, for various biological reasons, it can be extremely difficult
 to get good resolution between true and false predictions. In such case
@@ -88,10 +80,10 @@ please :ref:`contact-us:Contact us` and we will try to clarify or resolve the pr
 How can I tell which are predicted and which are experimentally confirmed sequences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Unfortunately, it is not currently possible to do this, since we do not add a source tag
-to each individual sequence in either our seed or full alignments.
-All of our families (seed alignments) are based on one or more experimentally validated
+to each individual sequence in either our SEED or FULL alignments.
+All of our families (SEED alignments) are based on one or more experimentally validated
 exemplars of the family, but the majority of the other member sequences are added
-by homology search and manual curation. We have high confidence in these members of the seed alignment
+by homology search and manual curation. We have high confidence in these members of the SEED alignment
 that we use to build the covariance model and computationally predict
 other possible members in the nucleotide database.
 
@@ -101,7 +93,7 @@ occasionally this contains useful information about function.
 Why is my favourite sequence not in the family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The most likely reason is that it is not in the EMBL release that rfamseq is based on.
-With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide database.
+With each major release, e.g. 14.0, 15.0, we update the underlying nucleotide database.
 You can check which version we are currently using `here <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_.
 If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family,
 it is possible that our model may need to be improved.
@@ -165,24 +157,19 @@ the strand is given by the order of the coordinates, in this case it is negative
 
 How can I view or download a family alignment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-From the family summary page, go to the "Alignments" tab on the left side panel.
+From the family summary page, go to the "Alignments" tab.
 The alignments tab will give you multiple drop down options on how to either view
-or download the seed sequences for this family, in an aligned or fasta format.
+or download the SEED sequences for this family, in an aligned or fasta format.
 The formatting options allow you to select which type of format you would prefer.
 
 If the alignment is very large the formatting tool may not be suitable and you may prefer
 to use the preformatted alignment in Stockholm format. A number of Stockholm alignment re-formatters
 and viewers exist, such as the sreformat program from the `HMMer package <http://hmmer.org>`_
-and the `RALEE <http://sgjlab.org/ralee/>`_ major mode for Emacs.
+and the `RALEE <https://github.com/samgriffithsjones/ralee/blob/master/00README>`_ major mode for Emacs.
 You can read more about Stockholm format on `Wikipedia <https://en.wikipedia.org/wiki/Stockholm_format>`_.
 
-As of release 12.0, we no longer provide full alignments for automatic download.
-You can generate them using the Sunbursts feature for sequences of your choice
-(for families with full alignments containing less than 1000 sequences),
-or generate them yourself by downloading the covariance model and using the Infernal suite of software.
-
 If you are interested retrieving alignments for multiple families, you can
-download all our seed alignments in Stockholm format flat-files, and the covariance models
+download all our SEED alignments in Stockholm format flat-files, and the covariance models
 used to generate them, from our `ftp site <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT>`_.
 
 How can I download a domain-specific subset of covariance models?
@@ -201,7 +188,7 @@ How can I download all Rfam sequences for my favourite species?
 Unfortunately, this has not been implemented yet. Please :ref:`contact-us:Contact us` if you need help.
 
 The "Taxonomy" tab on the search page will allow you to perform taxonomic queries.
-In fact, this function also allows you to search with queries from internal nodes
+This function also allows you to search with queries from internal nodes
 of the NCBI taxonomic tree. However, the results are only returned on the family level,
 not the sequence level.
 
@@ -314,6 +301,6 @@ How can I edit a SEED alignment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We do not currently provide public access to edit our alignments.
 This is advantageous in that it maintains our standard of alignments and structures,
-but, if you feel our seed alignment/structure annotations can and should be improved,
+but, if you feel our SEED alignment/structure annotations can and should be improved,
 please :ref:`contact-us:Contact us`, preferably supplying us with a new alignment, in Stockholm format,
 and we will do our best to incorporate the improvements.

@@ -144,7 +144,7 @@ Taxonomy search
 
 .. WARNING::
 
-  Taxonomy search search will soon be replaced by text search.
+  Taxonomy search will soon be replaced by text search.
 
 This is one of the more interesting and powerful ways to search Rfam.
 Using the taxonomy search form, you can identify families
