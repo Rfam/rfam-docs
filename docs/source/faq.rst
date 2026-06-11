@@ -93,7 +93,7 @@ occasionally this contains useful information about function.
 Why is my favourite sequence not in the family?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The most likely reason is that it is not in the EMBL release that rfamseq is based on.
-With each major release, e.g. 8.0, 9.0, we update the underlying nucleotide database.
+With each major release, e.g. 14.0, 15.0, we update the underlying nucleotide database.
 You can check which version we are currently using `here <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_.
 If, however, your sequence is in the relevant EMBL release but is still absent from a relevant family,
 it is possible that our model may need to be improved.
@@ -157,7 +157,7 @@ the strand is given by the order of the coordinates, in this case it is negative
 
 How can I view or download a family alignment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-From the family summary page, go to the "Alignments" tab on the left side panel.
+From the family summary page, go to the "Alignments" tab.
 The alignments tab will give you multiple drop down options on how to either view
 or download the SEED sequences for this family, in an aligned or fasta format.
 The formatting options allow you to select which type of format you would prefer.
@@ -165,13 +165,8 @@ The formatting options allow you to select which type of format you would prefer
 If the alignment is very large the formatting tool may not be suitable and you may prefer
 to use the preformatted alignment in Stockholm format. A number of Stockholm alignment re-formatters
 and viewers exist, such as the sreformat program from the `HMMer package <http://hmmer.org>`_
-and the `RALEE <http://sgjlab.org/ralee/>`_ major mode for Emacs.
+and the `RALEE <https://github.com/samgriffithsjones/ralee/blob/master/00README>`_ major mode for Emacs.
 You can read more about Stockholm format on `Wikipedia <https://en.wikipedia.org/wiki/Stockholm_format>`_.
-
-As of release 12.0, we no longer provide FULL alignments for automatic download.
-You can generate them using the Sunbursts feature for sequences of your choice
-(for families with FULL alignments containing less than 1000 sequences),
-or generate them yourself by downloading the covariance model and using the Infernal suite of software.
 
 If you are interested retrieving alignments for multiple families, you can
 download all our SEED alignments in Stockholm format flat-files, and the covariance models
@@ -193,7 +188,7 @@ How can I download all Rfam sequences for my favourite species?
 Unfortunately, this has not been implemented yet. Please :ref:`contact-us:Contact us` if you need help.
 
 The "Taxonomy" tab on the search page will allow you to perform taxonomic queries.
-In fact, this function also allows you to search with queries from internal nodes
+This function also allows you to search with queries from internal nodes
 of the NCBI taxonomic tree. However, the results are only returned on the family level,
 not the sequence level.
 
