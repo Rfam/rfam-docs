@@ -117,7 +117,7 @@ tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF0016
     :alt: R-scape visualisation of SAM riboswitch
     :width: 600
     :align: center
-
+    
     R-scape visualisation of SAM riboswitch
 
 Seed alignment (SEED)

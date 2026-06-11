@@ -3,15 +3,15 @@
 Extract ncRNA sequences
 ===================================================
 
-All Rfam ncRNA sequences become available on the `ftp <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release.
-The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_ and ``esl-sfetch`` tool.
+All Rfam ncRNA sequences become available on the `FTP site <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files>`_ with every new release.
+The following is a tutorial on how to extract sequences using the public instance of the `MySQL database <http://rfam.readthedocs.io/en/latest/database.html>`_ and the ``esl-sfetch`` tool.
 
 **Requirements:**
 
 
 1. MySQL Community Server, freely available `here <https://dev.mysql.com/downloads/>`_
 
-2. ``esl-sfetch`` from Infernal's easel `miniapps`
+2. ``esl-sfetch`` from Infernal's Easel `miniapps`
 
 
 =====================================================
@@ -26,16 +26,16 @@ The following is a tutorial on how to extract sequences using the public instanc
 ::
 	> export PATH="/path/to/infernal-1.1.x/bin:$PATH"
 
-3. Download Rfam.fa.gz (combined file of all the fasta files) from the FTP using ``wget`` and then unzip :
+3. Download Rfam.fa.gz (combined file of all the fasta files) from the FTP using ``wget`` and then unzip:
 ::
 	> wget ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/fasta_files/Rfam.fa.gz
 	> gunzip Rfam.fa.gz
 
-4. Index the unified sequence file using ``esl-sfetch`` :
+4. Index the unified sequence file using ``esl-sfetch``:
 ::
 	> esl-sfetch --index Rfam.fa
 
-.. note:: If the above command is successful, you should see a ``.ssi`` file generated in your current directory
+.. note:: If the above command is successful, you should see a ``.ssi`` file generated in your current directory.
 
 5. Create a ``.sql`` file with a SQL command that fetches the regions of interest.
 
@@ -68,7 +68,7 @@ Example query to retrieve all human snoRNAs:
 	and f.type like '%snoRNA%'
 	and gs.version=14.0;
 
-Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
+Example query to retrieve all mammalian 5S ribosomal RNAs (RF00001):
 
 ::
 
@@ -82,7 +82,7 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 .. note:: In order for ``esl-sfetch`` to work with the Rfam fasta file, the regions need to be in the format: **rfamseq_acc/seq_start-seq_end**.
 
-6.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database :
+6.  Fetch a list of accessions to extract from the database and save them in a ``.txt`` file using the MySQL database:
 
 ::
 
@@ -90,7 +90,7 @@ Example query to retrieve all Mammalian 5S ribosomal RNAs (RF00001):
 
 ..
 
-7. Extract the ncRNA sequences in the ``.txt`` file generated in **step 6** from the unified Rfam fasta file from **step 3** using ``esl-fetch``:
+7. Extract the ncRNA sequences in the ``.txt`` file generated in **step 6** from the unified Rfam fasta file from **step 3** using ``esl-sfetch``:
 
 ::
 

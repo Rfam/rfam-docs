@@ -28,7 +28,7 @@ the higher the bit score, the better your sequences fits the model.
 More specifically the bit score is the log\ :sub:`2`\  of the probability
 of the query sequence given the model, over the probability of the sequence given the null model:
 
-.. image:: images/bit-score.gif
+.. image:: images/bit-score.png
    :alt: Bit score formula
 
 In theory this means that positive bits scores are significant but, in practice,
