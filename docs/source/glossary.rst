@@ -22,7 +22,7 @@ All sequences on the Rfam website have already undergone this process, but if yo
 ClustalW
 --------
 
-A general purpose multiple sequence alignment program for DNA (RNA) which we use while building our SEED alignments. See the `Clustal web server <http://https://www.ebi.ac.uk/jdispatcher/msa/clustalo>`_.
+A general purpose multiple sequence alignment program for DNA (RNA) which we use while building our SEED alignments. See the `Clustal web server <https://www.ebi.ac.uk/jdispatcher/msa/clustalo>`_.
 
 Covariance model (CM)
 ---------------------
@@ -71,7 +71,7 @@ See the `Infernal website <http://eddylab.org/infernal>`_ for more details.
 MFOLD
 -----
 
-RNA structure prediction algorithm which utilises minimum free energy information. See the `MFOLD publication <https://academic.oup.com/nar/article/43/D1/D130/2437148>`_.
+RNA structure prediction algorithm which utilises minimum free energy information. See the `MFOLD publication <https://doi.org/10.1093/nar/gkg595>`_.
 
 Pfold
 -----
@@ -87,12 +87,12 @@ Rfamseq
 You can find out the information about *rfamseq* currently in use in the
 `README file <https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/README>`_ in the Rfam FTP archive.
 
-.. Table:: https://pmc.ncbi.nlm.nih.gov/articles/PMC11701678/table/tbl1/
-    :alt: The number of genomes in Rfamseq corresponding to release 14.0 and 15.0
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/76b3/11701678/bf17a771d02a/gkae1023fig1.jpg
+    :alt: The taxonomic distribution of cellular organisms in Rfamseq 15 organized by the phylogenetic kingdom.
     :width: 400
     :align: center
 
-    The number of genomes in Rfamseq corresponding to release 14.0 and 15.0
+    The taxonomic distribution of cellular organisms in Rfamseq 15 organized by the phylogenetic kingdom.
 
 RNAalifold
 ----------
@@ -113,7 +113,7 @@ in a multiple sequence alignment. R-scape is used to create and improve
 Rfam families, and R-scape visualisations are shown on the secondary structure
 tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF00162#tabview=tab4>`_).
 
-.. figure:: https://pmc.ncbi.nlm.nih.gov/articles/PMC6754622/figure/F8/
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/236e/5753348/9493552abea5/gkx1038fig5.jpg
     :alt: R-scape visualisation of SAM riboswitch
     :width: 600
     :align: center
@@ -127,12 +127,12 @@ A manually curated sample of representative sequences for a family.
 These sequences are aligned and annotated with a consensus secondary structure.
 This alignment is used to build the covariance model for the family. See :ref:`building-families:Seed alignments and secondary structure annotation` for more information.
 
-.. figure:: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6754622/bin/nihms-1047076-f0010.jpg
-      :alt: SAM riboswitch Seed alignment
+.. figure:: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0fff/13192927/b95ca1aa9060/nihpp-2026.05.10.724034v1-f0012.jpg
+      :alt: SEED alignment view of Rfam family RF00164
       :width: 600
       :align: center
 
-      An example seed alignment coloured by secondary structure helical regions
+      An example of SEED alignment view of Rfam family RF00164 implemented with the Nightingale framework.
 
 Sequence region
 ---------------

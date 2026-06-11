@@ -10,9 +10,9 @@ represents the **conserved** secondary structure for these sequences.
 
 The ideal basis for a new family is an RNA element that:
 
-* Has some known functional classification
-* Is evolutionarily conserved
-* Has evidence for a secondary structure
+* has some known functional classification
+* is evolutionarily conserved
+* has evidence for a secondary structure
 
 To build a new family, we
 must first obtain at least one **experimentally validated example** from
