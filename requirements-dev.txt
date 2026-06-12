@@ -34,7 +34,7 @@ sphinxcontrib-qthelp==2.0.0
 sphinxcontrib-serializinghtml==2.0.0
 starlette==0.46.2
 tornado==6.4.1
-urllib3==1.26.19
+urllib3==2.7.0
 uvicorn==0.34.2
 watchfiles==1.0.5
 websockets==15.0.1
