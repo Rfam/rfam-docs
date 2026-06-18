@@ -14,18 +14,13 @@ The blog is used to announce releases, new features and important changes to Rfa
 as well as for posts discussing general issues surrounding the Rfam resource.
 You can see blog posts that are specific to Rfam `here <https://xfam.wordpress.com/tag/rfam/>`_.
 
-RSS feed
---------
-You can keep in touch with the latest news by subscribing
-to the `RSS <http://xfam.wordpress.com/tag/rfam/feed/>`_ feed from the Xfam blog.
-
 LinkedIn
 --------
 You can `follow <https://www.linkedin.com/company/embl-ebi-rna-resources>`_ the EMBL-EBI RNA Resources team on LinkedIn.
 
-X
--
-You can `follow <https://x.com/RfamDB>`_ the RfamDB team at EMBL-EBI.
+X/ Bluesky
+----------
+You can follow the RfamDB team at EMBL-EBI on `X <https://x.com/RfamDB>`_ (formerly Twitter) or on `Bluesky <https://bsky.app/profile/rfamdb.bsky.social>`_.
 
 Submit an alignment
 -------------------

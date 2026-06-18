@@ -24,7 +24,6 @@ Collaborators
 * :raw-html:`<a href="https://www.mcb.harvard.edu/directory/elena-rivas/" target="_blank" rel="noopener noreferrer">Elena Rivas</a>` (Harvard University) - developer of the R-scape software
 * :raw-html:`<a href="https://orcid.org/0000-0003-4783-8823" target="_blank" rel="noopener noreferrer">Manja Marz</a>`, :raw-html:`<a href="https://orcid.org/0000-0001-8999-4395" target="_blank" rel="noopener noreferrer">Sandra Triebel</a>`, and :raw-html:`<a href="https://orcid.org/0000-0002-6375-6441" target="_blank" rel="noopener noreferrer">Kevin Lamkiewicz</a>` (Friedrich Schiller University Jena) - collaborators on the :raw-html:`<a href="https://rfam.org/viruses" target="_blank" rel="noopener noreferrer">Rfam Viruses project</a>`
 * :raw-html:`<a href="http://orcid.org/0000-0001-6043-807X" target="_blank" rel="noopener noreferrer">Sam Griffiths-Jones</a>` (University of Manchester) - *founding Rfam project leader* and a collaborator on the :raw-html:`<a href="https://rfam.org/microrna" target="_blank" rel="noopener noreferrer">microRNA project</a>`
-* :raw-html:`<a href="https://orcid.org/0000-0002-1508-8469" target="_blank" rel="noopener noreferrer">Daniel Gautheret</a>` and :raw-html:`<a href="https://orcid.org/0000-0003-4134-6844" target="_blank" rel="noopener noreferrer">Claire Toffano-Nioche</a>` (University of Paris-Saclay)
 * :raw-html:`<a href="http://orcid.org/0000-0002-6681-3624" target="_blank" rel="noopener noreferrer">Zasha Weinberg</a>` (University of Leipzig) - developer of the ZWD database
 * :raw-html:`<a href="https://bioinfo-scottgroup.med.usherbrooke.ca" target="_blank" rel="noopener noreferrer">Michelle Scott</a>` and Kristina Song (Université de Sherbrooke)
 
@@ -41,6 +40,8 @@ Previous contributors
 * :raw-html:`<a href="https://orcid.org/0000-0003-2678-2824" target="_blank" rel="noopener noreferrer">Joanna Argasinska</a>` - *former Biocurator*
 * :raw-html:`<a href="https://orcid.org/0000-0001-6152-1369" target="_blank" rel="noopener noreferrer">Ruth Eberhardt</a>`
 * :raw-html:`<a href="http://orcid.org/0000-0002-5431-190X" target="_blank" rel="noopener noreferrer">Evan Floden</a>`
+* :raw-html:`<a href="https://orcid.org/0000-0002-1508-8469" target="_blank" rel="noopener noreferrer">Daniel Gautheret</a>`
+* :raw-html:`<a href="https://orcid.org/0000-0003-4134-6844" target="_blank" rel="noopener noreferrer">Claire Toffano-Nioche</a>`
 * John Tate
 * Jennifer Daub
 * Ben Moore
