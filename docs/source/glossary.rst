@@ -123,7 +123,9 @@ tab for each family (for example, `SAM riboswitch <http://rfam.org/family/RF0016
 RFview
 ------
 
-**RFview** is an interactive RNA secondary structure viewer displayed on the *Secondary structure* tab of the Rfam family page, in a sub-tab alongside the static Rfam structure diagrams. Rather than a fixed image, RFview renders the family's consensus secondary structure as a diagram that can be panned and zoomed, making it easier to inspect base pairs and structural features up close. It is built on the `RFview.js <https://github.com/dincarnato/RFviewJS>`_ library, whose layout algorithms are ported from `VARNA <https://github.com/yannponty/VARNA>`_ (Radiate layout) and the Vienna RNA Package's naview (NAView layout).
+**RFview** is an interactive RNA secondary structure viewer displayed on the *Secondary structure* tab of the Rfam family page, in a sub-tab alongside the static Rfam structure diagrams. 
+Rather than a fixed image, RFview renders the family's consensus secondary structure as a diagram that can be panned and zoomed, making it easier to inspect base pairs and structural features up close. 
+It is built on the `RFview <https://github.com/dincarnato/RFviewJS>`_ library, whose layout algorithms are ported from `VARNA <https://github.com/yannponty/VARNA>`_ (Radiate layout) and the Vienna RNA Package's naview (NAView layout).
 
 .. figure:: images/rfview-example.png
     :alt: RFview interactive secondary structure viewer
