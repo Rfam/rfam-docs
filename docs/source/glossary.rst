@@ -148,6 +148,21 @@ This alignment is used to build the covariance model for the family. See :ref:`b
 
       An example of SEED alignment view of Rfam family RF00164 implemented with the Nightingale framework.
 
+Genomic context
+---------------
+
+Genomic context of a family's hits in `SeqHub <https://seqhub.org/>`_, a database of ~131,000 microbial genomes.
+Neighbouring genes are shown with annotations available on hover.
+Results are deduplicated to one row per genus.
+Rfam hits were identified by scanning the intergenic regions of SeqHub genomes with nhmmer (E-value ≤ 1e-3).
+
+.. figure:: images/rf02900_seqhub.png
+    :alt: SeqHub genomic context of Rfam family RF02900
+    :width: 600
+    :align: center
+
+    An example of the SeqHub genomic context view for Rfam family RF02900.
+
 Sequence region
 ---------------
 
